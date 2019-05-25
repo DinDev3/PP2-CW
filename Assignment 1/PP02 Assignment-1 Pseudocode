@@ -1,0 +1,164 @@
+Dinuka Piyadigama
+UOW ID - w17421047
+IIT ID - 2018373
+
+PSEUDOCODE for PP02 Assignment-1
+GOLF CLUB
+
+  BEGIN
+1.SET input=0, name="", arrLength=0
+2.SET playerRecords = <result,name>, playerResults=[]
+3.DISPLAY "Welcome to Springfield Golf Club"
+4.DISPLAY "Select Option:
+            1)Enter Scores
+            2)Find Golfer
+            3)Display Scoreboard
+            4)Exit Program"
+5.PROMPT input
+6.GET input
+7.DO WHILE input!=4:
+8.    IF input == number
+9.        SET input == 0
+10.       DO WHILE input<=0 OR input>4:
+11.           PROMPT input
+12.           GET input
+13.           Sort playerResults in ascending order
+14.           playerNames=[]
+15.           SET i=0
+16.           DO WHILE i<arrLength:
+17.               p = playerResults[i]
+18.               playerRecords<p,> in playerNames
+19.               i=i+1
+              END DO
+20.           IF input == 1:
+21.             enterScores
+22.           ELSE IF input == 2:
+23.                   findGolfer
+24.                ELSE IF input == 3:
+25.                       displayScores
+26.                     ELSE IF input ==4:
+27.                             DISPLAY "We hope you enjoyed your Golf session at Springfield Golf Club.
+                                          Looking forward to assist you in your next session.
+                                          Exiting Program..."
+28.                          ELSE:
+29.                             DISPLAY "Invalid input. Please try again."
+                             END IF
+                        ELSE IF
+                   END IF
+              END IF
+          END DO
+30.     ELSE:
+31.         DISPLAY "Only numeric characters are accepted. Please provide a valid input"
+        END IF
+  END DO
+  END    
+    
+    
+ 
+    
+---------
+enterScores
+
+1.SET numOfGolfers=0
+2.DO WHILE numOfGolfers=0 OR numOfGolfers != number:
+3.    PROMPT numOfGolfers
+4.    GET numOfGolfers
+5.    IF numOfGolfers!= number:
+6.        DISPLAY "Only numbers are allowed! Please try again"
+      END IF
+  END DO
+
+7.DO WHILE numOfGolfers>0:
+8.    SET result = 0
+9.    SET alter == ''
+
+10.    PROMPT for name
+11.    GET name
+
+12.    IF name in playerRecords<,name>:
+13.        loopCondition = true
+
+14.        DO WHILE loopCondition = true:
+15.            PROMPT alter: "This Golfer has a previous entry! Do you wish to over-write this?"
+16.            GET alter
+
+17.            IF alter == 'yes' OR alter == 'y':
+18.                SET result=0
+19.                SET position = 0
+20.                SET oldResult = 0
+
+21.                SET n=0
+22.                DO WHILE n<arrLength:
+23.                    IF playerNames[n] = name:
+24.                        position = n
+25.                    n = n+1
+                   END DO
+
+26.                oldResult = playerResults[position]
+27.                playerRecords[oldResult] = <0,"">
+28.                playerResults[position] = 0
+
+29.                DO WHILE result<18 OR result>108:
+30                    PROMPT result
+31.                    GET result
+                   END DO
+32.                result, name in playerRecords<result,name>
+33.                result in playerResults[i]
+
+34.                loopCondition = false
+35.                numOfGolfers -= 1
+
+36.            ELSE IF alter =='no' OR alter =='n':
+37.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
+38.                    loopCondition = false
+39.                 ELSE:
+40.                    DISPLAY "Invalid input. Please try again."
+                    END IF
+               END IF
+           END DO
+
+41.    ELSE:
+42.        SET result=0
+43.        DO WHILE result<18 OR result>108:
+44.            PROMPT result
+45,            GET result
+           END DO
+46.        arrLength = arrLength + 1
+47.        numOfGolfers -= 1
+48.        result, name in playerRecords<result,name>
+49.        result in playerResults[i]
+       END IF
+   END DO
+    
+---------
+
+
+findGolfer
+
+1.PROMPT name
+2.GET name
+
+3.IF name in playerRecords:
+4.    SET position = 0
+5.    SET n=0
+6.    DO WHILE n<arrLength:
+7.        IF playerNames[n] = name:
+8.            position = n
+9.        n = n+1
+      END DO
+10.   DISPLAY "Score: " + playerResults[position]
+11.ELSE:
+12.    DISPLAY "There is no recorded entry related to this name."
+  END IF
+    ---------
+
+    
+displayScores
+
+1.SET index[i] = 0
+2.DO WHILE i<arrLength:
+3.    DISPLAY playerNames[i]"       "+ playerResults[i]
+4.    i = i + 1
+  END DO
+
+    ---------
