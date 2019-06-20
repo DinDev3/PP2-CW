@@ -76,57 +76,56 @@ enterScores
 11.    GET name
 
 12.    IF name in playerRecords<,name>:
-13.        loopCondition = true
 
-14.        DO WHILE loopCondition = true:
-15.            PROMPT alter: "This Golfer has a previous entry! Do you wish to over-write this?"
-16.            GET alter
+13.        DO WHILE name in playerRecords<,name>:
+14.            PROMPT alter: "This Golfer has a previous entry! Do you wish to over-write this?"
+15.            GET alter
 
-17.            IF alter == 'yes' OR alter == 'y':
-18.                SET result=0
-19.                SET position = 0
-20.                SET oldResult = 0
+16.            IF alter == 'yes' OR alter == 'y':
+17.                SET result=0
+18.                SET position = 0
+29.                SET oldResult = 0
 
-21.                SET n=0
-22.                DO WHILE n<arrLength:
-23.                    IF playerNames[n] = name:
-24.                        position = n
-25.                    n = n+1
+20.                SET n=0
+21.                DO WHILE n<arrLength:
+22.                    IF playerNames[n] = name:
+23.                        position = n
+24.                    n = n+1
                    END DO
 
-26.                oldResult = playerResults[position]
-27.                playerRecords[oldResult] = <0,"">
-28.                playerResults[position] = 0
+25.                oldResult = playerResults[position]
+26.                playerRecords[oldResult] = <0,"">
+27.                playerResults[position] = 0
 
-29.                DO WHILE result<18 OR result>108:
-30                    PROMPT result
-31.                    GET result
+28.                DO WHILE result<18 OR result>108:
+29.                    PROMPT result
+30.                    GET result
                    END DO
-32.                result, name in playerRecords<result,name>
-33.                result in playerResults[i]
+31.                result, name in playerRecords<result,name>
+32.                result in playerResults[i]
 
-34.                loopCondition = false
-35.                numOfGolfers -= 1
+33.                numOfGolfers -= 1
+34.                break;
 
-36.            ELSE IF alter =='no' OR alter =='n':
-37.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
-38.                    loopCondition = false
-39.                 ELSE:
-40.                    DISPLAY "Invalid input. Please try again."
+35.            ELSE IF alter =='no' OR alter =='n':
+36.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
+37.                    break;
+38.                 ELSE:
+39.                    DISPLAY "Invalid input. Please try again."
                     END IF
                END IF
            END DO
 
-41.    ELSE:
-42.        SET result=0
-43.        DO WHILE result<18 OR result>108:
-44.            PROMPT result
-45,            GET result
+40.    ELSE:
+41.        SET result=0
+42.        DO WHILE result<18 OR result>108:
+43.            PROMPT result
+44,            GET result
            END DO
-46.        arrLength = arrLength + 1
-47.        numOfGolfers -= 1
-48.        result, name in playerRecords<result,name>
-49.        result in playerResults[i]
+45.        arrLength = arrLength + 1
+46.        numOfGolfers -= 1
+47.        result, name in playerRecords<result,name>
+48.        result in playerResults[i]
        END IF
    END DO
     
