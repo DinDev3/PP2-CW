@@ -93,9 +93,8 @@ public class GolfClub {
 
 
             if (playerRecords.containsValue(name)) {
-                boolean loopCondition = true;
 
-                while(loopCondition) {
+                while(playerRecords.containsValue(name)) {
                     Scanner alterInput = new Scanner(System.in);                  //Asking the user whether to alter results or not
                     System.out.println("This Golfer has a previous entry! Do you wish to over-write this?");
                     String alter = alterInput.nextLine();
@@ -127,13 +126,12 @@ public class GolfClub {
                         playerRecords.put(result, name);                //updating entry
                         playerResults.add(result);
 
-                        loopCondition = false;
                         numOfGolfers -= 1;
+                        break;
 
                     } else if (alter.equals("no") || alter.equals("n")) {
                         System.out.println("The record for Golfer, " + name + " wasn't changed.");
-                        loopCondition = false;
-
+                        break;
 
                     } else {
                         System.out.println("Invalid input. Please try again.");
@@ -141,7 +139,7 @@ public class GolfClub {
                 }
 
             } else {
-                int result = 0;                                 //resetting result that will be input, if the user wishes to change it
+                int result;                                 //initialing result to get the while loop to work
                 do {                                            //result range: 18-108
                     Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
                     System.out.print("Enter the result (in range 18-108): ");
