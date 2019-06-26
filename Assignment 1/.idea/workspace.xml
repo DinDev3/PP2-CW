@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" beforeDir="false" afterPath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GolfClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GolfClub.java" afterDir="false" />
     </list>
@@ -38,11 +39,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+            <state relative-caret-position="1908">
+              <caret line="108" column="158" selection-start-line="108" selection-start-column="158" selection-end-line="108" selection-end-column="158" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2250">
+              <caret line="125" column="2" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -70,6 +80,11 @@
       <find>(result &lt; 18 || result &gt; 108)</find>
       <find>number</find>
       <find>numbers</find>
+      <find>Enter the result (in range 18-108):</find>
+      <find>Scanner</find>
+      <find>&quot;Only numeric characters are accepted. Please provide a valid input&quot;</find>
+      <find>&quot;Only numbers are allowed! Please try again&quot;</find>
+      <find>Collections.sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,10 +109,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -209,7 +223,7 @@
       <workItem from="1561525695096" duration="4537000" />
       <workItem from="1561532458897" duration="94000" />
       <workItem from="1561539089978" duration="130000" />
-      <workItem from="1561573208234" duration="2370000" />
+      <workItem from="1561573208234" duration="4980000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -260,11 +274,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561574562313</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Applied method; marksValidation in every required place.">
+      <created>1561575773454</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561575773454</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58478000" />
+    <option name="totallyTimeSpent" value="61088000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -307,7 +328,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.34872824" />
+      <window_info anchor="right" id="Run" order="9" weight="0.3433735" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +382,8 @@
     <MESSAGE value="Added a comment" />
     <MESSAGE value="minor change to menu" />
     <MESSAGE value="Added a method; marksValidation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a method; marksValidation" />
+    <MESSAGE value="Applied method; marksValidation in every required place." />
+    <option name="LAST_COMMIT_MESSAGE" value="Applied method; marksValidation in every required place." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -414,15 +436,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="2250">
+          <caret line="125" column="2" selection-start-line="125" selection-start-column="2" selection-end-line="125" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        <state relative-caret-position="1908">
+          <caret line="108" column="158" selection-start-line="108" selection-start-column="158" selection-end-line="108" selection-end-column="158" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

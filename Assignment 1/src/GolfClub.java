@@ -13,6 +13,7 @@ public class GolfClub {
     static ArrayList<Integer> playerResults = new ArrayList<>();
 
     static Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
+    static Scanner scanName = new Scanner(System.in);                   //getting name input
 
     public static void main(String[] args) {
 
@@ -86,7 +87,7 @@ public class GolfClub {
 
 
         while (numOfGolfers > 0) {
-            Scanner scanName = new Scanner(System.in);
+
             System.out.println("\nEnter a name of a Golfer");
             String name = scanName.nextLine();
 
@@ -103,8 +104,9 @@ public class GolfClub {
                     int result = 0;                                 //resetting result that will be input, if the user wishes to change it
                     int position = 0;                                       //resetting position
 
+                    //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
                     for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
-                        if (playerNames.get(n).equals(name)) {
+                        if (playerNames.get(n).equals(name)) {                            //can't have this as a method because name isn't globally accessible
                             position = n;
                         }
                     }
@@ -156,15 +158,16 @@ public class GolfClub {
 
     private static void findGolfer() {//input = 2
 
-        Scanner scanName = new Scanner(System.in);
         System.out.println("\nEnter a name of a Golfer");
         String name = scanName.nextLine();
 
         if (playerRecords.containsValue(name)) {
+
+            //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
             int position = 0;                                       //resetting position
 
             for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists
-                if (playerNames.get(n).equals(name)) {
+                if (playerNames.get(n).equals(name)) {                            //can't have this as a method because name isn't globally accessible
                     position = n;
                 }
 
