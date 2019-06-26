@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GolfClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GolfClub.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,12 +34,12 @@
     <favorites_list name="Assignment 1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            <state relative-caret-position="127">
+              <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,7 +106,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,6 +122,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,7 +208,8 @@
       <workItem from="1561446888049" duration="117000" />
       <workItem from="1561525695096" duration="4537000" />
       <workItem from="1561532458897" duration="94000" />
-      <workItem from="1561539089978" duration="86000" />
+      <workItem from="1561539089978" duration="130000" />
+      <workItem from="1561573208234" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -244,11 +246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561532522003</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="minor change to menu">
+      <created>1561539193539</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561539193539</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56064000" />
+    <option name="totallyTimeSpent" value="57169000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -261,8 +270,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.17536815" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" weight="0.17737617" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.09731544" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -290,7 +300,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.3888889" />
+      <window_info anchor="right" id="Run" order="9" weight="0.3888889" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +352,8 @@
     <MESSAGE value="Removed all breaks" />
     <MESSAGE value="Gugsi threats mitigated" />
     <MESSAGE value="Added a comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a comment" />
+    <MESSAGE value="minor change to menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor change to menu" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -402,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        <state relative-caret-position="127">
+          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

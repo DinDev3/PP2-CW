@@ -12,10 +12,11 @@ public class GolfClub {
     static ArrayList<String> playerNames = new ArrayList<>();
     static ArrayList<Integer> playerResults = new ArrayList<>();
 
+    static Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
+
     public static void main(String[] args) {
 
         int input;                                         //initializing input
-
         System.out.println("\nWelcome to Springfield Golf Club!");
 
         do {
@@ -23,15 +24,12 @@ public class GolfClub {
 
 
             while (input <= 0) {
-                System.out.println("\nSelect Option:\n\t1)Enter Scores\n\t2)Find Golfer\n\t3)Display Scoreboard\n\t4)Exit Program");
+                System.out.println("\nSelect Option:\n\t1) Enter Scores\n\t2) Find Golfer\n\t3) Display Scoreboard\n\t4) Exit Program");
 
-                Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
                 System.out.print("\nEnter input in range 1-4\n\t>");
 
-                while (!scanInput.hasNextInt()) {
-                    System.out.println("Only numeric characters are accepted. Please provide a valid input");              //error handling message for characters other than numbers
-                    scanInput.next();
-                }
+                scoreValidation();
+
                 input = scanInput.nextInt();
 
                 Collections.sort(playerResults);                //sorting scores in ascending order
@@ -61,21 +59,22 @@ public class GolfClub {
                         System.out.println("\nWe hope you enjoyed your Golf session at Springfield Golf Club.");      //Exit message, when exiting program
                         System.out.println("\tLooking forward to assist you in your next session.");
                         System.out.println("\tExiting Program...");
+                        System.exit(0);                             //ending program
                         break;
 
                     default:                                            //message to display, if input number not in required range
-                        System.out.println("Invalid input, try again.");
+                        System.out.println("Invalid input!!! Reenter...");
                 }
 
             }
 
-        } while (input != 4);
+        } while (input <1 || input>4);
 
     }
 
 
-//-----methods-----
 
+//-----methods-----
     private static void enterScores() {//input = 1
         int numOfGolfers = 0;
 
@@ -83,7 +82,7 @@ public class GolfClub {
         System.out.println("How many golfers are in this group?");
 
         while (!scanGolfersCount.hasNextInt()) {
-            System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
+            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message
             scanGolfersCount.next();      //removing incorrect input entered
         }
         numOfGolfers = scanGolfersCount.nextInt();
@@ -123,7 +122,7 @@ public class GolfClub {
                         System.out.print("Enter the result (in range 18-108): ");
 
                         while (!scanResult.hasNextInt()) {
-                            System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
+                            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message
                             scanResult.next();      //removing incorrect input entered
                         }
                         result = scanResult.nextInt();
@@ -148,7 +147,7 @@ public class GolfClub {
                     System.out.print("Enter the result (in range 18-108): ");
 
                     while (!scanResult.hasNextInt()) {
-                        System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
+                        System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message
                         scanResult.next();      //removing incorrect input entered
                     }
                     result = scanResult.nextInt();
@@ -198,6 +197,15 @@ public class GolfClub {
             System.out.println(playerNames.get(i) + "       " + playerResults.get(i));
 
             System.out.println("-----------------------------------------");                               //for clarity of output
+        }
+    }
+
+
+    private static void scoreValidation() {
+
+        while (!scanInput.hasNextInt()) {
+            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message for characters other than integers
+            scanInput.next();
         }
     }
 }
