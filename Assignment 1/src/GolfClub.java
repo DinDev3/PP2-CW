@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class GolfClub {
-    static HashMap<Integer,String> playerRecords = new HashMap<Integer,String>();
+    static HashMap<Integer, String> playerRecords = new HashMap<Integer, String>();
     static ArrayList<String> playerNames = new ArrayList<>();
     static ArrayList<Integer> playerResults = new ArrayList<>();
 
@@ -31,7 +31,7 @@ public class GolfClub {
 
                     Collections.sort(playerResults);                //sorting scores in ascending order
                     playerNames.clear();                            //removing names from arrayList, to match the same positions as the new/updated results
-                    for (int i=0; i< playerResults.size();i++) {
+                    for (int i = 0; i < playerResults.size(); i++) {
                         int p = playerResults.get(i);                       //selecting key, to find value
 
                         playerNames.add(playerRecords.get(p));              //adding value of selected key into playerNames arrayList
@@ -63,15 +63,13 @@ public class GolfClub {
                     }
 
                 }
-            } catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Only numeric characters are accepted. Please provide a valid input");              //error handling message for characters other than numbers
             }
 
         } while (input != 4);
 
     }
-
-
 
 
 //-----methods-----
@@ -82,7 +80,7 @@ public class GolfClub {
             Scanner scanGolfersCount = new Scanner(System.in);              //getting the count of golfers in the group
             System.out.println("How many golfers are in this group?");
             numOfGolfers = scanGolfersCount.nextInt();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Only numbers are allowed! Please try again.");              //error handling message
         }
 
@@ -94,48 +92,43 @@ public class GolfClub {
 
             if (playerRecords.containsValue(name)) {
 
-                while(playerRecords.containsValue(name)) {
-                    Scanner alterInput = new Scanner(System.in);                  //Asking the user whether to alter results or not
-                    System.out.println("This Golfer has a previous entry! Do you wish to over-write this?");
-                    String alter = alterInput.nextLine();
+                Scanner alterInput = new Scanner(System.in);                  //Asking the user whether to alter results or not
+                System.out.println("This Golfer has a previous entry! Do you wish to over-write this?");
+                String alter = alterInput.nextLine();
 
-                    alter = alter.toLowerCase();                        //to accept input in capital letters as well    |   reassigned because strings are immutable
+                alter = alter.toLowerCase();                        //to accept input in capital letters as well    |   reassigned because strings are immutable
 
-                    if (alter.equals("yes") || alter.equals("y")) {
-                        int result = 0;                                 //resetting result that will be input, if the user wishes to change it
-                        int position = 0;                                       //resetting position
+                if (alter.equals("yes") || alter.equals("y")) {
+                    int result = 0;                                 //resetting result that will be input, if the user wishes to change it
+                    int position = 0;                                       //resetting position
 
-                        for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
-                            if (playerNames.get(n).equals(name)) {
-                                position = n;
-                                break;
-                            }
+                    for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                        if (playerNames.get(n).equals(name)) {
+                            position = n;
                         }
-
-                        int oldResult = playerResults.get(position);
-
-                        playerRecords.remove(oldResult);               //removing old key entry
-                        playerResults.remove(position);                //removing old result from results array list
-
-                        while (result < 18 || result > 108) {                             //result range: 18-108
-                            Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
-                            System.out.print("Enter the result (in range 18-108): ");
-                            result = scanResult.nextInt();
-
-                        }
-                        playerRecords.put(result, name);                //updating entry
-                        playerResults.add(result);
-
-                        numOfGolfers -= 1;
-                        break;
-
-                    } else if (alter.equals("no") || alter.equals("n")) {
-                        System.out.println("The record for Golfer, " + name + " wasn't changed.");
-                        break;
-
-                    } else {
-                        System.out.println("Invalid input. Please try again.");
                     }
+
+                    int oldResult = playerResults.get(position);
+
+                    playerRecords.remove(oldResult);               //removing old key entry
+                    playerResults.remove(position);                //removing old result from results array list
+
+                    while (result < 18 || result > 108) {                             //result range: 18-108
+                        Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
+                        System.out.print("Enter the result (in range 18-108): ");
+                        result = scanResult.nextInt();
+
+                    }
+                    playerRecords.put(result, name);                //updating entry
+                    playerResults.add(result);
+
+                    numOfGolfers -= 1;
+
+                } else if (alter.equals("no") || alter.equals("n")) {
+                    System.out.println("The record for Golfer, " + name + " wasn't changed.");
+
+                } else {
+                    System.out.println("Invalid input. Please try again.");
                 }
 
             } else {
@@ -144,7 +137,7 @@ public class GolfClub {
                     Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
                     System.out.print("Enter the result (in range 18-108): ");
                     result = scanResult.nextInt();
-                    
+
                 } while (result < 18 || result > 108);
                 playerRecords.put(result, name);                //new entry
                 playerResults.add(result);
@@ -152,9 +145,7 @@ public class GolfClub {
                 numOfGolfers -= 1;
             }
         }
-}
-
-
+    }
 
 
     private static void findGolfer() {//input = 2
@@ -163,35 +154,35 @@ public class GolfClub {
         System.out.println("\nEnter a name of a Golfer");
         String name = scanName.nextLine();
 
-        if(playerRecords.containsValue(name)){
+        if (playerRecords.containsValue(name)) {
             int position = 0;                                       //resetting position
 
-            for (int n=0; n<playerNames.size();n++){                        //n is an index of the two Array Lists
-                if(playerNames.get(n).equals(name)) {
+            for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists
+                if (playerNames.get(n).equals(name)) {
                     position = n;
                 }
 
             }
 
-            System.out.println("Score: "+ playerResults.get(position));
-        }else{
+            System.out.println("Score: " + playerResults.get(position));
+        } else {
             System.out.println("There is no recorded entry related to this name.");
         }
 
     }
 
 
-
-
     private static void displayScores() {//input = 3
 
         System.out.println("\n-----------------------------------------");                               //for clarity of output
+        System.out.println("Name       Score");
+        System.out.println("-----------------------------------------");                               //for clarity of output
 
-       for (int i=0; i< playerResults.size();i++) {
+        for (int i = 0; i < playerResults.size(); i++) {
 
-           System.out.println(playerNames.get(i) +"       "+ playerResults.get(i));
+            System.out.println(playerNames.get(i) + "       " + playerResults.get(i));
 
-           System.out.println("-----------------------------------------");                               //for clarity of output
-       }
+            System.out.println("-----------------------------------------");                               //for clarity of output
+        }
     }
 }

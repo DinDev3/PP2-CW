@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" beforeDir="false" afterPath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GolfClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GolfClub.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,11 +39,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="171" column="17" lean-forward="true" selection-start-line="171" selection-start-column="17" selection-end-line="171" selection-end-column="17" />
+            <state relative-caret-position="396">
+              <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
               <folding>
+                <element signature="e#0#8252#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -57,12 +69,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>break</find>
       <find>Invalid input. Please try again.</find>
       <find>alter</find>
       <find>scanner</find>
       <find>true</find>
       <find>result</find>
+      <find>break;</find>
+      <find>break</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -75,6 +88,7 @@
         <option value="$PROJECT_DIR$/../Learn1/src/test PP2 Ass1.java" />
         <option value="$PROJECT_DIR$/../test/src/test2 PP2 Ass1.java" />
         <option value="$PROJECT_DIR$/../Learn1/src/Lesson1.java" />
+        <option value="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" />
         <option value="$PROJECT_DIR$/src/GolfClub.java" />
       </list>
     </option>
@@ -96,7 +110,21 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Assignment 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assignment 1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -179,7 +207,7 @@
       <workItem from="1561316010107" duration="699000" />
       <workItem from="1561366310435" duration="199000" />
       <workItem from="1561446888049" duration="117000" />
-      <workItem from="1561525695096" duration="290000" />
+      <workItem from="1561525695096" duration="1836000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -188,11 +216,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561059359874</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removed one break">
+      <created>1561526178524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561526178524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51637000" />
+    <option name="totallyTimeSpent" value="53183000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -217,16 +252,15 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32908458" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.23098591" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32947975" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32957748" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32816902" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32808024" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32947975" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32957748" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32816902" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32808024" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -236,6 +270,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
+      <window_info anchor="right" id="Run" order="9" weight="0.3888889" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +318,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed the while true loop, to achieve marking standards." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the while true loop, to achieve marking standards." />
+    <MESSAGE value="Removed one break" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed one break" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -335,13 +371,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="171" column="17" lean-forward="true" selection-start-line="171" selection-start-column="17" selection-end-line="171" selection-end-column="17" />
+        <state relative-caret-position="396">
+          <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
           <folding>
+            <element signature="e#0#8252#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

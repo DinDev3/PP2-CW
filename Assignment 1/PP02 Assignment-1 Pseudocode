@@ -105,27 +105,25 @@ enterScores
 32.                result in playerResults[i]
 
 33.                numOfGolfers -= 1
-34.                break;
 
-35.            ELSE IF alter =='no' OR alter =='n':
-36.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
-37.                    break;
-38.                 ELSE:
-39.                    DISPLAY "Invalid input. Please try again."
+34.            ELSE IF alter =='no' OR alter =='n':
+35.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
+36.                 ELSE:
+37.                    DISPLAY "Invalid input. Please try again."
                     END IF
                END IF
            END DO
 
-40.    ELSE:
-41.        SET result=0
-42.        DO WHILE result<18 OR result>108:
-43.            PROMPT result
-44,            GET result
+38.    ELSE:
+39.        SET result=0
+40.        DO WHILE result<18 OR result>108:
+41.            PROMPT result
+42,            GET result
            END DO
-45.        arrLength = arrLength + 1
-46.        numOfGolfers -= 1
-47.        result, name in playerRecords<result,name>
-48.        result in playerResults[i]
+43.        arrLength = arrLength + 1
+44.        numOfGolfers -= 1
+45.        result, name in playerRecords<result,name>
+46.        result in playerResults[i]
        END IF
    END DO
     
