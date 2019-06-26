@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" beforeDir="false" afterPath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GolfClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GolfClub.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,30 +33,7 @@
     <favorites_list name="Assignment 1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="150" column="44" lean-forward="true" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="95" />
-              <folding>
-                <element signature="e#0#8252#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -212,7 +187,7 @@
       <workItem from="1561316010107" duration="699000" />
       <workItem from="1561366310435" duration="199000" />
       <workItem from="1561446888049" duration="117000" />
-      <workItem from="1561525695096" duration="4366000" />
+      <workItem from="1561525695096" duration="4537000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -235,11 +210,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561529694392</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Gugsi threats mitigated">
+      <created>1561532247798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561532247798</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55713000" />
+    <option name="totallyTimeSpent" value="55884000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -252,9 +234,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" weight="0.17336011" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.17336011" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.09731544" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -332,7 +313,8 @@
     <MESSAGE value="Removed the while true loop, to achieve marking standards." />
     <MESSAGE value="Removed one break" />
     <MESSAGE value="Removed all breaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed all breaks" />
+    <MESSAGE value="Gugsi threats mitigated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gugsi threats mitigated" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -383,21 +365,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="150" column="44" lean-forward="true" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="95" />
+        <state relative-caret-position="1692">
+          <caret line="94" column="46" lean-forward="true" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
           <folding>
             <element signature="e#0#8252#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
         </state>
       </provider>
     </entry>

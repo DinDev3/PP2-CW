@@ -84,7 +84,7 @@ public class GolfClub {
 
         while (!scanGolfersCount.hasNextInt()) {
             System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
-            scanGolfersCount.next();
+            scanGolfersCount.next();      //removing incorrect input entered
         }
         numOfGolfers = scanGolfersCount.nextInt();
 
@@ -124,7 +124,7 @@ public class GolfClub {
 
                         while (!scanResult.hasNextInt()) {
                             System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
-                            scanResult.next();
+                            scanResult.next();      //removing incorrect input entered
                         }
                         result = scanResult.nextInt();
 
@@ -149,7 +149,7 @@ public class GolfClub {
 
                     while (!scanResult.hasNextInt()) {
                         System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
-                        scanResult.next();
+                        scanResult.next();      //removing incorrect input entered
                     }
                     result = scanResult.nextInt();
 
