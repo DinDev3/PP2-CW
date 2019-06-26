@@ -21,50 +21,52 @@ public class GolfClub {
         do {
             input = 0;                                          //resetting input
 
-            try {
-                while (input <= 0 || input > 4) {
-                    System.out.println("\nSelect Option:\n\t1)Enter Scores\n\t2)Find Golfer\n\t3)Display Scoreboard\n\t4)Exit Program");
 
-                    Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
-                    System.out.println("\nEnter input in range 1-4");
-                    input = scanInput.nextInt();
+            while (input <= 0) {
+                System.out.println("\nSelect Option:\n\t1)Enter Scores\n\t2)Find Golfer\n\t3)Display Scoreboard\n\t4)Exit Program");
 
-                    Collections.sort(playerResults);                //sorting scores in ascending order
-                    playerNames.clear();                            //removing names from arrayList, to match the same positions as the new/updated results
-                    for (int i = 0; i < playerResults.size(); i++) {
-                        int p = playerResults.get(i);                       //selecting key, to find value
+                Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
+                System.out.println("\nEnter input in range 1-4");
 
-                        playerNames.add(playerRecords.get(p));              //adding value of selected key into playerNames arrayList
-                    }
-
-                    switch (input) {
-                        case 1:
-                            enterScores();
-                            break;
-
-
-                        case 2:
-                            findGolfer();
-                            break;
-
-
-                        case 3:
-                            displayScores();
-                            break;
-
-                        case 4:
-                            System.out.println("\nWe hope you enjoyed your Golf session at Springfield Golf Club.");      //Exit message, when exiting program
-                            System.out.println("\tLooking forward to assist you in your next session.");
-                            System.out.println("\tExiting Program...");
-                            break;
-
-                        default:                                            //message to display, if input number not in required range
-                            System.out.println("Invalid input, try again.");
-                    }
-
+                while (!scanInput.hasNextInt()) {
+                    System.out.println("Only numeric characters are accepted. Please provide a valid input");              //error handling message for characters other than numbers
+                    scanInput.next();
                 }
-            } catch (Exception e) {
-                System.out.println("Only numeric characters are accepted. Please provide a valid input");              //error handling message for characters other than numbers
+                input = scanInput.nextInt();
+
+                Collections.sort(playerResults);                //sorting scores in ascending order
+                playerNames.clear();                            //removing names from arrayList, to match the same positions as the new/updated results
+                for (int i = 0; i < playerResults.size(); i++) {
+                    int p = playerResults.get(i);                       //selecting key, to find value
+
+                    playerNames.add(playerRecords.get(p));              //adding value of selected key into playerNames arrayList
+                }
+
+                switch (input) {
+                    case 1:
+                        enterScores();
+                        break;
+
+
+                    case 2:
+                        findGolfer();
+                        break;
+
+
+                    case 3:
+                        displayScores();
+                        break;
+
+                    case 4:
+                        System.out.println("\nWe hope you enjoyed your Golf session at Springfield Golf Club.");      //Exit message, when exiting program
+                        System.out.println("\tLooking forward to assist you in your next session.");
+                        System.out.println("\tExiting Program...");
+                        break;
+
+                    default:                                            //message to display, if input number not in required range
+                        System.out.println("Invalid input, try again.");
+                }
+
             }
 
         } while (input != 4);
@@ -76,13 +78,16 @@ public class GolfClub {
 
     private static void enterScores() {//input = 1
         int numOfGolfers = 0;
-        try {
-            Scanner scanGolfersCount = new Scanner(System.in);              //getting the count of golfers in the group
-            System.out.println("How many golfers are in this group?");
-            numOfGolfers = scanGolfersCount.nextInt();
-        } catch (Exception e) {
-            System.out.println("Only numbers are allowed! Please try again.");              //error handling message
+
+        Scanner scanGolfersCount = new Scanner(System.in);              //getting the count of golfers in the group
+        System.out.println("How many golfers are in this group?");
+
+        while (!scanGolfersCount.hasNextInt()) {
+            System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
+            scanGolfersCount.next();
         }
+        numOfGolfers = scanGolfersCount.nextInt();
+
 
         while (numOfGolfers > 0) {
             Scanner scanName = new Scanner(System.in);
@@ -116,6 +121,11 @@ public class GolfClub {
                     while (result < 18 || result > 108) {                             //result range: 18-108
                         Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
                         System.out.print("Enter the result (in range 18-108): ");
+
+                        while (!scanResult.hasNextInt()) {
+                            System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
+                            scanResult.next();
+                        }
                         result = scanResult.nextInt();
 
                     }
@@ -136,6 +146,11 @@ public class GolfClub {
                 do {                                            //result range: 18-108
                     Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
                     System.out.print("Enter the result (in range 18-108): ");
+
+                    while (!scanResult.hasNextInt()) {
+                        System.out.println("Only integer numbers are allowed! Please try again.");              //error handling message
+                        scanResult.next();
+                    }
                     result = scanResult.nextInt();
 
                 } while (result < 18 || result > 108);

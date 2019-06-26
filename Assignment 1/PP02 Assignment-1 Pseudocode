@@ -19,7 +19,7 @@ GOLF CLUB
 7.DO WHILE input!=4:
 8.    IF input == number
 9.        SET input == 0
-10.       DO WHILE input<=0 OR input>4:
+10.       DO WHILE input<=0:
 11.           PROMPT input
 12.           GET input
 13.           Sort playerResults in ascending order
@@ -99,31 +99,37 @@ enterScores
 
 28.                DO WHILE result<18 OR result>108:
 29.                    PROMPT result
-30.                    GET result
+30.                      DO WHILE result != INTEGER:
+31.                         DISPLAY "Only integer numbers are allowed! Please try again."
+                       END DO
+32.                    GET result
                    END DO
-31.                result, name in playerRecords<result,name>
-32.                result in playerResults[i]
+33.                result, name in playerRecords<result,name>
+34.                result in playerResults[i]
 
-33.                numOfGolfers -= 1
+35.                numOfGolfers -= 1
 
-34.            ELSE IF alter =='no' OR alter =='n':
-35.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
-36.                 ELSE:
-37.                    DISPLAY "Invalid input. Please try again."
+36.            ELSE IF alter =='no' OR alter =='n':
+37.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
+38.                 ELSE:
+39.                    DISPLAY "Invalid input. Please try again."
                     END IF
                END IF
            END DO
 
-38.    ELSE:
-39.        SET result=0
-40.        DO WHILE result<18 OR result>108:
-41.            PROMPT result
-42,            GET result
+40.    ELSE:
+41.        SET result=0
+42.        DO WHILE result<18 OR result>108:
+43.            PROMPT result
+44.            DO WHILE result != INTEGER:
+45.                DISPLAY "Only integer numbers are allowed! Please try again."
+               END DO
+46.            GET result
            END DO
-43.        arrLength = arrLength + 1
-44.        numOfGolfers -= 1
-45.        result, name in playerRecords<result,name>
-46.        result in playerResults[i]
+47.        arrLength = arrLength + 1
+48.        numOfGolfers -= 1
+49.        result, name in playerRecords<result,name>
+50.        result in playerResults[i]
        END IF
    END DO
     

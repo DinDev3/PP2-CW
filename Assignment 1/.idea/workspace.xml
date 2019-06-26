@@ -36,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+            <state relative-caret-position="481">
+              <caret line="150" column="44" lean-forward="true" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="95" />
               <folding>
                 <element signature="e#0#8252#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
+            <state relative-caret-position="98">
+              <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -73,9 +73,14 @@
       <find>alter</find>
       <find>scanner</find>
       <find>true</find>
-      <find>result</find>
       <find>break;</find>
       <find>break</find>
+      <find>Collections</find>
+      <find>try</find>
+      <find>result</find>
+      <find>(result &lt; 18 || result &gt; 108)</find>
+      <find>number</find>
+      <find>numbers</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,8 +93,8 @@
         <option value="$PROJECT_DIR$/../Learn1/src/test PP2 Ass1.java" />
         <option value="$PROJECT_DIR$/../test/src/test2 PP2 Ass1.java" />
         <option value="$PROJECT_DIR$/../Learn1/src/Lesson1.java" />
-        <option value="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" />
         <option value="$PROJECT_DIR$/src/GolfClub.java" />
+        <option value="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" />
       </list>
     </option>
   </component>
@@ -207,7 +212,7 @@
       <workItem from="1561316010107" duration="699000" />
       <workItem from="1561366310435" duration="199000" />
       <workItem from="1561446888049" duration="117000" />
-      <workItem from="1561525695096" duration="1836000" />
+      <workItem from="1561525695096" duration="4366000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -223,11 +228,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561526178524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed all breaks">
+      <created>1561529694392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561529694392</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53183000" />
+    <option name="totallyTimeSpent" value="55713000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -319,7 +331,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed the while true loop, to achieve marking standards." />
     <MESSAGE value="Removed one break" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed one break" />
+    <MESSAGE value="Removed all breaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed all breaks" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -370,21 +383,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+        <state relative-caret-position="481">
+          <caret line="150" column="44" lean-forward="true" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="95" />
           <folding>
             <element signature="e#0#8252#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PP02 Assignment-1 Pseudocode">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
         </state>
       </provider>
     </entry>
