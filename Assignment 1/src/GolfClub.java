@@ -26,7 +26,7 @@ public class GolfClub {
                 System.out.println("\nSelect Option:\n\t1)Enter Scores\n\t2)Find Golfer\n\t3)Display Scoreboard\n\t4)Exit Program");
 
                 Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
-                System.out.println("\nEnter input in range 1-4");
+                System.out.print("\nEnter input in range 1-4\n\t>");
 
                 while (!scanInput.hasNextInt()) {
                     System.out.println("Only numeric characters are accepted. Please provide a valid input");              //error handling message for characters other than numbers
