@@ -28,7 +28,7 @@ public class GolfClub {
 
                 System.out.print("\nEnter input in range 1-4\n\t>");
 
-                scoreValidation();
+                inputValidation();                     //validating integer input
 
                 input = scanInput.nextInt();
 
@@ -68,7 +68,7 @@ public class GolfClub {
 
             }
 
-        } while (input <1 || input>4);
+        } while (input !=4);
 
     }
 
@@ -78,14 +78,11 @@ public class GolfClub {
     private static void enterScores() {//input = 1
         int numOfGolfers = 0;
 
-        Scanner scanGolfersCount = new Scanner(System.in);              //getting the count of golfers in the group
+        //getting the count of golfers in the group
         System.out.println("How many golfers are in this group?");
 
-        while (!scanGolfersCount.hasNextInt()) {
-            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message
-            scanGolfersCount.next();      //removing incorrect input entered
-        }
-        numOfGolfers = scanGolfersCount.nextInt();
+        inputValidation();                     //validating integer input
+        numOfGolfers = scanInput.nextInt();
 
 
         while (numOfGolfers > 0) {
@@ -118,16 +115,13 @@ public class GolfClub {
                     playerResults.remove(position);                //removing old result from results array list
 
                     while (result < 18 || result > 108) {                             //result range: 18-108
-                        Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
+                        //getting result of golfer
                         System.out.print("Enter the result (in range 18-108): ");
 
-                        while (!scanResult.hasNextInt()) {
-                            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message
-                            scanResult.next();      //removing incorrect input entered
-                        }
-                        result = scanResult.nextInt();
-
+                        inputValidation();                     //validating integer input
+                        result = scanInput.nextInt();
                     }
+
                     playerRecords.put(result, name);                //updating entry
                     playerResults.add(result);
 
@@ -143,14 +137,12 @@ public class GolfClub {
             } else {
                 int result;                                 //initialing result to get the while loop to work
                 do {                                            //result range: 18-108
-                    Scanner scanResult = new Scanner(System.in);                  //getting result of golfer
+
+                    //getting result of golfer
                     System.out.print("Enter the result (in range 18-108): ");
 
-                    while (!scanResult.hasNextInt()) {
-                        System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message
-                        scanResult.next();      //removing incorrect input entered
-                    }
-                    result = scanResult.nextInt();
+                    inputValidation();                     //validating integer input
+                    result = scanInput.nextInt();
 
                 } while (result < 18 || result > 108);
                 playerRecords.put(result, name);                //new entry
@@ -201,11 +193,11 @@ public class GolfClub {
     }
 
 
-    private static void scoreValidation() {
+    private static void inputValidation() {                     //validating integer input
 
         while (!scanInput.hasNextInt()) {
             System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message for characters other than integers
-            scanInput.next();
+            scanInput.next();                                                     //removing incorrect input entered
         }
     }
 }

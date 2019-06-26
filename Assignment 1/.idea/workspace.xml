@@ -38,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+            <state relative-caret-position="451">
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,7 +209,7 @@
       <workItem from="1561525695096" duration="4537000" />
       <workItem from="1561532458897" duration="94000" />
       <workItem from="1561539089978" duration="130000" />
-      <workItem from="1561573208234" duration="1061000" />
+      <workItem from="1561573208234" duration="2370000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -253,11 +253,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561539193539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added a method; marksValidation">
+      <created>1561574562313</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561574562313</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57169000" />
+    <option name="totallyTimeSpent" value="58478000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -300,7 +307,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
-      <window_info anchor="right" id="Run" order="9" weight="0.3888889" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.34872824" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +360,8 @@
     <MESSAGE value="Gugsi threats mitigated" />
     <MESSAGE value="Added a comment" />
     <MESSAGE value="minor change to menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor change to menu" />
+    <MESSAGE value="Added a method; marksValidation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a method; marksValidation" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -413,8 +421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+        <state relative-caret-position="451">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
