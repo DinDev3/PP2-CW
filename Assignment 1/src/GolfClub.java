@@ -77,13 +77,12 @@ public class GolfClub {
 
 //-----methods-----
     private static void enterScores() {//input = 1
-        int numOfGolfers = 0;
 
         //getting the count of golfers in the group
         System.out.println("How many golfers are in this group?");
 
         inputValidation();                     //validating integer input
-        numOfGolfers = scanInput.nextInt();
+        int numOfGolfers = scanInput.nextInt();
 
 
         while (numOfGolfers > 0) {

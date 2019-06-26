@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" beforeDir="false" afterPath="$PROJECT_DIR$/PP02 Assignment-1 Pseudocode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP02 - Assignment 01/GolfClub.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GolfClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GolfClub.java" afterDir="false" />
     </list>
@@ -39,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1908">
-              <caret line="108" column="158" selection-start-line="108" selection-start-column="158" selection-end-line="108" selection-end-column="158" />
+            <state relative-caret-position="253">
+              <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,7 +222,7 @@
       <workItem from="1561525695096" duration="4537000" />
       <workItem from="1561532458897" duration="94000" />
       <workItem from="1561539089978" duration="130000" />
-      <workItem from="1561573208234" duration="4980000" />
+      <workItem from="1561573208234" duration="5272000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -281,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561575773454</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finishing touches after changing code &amp; pseudocode according to Gugsi's conditions">
+      <created>1561578328899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1561578328899</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61088000" />
+    <option name="totallyTimeSpent" value="61380000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -383,7 +389,8 @@
     <MESSAGE value="minor change to menu" />
     <MESSAGE value="Added a method; marksValidation" />
     <MESSAGE value="Applied method; marksValidation in every required place." />
-    <option name="LAST_COMMIT_MESSAGE" value="Applied method; marksValidation in every required place." />
+    <MESSAGE value="Finishing touches after changing code &amp; pseudocode according to Gugsi's conditions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing touches after changing code &amp; pseudocode according to Gugsi's conditions" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -443,8 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1908">
-          <caret line="108" column="158" selection-start-line="108" selection-start-column="158" selection-end-line="108" selection-end-column="158" />
+        <state relative-caret-position="253">
+          <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
