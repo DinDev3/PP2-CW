@@ -169,7 +169,6 @@ public class GolfClub {
             for (int n=0; n<playerNames.size();n++){                        //n is an index of the two Array Lists
                 if(playerNames.get(n).equals(name)) {
                     position = n;
-                    break;
                 }
 
             }
