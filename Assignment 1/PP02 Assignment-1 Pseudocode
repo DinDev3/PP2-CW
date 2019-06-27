@@ -7,7 +7,7 @@ GOLF CLUB
 
   BEGIN
 1.SET input=0, name="", arrLength=0
-2.SET playerRecords = <result,name>, playerResults=[]
+2.SET playerRecords = <name,result>, playerResults=[]
 3.DISPLAY "Welcome to Springfield Golf Club"
 4.DISPLAY "Select Option:
             1) Enter Scores
@@ -24,12 +24,22 @@ GOLF CLUB
 12.           GET input
 13.           Sort playerResults in ascending order
 14.           playerNames=[]
+
 15.           SET i=0
 16.           DO WHILE i<arrLength:
 17.               p = playerResults[i]
+                  SET t=0
+                  DO WHILE t<arrLength;
+                      (Map.Entry)
+                      IF p==Value of entry
+                          Key of entry in playerNames[i]
+                      END IF
+                      t=t+1
+                  END DO
 18.               playerRecords<p,> in playerNames
 19.               i=i+1
               END DO
+
 20.           IF input == 1:
 21.             enterScores
 22.           ELSE IF input == 2:
@@ -82,7 +92,6 @@ enterScores
 16.            IF alter == 'yes' OR alter == 'y':
 17.                SET result=0
 18.                SET position = 0
-29.                SET oldResult = 0
 
 20.                SET n=0
 21.                DO WHILE n<arrLength:
@@ -91,8 +100,6 @@ enterScores
 24.                    n = n+1
                    END DO
 
-25.                oldResult = playerResults[position]
-26.                playerRecords[oldResult] = <0,"">
 27.                playerResults[position] = 0
 
 28.                DO WHILE result<18 OR result>108:
@@ -100,7 +107,7 @@ enterScores
 30.                    inputValidation
 31.                    GET result
                    END DO
-32.                result, name in playerRecords<result,name>
+32.                result, name in playerRecords<name,result>
 33.                result in playerResults[i]
 
 34.                numOfGolfers -= 1
@@ -122,7 +129,7 @@ enterScores
            END DO
 45.        arrLength = arrLength + 1
 46.        numOfGolfers -= 1
-47.        result, name in playerRecords<result,name>
+47.        result, name in playerRecords<name,result>
 48.        result in playerResults[i]
        END IF
    END DO
@@ -134,18 +141,10 @@ findGolfer
 
 1.PROMPT name
 2.GET name
-
 3.IF name in playerRecords:
-4.    SET position = 0
-5.    SET n=0
-6.    DO WHILE n<arrLength:
-7.        IF playerNames[n] = name:
-8.            position = n
-9.        n = n+1
-      END DO
-10.   DISPLAY "Score: " + playerResults[position]
-11.ELSE:
-12.    DISPLAY "There is no recorded entry related to this name."
+4.   DISPLAY "Score: " + playerRecords<name, >
+5.ELSE:
+6.   DISPLAY "There is no recorded entry related to this name."
   END IF
     ---------
 
