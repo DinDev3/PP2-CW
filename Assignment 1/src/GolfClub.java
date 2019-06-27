@@ -106,7 +106,7 @@ public class GolfClub {
                     //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
                     for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
                         if (playerNames.get(n).equals(name)) {                            //can't have this as a method because name isn't globally accessible
-                            position = n;
+                            position = n;                                                       //& position needs to be returned. Can't do with void method
                         }
                     }
 
@@ -167,7 +167,7 @@ public class GolfClub {
 
             for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists
                 if (playerNames.get(n).equals(name)) {                            //can't have this as a method because name isn't globally accessible
-                    position = n;
+                    position = n;                                                       //& position needs to be returned. Can't do with void method
                 }
 
             }
