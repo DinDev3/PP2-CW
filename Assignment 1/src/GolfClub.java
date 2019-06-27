@@ -2,13 +2,10 @@
 //UOW ID - w17421047
 //IIT ID - 2018373
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class GolfClub {
-    static HashMap<Integer, String> playerRecords = new HashMap<Integer, String>();
+    static HashMap<String, Integer> playerRecords = new HashMap<>();
     static ArrayList<String> playerNames = new ArrayList<>();
     static ArrayList<Integer> playerResults = new ArrayList<>();
 
@@ -34,13 +31,18 @@ public class GolfClub {
                 input = scanInput.nextInt();
 
                 Collections.sort(playerResults);                //sorting scores in ascending order
-                playerNames.clear();                            //removing names from arrayList, to match the same positions as the new/updated results
-                for (int i = 0; i < playerResults.size(); i++) {
-                    int p = playerResults.get(i);                       //selecting key, to find value
+                playerNames.clear();                            //removing names from arrayList,
 
-                    playerNames.add(playerRecords.get(p));              //adding value of selected key into playerNames arrayList
+                //matching the names with the same positions as the new/updated results
+                for (int i = 0; i < playerResults.size(); i++) {            //considering all positions of records
+                    int p = playerResults.get(i);                   //score at the sorted position
+
+                    for (Map.Entry<String, Integer> entry : playerRecords.entrySet()) {         //checking all HashMap entries
+                        if(p==entry.getValue())
+                            playerNames.add(entry.getKey());              //adding value of selected key into playerNames arrayList
+                    }
                 }
-
+                                                   // ###################
                 switch (input) {
                     case 1:
                         enterScores();
@@ -69,13 +71,12 @@ public class GolfClub {
 
             }
 
-        } while (input !=4);
+        } while (input != 4);
 
     }
 
 
-
-//-----methods-----
+    //-----methods-----
     private static void enterScores() {//input = 1
 
         //getting the count of golfers in the group
@@ -91,7 +92,7 @@ public class GolfClub {
             String name = scanName.nextLine();
 
 
-            if (playerRecords.containsValue(name)) {
+            if (playerRecords.containsKey(name)) {
 
                 Scanner alterInput = new Scanner(System.in);                  //Asking the user whether to alter results or not
                 System.out.println("This Golfer has a previous entry! Do you wish to over-write this?");
@@ -105,14 +106,12 @@ public class GolfClub {
 
                     //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
                     for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
-                        if (playerNames.get(n).equals(name)) {                            //can't have this as a method because name isn't globally accessible
-                            position = n;                                                       //& position needs to be returned. Can't do with void method
+                        if (playerNames.get(n).equals(name)) {                          //getting matching position of score to name
+                            position = n;
                         }
                     }
 
-                    int oldResult = playerResults.get(position);
-
-                    playerRecords.remove(oldResult);               //removing old key entry
+                    //playerRecords value will be automatically replaced
                     playerResults.remove(position);                //removing old result from results array list
 
                     while (result < 18 || result > 108) {                             //result range: 18-108
@@ -123,7 +122,7 @@ public class GolfClub {
                         result = scanInput.nextInt();
                     }
 
-                    playerRecords.put(result, name);                //updating entry
+                    playerRecords.put(name, result);                //updating entry
                     playerResults.add(result);
 
                     numOfGolfers -= 1;
@@ -146,7 +145,7 @@ public class GolfClub {
                     result = scanInput.nextInt();
 
                 } while (result < 18 || result > 108);
-                playerRecords.put(result, name);                //new entry
+                playerRecords.put(name, result);                //new entry
                 playerResults.add(result);
 
                 numOfGolfers -= 1;
@@ -160,8 +159,9 @@ public class GolfClub {
         System.out.println("\nEnter a name of a Golfer");
         String name = scanName.nextLine();
 
-        if (playerRecords.containsValue(name)) {
+        if (playerRecords.containsKey(name)) {
 
+            /*
             //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
             int position = 0;                                       //resetting position
 
@@ -171,8 +171,9 @@ public class GolfClub {
                 }
 
             }
+            */
 
-            System.out.println("Score: " + playerResults.get(position));
+            System.out.println("Score: " + playerRecords.get(name));
         } else {
             System.out.println("There is no recorded entry related to this name.");
         }
