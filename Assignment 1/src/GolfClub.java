@@ -37,12 +37,12 @@ public class GolfClub {
                 for (int i = 0; i < playerResults.size(); i++) {            //considering all positions of records
                     int p = playerResults.get(i);                   //score at the sorted position
 
-                    for (Map.Entry<String, Integer> entry : playerRecords.entrySet()) {         //checking all HashMap entries
+                    for (Map.Entry<String, Integer> entry : playerRecords.entrySet()) {         //checking for all HashMap entries
                         if(p==entry.getValue())
                             playerNames.add(entry.getKey());              //adding value of selected key into playerNames arrayList
                     }
                 }
-                                                   // ###################
+
                 switch (input) {
                     case 1:
                         enterScores();
@@ -160,24 +160,11 @@ public class GolfClub {
         String name = scanName.nextLine();
 
         if (playerRecords.containsKey(name)) {
-
-            /*
-            //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
-            int position = 0;                                       //resetting position
-
-            for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists
-                if (playerNames.get(n).equals(name)) {                            //can't have this as a method because name isn't globally accessible
-                    position = n;                                                       //& position needs to be returned. Can't do with void method
-                }
-
-            }
-            */
-
             System.out.println("Score: " + playerRecords.get(name));
+
         } else {
             System.out.println("There is no recorded entry related to this name.");
         }
-
     }
 
 
