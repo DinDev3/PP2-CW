@@ -114,7 +114,7 @@ enterScores
 31.            ELSE IF alter =='no' OR alter =='n':
 32.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
 33.                 ELSE:
-34.                    DISPLAY "Invalid input. Please try again."
+34.                    DISPLAY "Invalid input."
                     END IF
                END IF
            END DO

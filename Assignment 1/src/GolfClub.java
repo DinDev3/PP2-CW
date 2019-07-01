@@ -134,7 +134,7 @@ public class GolfClub {
                     System.out.println("The record for Golfer, " + name + " wasn't changed.");
 
                 } else {
-                    System.out.println("Invalid input. Please try again.");
+                    System.out.println("Invalid input.");
                 }
 
             } else {
