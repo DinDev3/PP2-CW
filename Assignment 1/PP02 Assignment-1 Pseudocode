@@ -28,37 +28,37 @@ GOLF CLUB
 15.           SET i=0
 16.           DO WHILE i<arrLength:
 17.               p = playerResults[i]
-                  SET t=0
-                  DO WHILE t<arrLength;
-                      (Map.Entry)
-                      IF p==Value of entry
-                          Key of entry in playerNames[i]
+18.               SET t=0
+19.               DO WHILE t<arrLength;
+20.                   (Map.Entry)
+21.                   IF p==Value of entry
+22.                      Key of entry in playerNames[i]
                       END IF
-                      t=t+1
+23.                   t=t+1
                   END DO
-18.               playerRecords<p,> in playerNames
-19.               i=i+1
+24.               playerRecords<p,> in playerNames
+25.               i=i+1
               END DO
 
-20.           IF input == 1:
-21.             enterScores
-22.           ELSE IF input == 2:
-23.                   findGolfer
-24.                ELSE IF input == 3:
-25.                       displayScores
-26.                     ELSE IF input ==4:
-27.                             DISPLAY "We hope you enjoyed your Golf session at Springfield Golf Club.
+26.           IF input == 1:
+27.             enterScores
+28.           ELSE IF input == 2:
+29.                   findGolfer
+30.                ELSE IF input == 3:
+31.                       displayScores
+32.                     ELSE IF input ==4:
+33.                             DISPLAY "We hope you enjoyed your Golf session at Springfield Golf Club.
                                           Looking forward to assist you in your next session.
                                           Exiting Program..."
-28.                          ELSE:
-29.                             DISPLAY Invalid input!!! Reenter..."
+34.                          ELSE:
+35.                             DISPLAY Invalid input!!! Reenter..."
                              END IF
                         ELSE IF
                    END IF
               END IF
           END DO
-30.     ELSE:
-31.         DISPLAY "Only numeric characters are accepted. Please provide a valid input"
+36.     ELSE:
+37.         DISPLAY "Only numeric characters are accepted. Please provide a valid input"
         END IF
   END DO
   END    
@@ -92,46 +92,45 @@ enterScores
 16.            IF alter == 'yes' OR alter == 'y':
 17.                SET result=0
 18.                SET position = 0
+19.                SET n=0
 
-20.                SET n=0
-21.                DO WHILE n<arrLength:
-22.                    IF playerNames[n] = name:
-23.                        position = n
-24.                    n = n+1
+20.                DO WHILE n<arrLength:
+21.                    IF playerNames[n] = name:
+22.                        position = n
+23.                    n = n+1
                    END DO
 
-27.                playerResults[position] = 0
+24.                playerResults[position] = 0
 
-28.                DO WHILE result<18 OR result>108:
-29.                    PROMPT result
-30.                    inputValidation
-31.                    GET result
+25.                DO WHILE result<18 OR result>108:
+26.                    PROMPT result
+27.                    inputValidation
+28.                    GET result
                    END DO
-32.                result, name in playerRecords<name,result>
-33.                result in playerResults[i]
+29.                result, name in playerRecords<name,result>
+30.                result in playerResults[i]
 
-34.                numOfGolfers -= 1
 
-35.            ELSE IF alter =='no' OR alter =='n':
-36.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
-37.                 ELSE:
-38.                    DISPLAY "Invalid input. Please try again."
+31.            ELSE IF alter =='no' OR alter =='n':
+32.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
+33.                 ELSE:
+34.                    DISPLAY "Invalid input. Please try again."
                     END IF
                END IF
            END DO
 
-39.    ELSE:
-40.        SET result=0
-41.        DO WHILE result<18 OR result>108:
-42.            PROMPT result
-43.            inputValidation
-44.            GET result
+35.    ELSE:
+36.        SET result=0
+37.        DO WHILE result<18 OR result>108:
+38.            PROMPT result
+39.            inputValidation
+40.            GET result
            END DO
-45.        arrLength = arrLength + 1
-46.        numOfGolfers -= 1
-47.        result, name in playerRecords<name,result>
-48.        result in playerResults[i]
+41.        arrLength = arrLength + 1
+42.        result, name in playerRecords<name,result>
+43.        result in playerResults[i]
        END IF
+44.    numOfGolfers -= 1
    END DO
     
 ---------

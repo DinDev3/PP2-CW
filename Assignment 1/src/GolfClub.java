@@ -2,7 +2,11 @@
 //UOW ID - w17421047
 //IIT ID - 2018373
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class GolfClub {
     static HashMap<String, Integer> playerRecords = new HashMap<>();
@@ -125,7 +129,6 @@ public class GolfClub {
                     playerRecords.put(name, result);                //updating entry
                     playerResults.add(result);
 
-                    numOfGolfers -= 1;
 
                 } else if (alter.equals("no") || alter.equals("n")) {
                     System.out.println("The record for Golfer, " + name + " wasn't changed.");
@@ -148,8 +151,8 @@ public class GolfClub {
                 playerRecords.put(name, result);                //new entry
                 playerResults.add(result);
 
-                numOfGolfers -= 1;
             }
+            numOfGolfers -= 1;
         }
     }
 
