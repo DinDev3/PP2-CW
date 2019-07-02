@@ -1,13 +1,14 @@
 Dinuka Piyadigama
 UOW ID - w17421047
 IIT ID - 2018373
-
+                                                                        //!!!!!!!Re-number eevrything!!!!!!!!//
 PSEUDOCODE for PP02 Assignment-1
 GOLF CLUB
 
   BEGIN
 1.SET input=0, name="", arrLength=0
 2.SET playerRecords = <name,result>, playerResults=[]
+2.SET deletedRecords = <name,result>, playerResults=[]
 3.DISPLAY "Welcome to Springfield Golf Club"
 4.DISPLAY "Select Option:
             1) Enter Scores
@@ -16,6 +17,7 @@ GOLF CLUB
             4) Exit Program"
 5.PROMPT input
 6.GET input
+ .inputValidation
 7.DO WHILE input!=4:
 8.    IF input == number
 9.        SET input == 0
@@ -65,9 +67,111 @@ GOLF CLUB
     
     
  
-    
----------
+    ------------------------------------------methods----------------------------------------------
+
+
+    ---~~~main menu methods~~~---
+
 enterScores
+
+4.DISPLAY "Enter Scores:
+            1) Enter Details
+            2) Edit Records
+            3) Delete Records
+            4) Restore Records
+            5) Exit Program"
+5.PROMPT input
+6.GET input
+  inputValidation
+7.DO WHILE (input<1 OR input>5):
+8.    IF input == number
+26.           IF input == 1:
+27.             enterDetails
+28.           ELSE IF input == 2:
+29.                   editData
+30.                ELSE IF input == 3:
+31.                       deleteData
+32.                     ELSE IF input ==4:
+33.                             restoreData
+34.                          ELSE:
+35.                             DISPLAY Invalid input!!! Reenter..."
+                             END IF
+                        ELSE IF
+                   END IF
+              END IF
+        
+      ELSE 
+          
+      END IF
+  END DO
+
+
+---------
+
+
+findGolfer
+
+1.PROMPT name
+2.GET name
+3.IF name in playerRecords:
+4.   DISPLAY "Score: " + playerRecords<name, >
+5.ELSE:
+6.   DISPLAY "There is no recorded entry related to this name."
+  END IF
+
+    ---------
+
+    
+displayScores
+
+1.SET index[i] = 0
+2.DO WHILE i<arrLength:
+3.    DISPLAY playerNames[i]"       "+ playerResults[i]
+4.    i = i + 1
+  END DO
+
+    ---------
+
+
+inputValidation
+
+1.DO WHILE scanInput != INTEGER:
+2.    DISPLAY "Only integer numbers are allowed! Please try again."
+3.    CLEAR scanInput
+  END DO
+
+    ---------
+
+
+changeScore
+
+17.SET result=0
+18.SET position = 0
+19.SET n=0
+
+20.DO WHILE n<arrLength:
+21.   IF playerNames[n] = name:
+22.       position = n
+      END IF
+23.   n = n+1
+  .END DO
+
+24.playerResults[position] = 0
+
+25.DO WHILE result<18 OR result>108:
+26.   PROMPT result
+27.   inputValidation
+28.   GET result
+   END DO
+29.result, name in playerRecords<name,result>
+30.result in playerResults[i]
+
+    ---------
+
+    ---~~~sub menu methods~~~---
+
+
+enterDetails
 
 1.SET numOfGolfers=0
 2.DO WHILE numOfGolfers=0 OR numOfGolfers != number:
@@ -90,25 +194,7 @@ enterScores
 15.            GET alter
 
 16.            IF alter == 'yes' OR alter == 'y':
-17.                SET result=0
-18.                SET position = 0
-19.                SET n=0
-
-20.                DO WHILE n<arrLength:
-21.                    IF playerNames[n] = name:
-22.                        position = n
-23.                    n = n+1
-                   END DO
-
-24.                playerResults[position] = 0
-
-25.                DO WHILE result<18 OR result>108:
-26.                    PROMPT result
-27.                    inputValidation
-28.                    GET result
-                   END DO
-29.                result, name in playerRecords<name,result>
-30.                result in playerResults[i]
+                  changeScore
 
 
 31.            ELSE IF alter =='no' OR alter =='n':
@@ -127,41 +213,68 @@ enterScores
 40.            GET result
            END DO
 41.        arrLength = arrLength + 1
-42.        result, name in playerRecords<name,result>
+42.        name, result in playerRecords<name,result>
 43.        result in playerResults[i]
        END IF
 44.    numOfGolfers -= 1
    END DO
-    
----------
+
+    ---------
 
 
-findGolfer
+editData
 
-1.PROMPT name
-2.GET name
-3.IF name in playerRecords:
-4.   DISPLAY "Score: " + playerRecords<name, >
-5.ELSE:
-6.   DISPLAY "There is no recorded entry related to this name."
+1.displayScores
+2.DISPLAY "Enter a name that you want to edit the score of: "
+3.PROMPT name
+4.GET name
+.IF name in playerRecords:
+.   changeScore
+.ELSE:
+.   DISPLAY "There is no record related to this name."
   END IF
-    ---------
-
-    
-displayScores
-
-1.SET index[i] = 0
-2.DO WHILE i<arrLength:
-3.    DISPLAY playerNames[i]"       "+ playerResults[i]
-4.    i = i + 1
-  END DO
 
     ---------
 
 
-inputValidation
+deleteData
 
-1.DO WHILE scanInput != INTEGER:
-2.    DISPLAY "Only integer numbers are allowed! Please try again."
-3.    CLEAR scanInput
-  END DO
+1.displayScores
+2.DISPLAY "Enter a name that you want to delete the record of: "
+.IF name in playerRecords:
+.   name, playerRecords<name,result> in deletedRecords<name, result>
+.   < , > in playerRecords<name, >
+.   DO WHILE n<arrLength:
+21.    IF playerNames[n] = name:
+22.       position = n
+23.       n = n+1
+        END IF
+    END DO
+
+24.playerResults[position] = 0
+
+.  DISPLAY "The record for, " + name + " was deleted"
+
+.ELSE:
+.   DISPLAY "There is no record related to this name."
+  END IF
+
+    ---------
+
+
+restoreData
+
+1.DISPLAY "Enter a name that you want to restore the record of: "
+2.PROMPT name
+3.GET name
+4.IF <name , > in deletedRecords<, >
+5.    playerRecords<name, > remove from playerResults[]
+6.    deletedRecords<name, > in playerResults[]
+
+7.    <name, deletedRecords<name, >> in playerRecords<, >
+
+8.    <,> in deletedRecords <name,>
+9.    DISPLAY "The record for player, " + name + " was restored."
+
+ .ELSE
+10.   DISPLAY "There is no deleted record related to this name."
