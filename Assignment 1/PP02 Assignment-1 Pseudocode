@@ -1,7 +1,7 @@
 Dinuka Piyadigama
 UOW ID - w17421047
 IIT ID - 2018373
-                                                                        //!!!!!!!Re-number eevrything!!!!!!!!//
+
 PSEUDOCODE for PP02 Assignment-1
 GOLF CLUB
 
@@ -17,50 +17,50 @@ GOLF CLUB
             4) Exit Program"
 5.PROMPT input
 6.GET input
- .inputValidation
-7.DO WHILE input!=4:
-8.    IF input == number
-9.        SET input == 0
-10.       DO WHILE input<=0:
-11.           PROMPT input
-12.           GET input
-13.           Sort playerResults in ascending order
-14.           playerNames=[]
+7.inputValidation
+8.DO WHILE input!=4:
+9.    IF input == number
+10.        SET input == 0
+11.       DO WHILE input<=0:
+12.           PROMPT input
+13.           GET input
+14.           Sort playerResults in ascending order
+15.           playerNames=[]
 
-15.           SET i=0
-16.           DO WHILE i<arrLength:
-17.               p = playerResults[i]
-18.               SET t=0
-19.               DO WHILE t<arrLength;
-20.                   (Map.Entry)
-21.                   IF p==Value of entry
-22.                      Key of entry in playerNames[i]
+16.           SET i=0
+17.           DO WHILE i<arrLength:
+18.               p = playerResults[i]
+19.               SET t=0
+20.               DO WHILE t<arrLength;
+21.                   (Map.Entry)
+22.                   IF p==Value of entry
+23.                      Key of entry in playerNames[i]
                       END IF
-23.                   t=t+1
+24.                   t=t+1
                   END DO
-24.               playerRecords<p,> in playerNames
-25.               i=i+1
+25.               playerRecords<p,> in playerNames
+26.               i=i+1
               END DO
 
-26.           IF input == 1:
-27.             enterScores
-28.           ELSE IF input == 2:
-29.                   findGolfer
-30.                ELSE IF input == 3:
-31.                       displayScores
-32.                     ELSE IF input ==4:
-33.                             DISPLAY "We hope you enjoyed your Golf session at Springfield Golf Club.
+27.           IF input == 1:
+28.             enterScores
+29.           ELSE IF input == 2:
+30.                   findGolfer
+31.                ELSE IF input == 3:
+32.                       displayScores
+33.                     ELSE IF input ==4:
+34.                             DISPLAY "We hope you enjoyed your Golf session at Springfield Golf Club.
                                           Looking forward to assist you in your next session.
                                           Exiting Program..."
-34.                          ELSE:
-35.                             DISPLAY Invalid input!!! Reenter..."
+35.                          ELSE:
+36.                             DISPLAY Invalid input!!! Reenter..."
                              END IF
-                        ELSE IF
+                        END IF
                    END IF
               END IF
           END DO
-36.     ELSE:
-37.         DISPLAY "Only numeric characters are accepted. Please provide a valid input"
+37.     ELSE:
+38.         DISPLAY "Only numeric characters are accepted. Please provide a valid input"
         END IF
   END DO
   END    
@@ -74,35 +74,32 @@ GOLF CLUB
 
 enterScores
 
-4.DISPLAY "Enter Scores:
+1.DISPLAY "Enter Scores:
             1) Enter Details
             2) Edit Records
             3) Delete Records
             4) Restore Records
             5) Exit Program"
-5.PROMPT input
-6.GET input
-  inputValidation
-7.DO WHILE (input<1 OR input>5):
-8.    IF input == number
-26.           IF input == 1:
-27.             enterDetails
-28.           ELSE IF input == 2:
-29.                   editData
-30.                ELSE IF input == 3:
-31.                       deleteData
-32.                     ELSE IF input ==4:
-33.                             restoreData
-34.                          ELSE:
-35.                             DISPLAY Invalid input!!! Reenter..."
-                             END IF
-                        ELSE IF
+2.PROMPT input
+3.GET input
+4.inputValidation
+5.DO WHILE (input<1 OR input>5):
+6.    IF input == number
+7.           IF input == 1:
+8.             enterDetails
+9.           ELSE IF input == 2:
+10.                   editData
+11.                ELSE IF input == 3:
+12.                        deleteData
+13.                     ELSE IF input ==4:
+14.                              restoreData
+15.                           ELSE:
+16.                              DISPLAY Invalid input!!! Reenter..."
+                              END IF
+                        END IF
                    END IF
-              END IF
-        
-      ELSE 
-          
-      END IF
+              END IF      
+       END IF
   END DO
 
 
@@ -168,7 +165,9 @@ changeScore
 
     ---------
 
+
     ---~~~sub menu methods~~~---
+
 
 
 enterDetails
@@ -241,23 +240,23 @@ deleteData
 
 1.displayScores
 2.DISPLAY "Enter a name that you want to delete the record of: "
-.IF name in playerRecords:
-.   name, playerRecords<name,result> in deletedRecords<name, result>
-.   < , > in playerRecords<name, >
-.   DO WHILE n<arrLength:
-21.    IF playerNames[n] = name:
-22.       position = n
-23.       n = n+1
+3.IF name in playerRecords:
+4.   name, playerRecords<name,result> in deletedRecords<name, result>
+5.   < , > in playerRecords<name, >
+6.   DO WHILE n<arrLength:
+7.      IF playerNames[n] == name
+8.        position = n
+9.        n = n+1
         END IF
-    END DO
+     END DO
 
-24.playerResults[position] = 0
+10.  playerResults[position] = 0
 
-.  DISPLAY "The record for, " + name + " was deleted"
+11.  DISPLAY "The record for, " + name + " was deleted"
 
-.ELSE:
-.   DISPLAY "There is no record related to this name."
-  END IF
+12.ELSE:
+13.   DISPLAY "There is no record related to this name."
+   END IF
 
     ---------
 
@@ -276,5 +275,5 @@ restoreData
 8.    <,> in deletedRecords <name,>
 9.    DISPLAY "The record for player, " + name + " was restored."
 
- .ELSE
-10.   DISPLAY "There is no deleted record related to this name."
+10.ELSE
+11.   DISPLAY "There is no deleted record related to this name."
