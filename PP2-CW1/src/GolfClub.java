@@ -113,11 +113,11 @@ public class GolfClub {
                     break;
 
                 case 3:
-                    deleteData();
+                    deleteData();                       //used to delete record
                     break;
 
                 case 4:
-                    restoreData();
+                    restoreData();                      //can restore a deleted data record
                     break;
 
                 case 5:
@@ -170,7 +170,7 @@ public class GolfClub {
     }
 
 
-    private static void changeScore(String enteredName) {
+    private static void changeScore(String enteredName) {               //changes the score for a chosen name
 
         int result = 0;                                 //resetting result that will be input, if the user wishes to change it
         int position = 0;                                       //resetting position
@@ -201,7 +201,7 @@ public class GolfClub {
     //---~~~sub menu methods~~~---
 
 
-    private static void enterDetails() {
+    private static void enterDetails() {                    //used to enter names and scores
         //getting the count of golfers in the group
         System.out.println("How many golfers are in this group?");
 
@@ -254,7 +254,7 @@ public class GolfClub {
     }
 
 
-    private static void editData() {
+    private static void editData() {                        //edit scores of existing records
         displayScores();                //show the user the available records
 
         System.out.println("Enter a name that you want to edit the score of: ");
@@ -269,7 +269,7 @@ public class GolfClub {
     }
 
 
-    private static void deleteData() {
+    private static void deleteData() {                      //delete chosen record
         displayScores();
 
         System.out.println("Enter a name that you want to delete the record of: ");
@@ -300,7 +300,7 @@ public class GolfClub {
     }
 
 
-    private static void restoreData() {
+    private static void restoreData() {                     //can restore a deleted data record
         System.out.println("Enter a name that you want to restore the record of: ");
         String name = scanName.nextLine();
 
