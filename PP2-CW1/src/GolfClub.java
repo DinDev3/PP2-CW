@@ -7,8 +7,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Stack;
 
-public class GolfClub {
+public abstract class GolfClub {
     static HashMap<String, Integer> playerRecords = new HashMap<>();
     static ArrayList<String> playerNames = new ArrayList<>();
     static ArrayList<Integer> playerResults = new ArrayList<>();
@@ -17,6 +18,13 @@ public class GolfClub {
 
     static Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
     static Scanner scanName = new Scanner(System.in);                   //getting name input
+
+    static Stack<String> stackUndoName = new Stack<>();                        //stack used for undo name of Golfer
+    static Stack<Integer> stackUndoScore = new Stack<>();                      //stack used for undo score of Golfer
+    static Stack<String> stackRedoName = new Stack<>();                        //stack used for redo name of Golfer
+    static Stack<Integer> stackRedoScore = new Stack<>();                      //stack used for redo score of Golfer
+    static Stack<String> stackCommand = new Stack<>();                         //stack used to identify process
+
 
     public static void main(String[] args) {
 
@@ -95,9 +103,10 @@ public class GolfClub {
             inputSub = 0;                                          //resetting input
 
 
-            System.out.println("\n~Enter Scores~\n\t1) Enter Details\n\t2) Edit Records\n\t3) Delete Records\n\t4) Restore Records\n\t5) Back to Main Menu");
+            System.out.println("\n~Enter Scores~\n\t1) Enter Details\n\t2) Edit Records\n\t3) Delete Records\n\t4) Restore Records" +
+                    "\n\t5) Undo\n\t6) Redo\n\t7) Back to Main Menu");
 
-            System.out.print("\nEnter input in range 1-5\n\t>");
+            System.out.print("\nEnter input in range 1-7\n\t>");
 
             inputValidation();                     //validating integer input
 
@@ -113,21 +122,29 @@ public class GolfClub {
                     break;
 
                 case 3:
-                    deleteData();                       //used to delete record
+                    deleteData();
                     break;
 
                 case 4:
-                    restoreData();                      //can restore a deleted data record
+                    restoreData();
                     break;
 
                 case 5:
+                    undo();
+                    break;
+
+                case 6:
+                    redo();
+                    break;
+
+                case 7:
                     break;
 
                 default:                                            //message to display, if input number not in required range
                     System.out.println("Invalid input!!! Reenter...");
             }
 
-        } while (inputSub < 1 || inputSub > 5);
+        } while (inputSub < 1 || inputSub > 7);
 
     }
 
@@ -158,6 +175,7 @@ public class GolfClub {
 
             System.out.println("-----------------------------------------");                               //for clarity of output
         }
+        //System.out.println("stack: "+stackUndoName.peek());       //used to check whether stack contains required data
     }
 
 
@@ -170,7 +188,7 @@ public class GolfClub {
     }
 
 
-    private static void changeScore(String enteredName) {               //changes the score for a chosen name
+    private static void changeScore(String enteredName) {
 
         int result = 0;                                 //resetting result that will be input, if the user wishes to change it
         int position = 0;                                       //resetting position
@@ -195,13 +213,14 @@ public class GolfClub {
 
         playerRecords.put(enteredName, result);                //updating entry
         playerResults.add(result);
+
+        stackUndoScore.push(result);
+        stackCommand.push("edit");
     }
 
 
     //---~~~sub menu methods~~~---
-
-
-    private static void enterDetails() {                    //used to enter names and scores
+    private static void enterDetails() {
         //getting the count of golfers in the group
         System.out.println("How many golfers are in this group?");
 
@@ -226,6 +245,7 @@ public class GolfClub {
                 if (alter.equals("yes") || alter.equals("y")) {
 
                     changeScore(name);                              //change the score of the record related to this name
+                    stackUndoName.push(name);
 
                 } else if (alter.equals("no") || alter.equals("n")) {
                     System.out.println("The record for Golfer, " + name + " wasn't changed.");
@@ -248,19 +268,25 @@ public class GolfClub {
                 playerRecords.put(name, result);                //new entry
                 playerResults.add(result);
 
+                //updating undo stacks
+                stackCommand.push("add");
+                stackUndoName.push(name);
+                stackUndoScore.push(result);
+
             }
             numOfGolfers -= 1;
         }
     }
 
 
-    private static void editData() {                        //edit scores of existing records
+    private static void editData() {
         displayScores();                //show the user the available records
 
         System.out.println("Enter a name that you want to edit the score of: ");
         String name = scanName.nextLine();
         if (playerRecords.containsKey(name)) {
             changeScore(name);                              //change the score of the record related to this name
+            stackUndoName.push(name);
 
         } else {
             System.out.println("There is no record related to this name");
@@ -269,7 +295,7 @@ public class GolfClub {
     }
 
 
-    private static void deleteData() {                      //delete chosen record
+    private static void deleteData() {
         displayScores();
 
         System.out.println("Enter a name that you want to delete the record of: ");
@@ -289,10 +315,17 @@ public class GolfClub {
                 }
             }
 
-            //playerRecords value will be automatically replaced
+            //updating undo stacks
+            stackCommand.push("delete");
+            stackUndoName.push(name);
+            stackUndoScore.push(playerResults.get(position));
+
+
+            //playerRecords value will be automatically removed
             playerResults.remove(position);                //removing old result from results array list
 
             System.out.println("The record for, " + name + " was deleted");
+
 
         } else {
             System.out.println("There is no recorded entry related to this name.");
@@ -300,11 +333,16 @@ public class GolfClub {
     }
 
 
-    private static void restoreData() {                     //can restore a deleted data record
+    private static void restoreData() {
         System.out.println("Enter a name that you want to restore the record of: ");
         String name = scanName.nextLine();
 
         if (deletedRecords.containsKey(name)) {
+            //updating undo stacks
+            stackCommand.push("restore");
+            stackUndoName.push(name);
+            stackUndoScore.push(deletedRecords.get(name));
+
 
             //changing in playerResults
             playerResults.remove(playerRecords.get(name));                //removing previously changed result from playerResults array list
@@ -320,4 +358,77 @@ public class GolfClub {
         }
     }
 
+
+    private static void undo() {
+
+        String undoName = stackUndoName.pop();
+        int undoScore = stackUndoScore.pop();
+        String undoCommand = stackCommand.pop();
+
+        stackRedoName.push(undoName);
+        stackRedoScore.push(undoScore);
+        stackCommand.push(undoCommand);
+
+        int position = 0;                               //to be used later in switch
+
+        switch (undoCommand) {                     //to check which process happened last
+            case "add":                             //undoing adding of record
+            case "restore":                         //undoing restoring of deleted record
+                //removing the records
+                playerRecords.remove(undoName);
+
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(undoName)) {                          //getting matching position of score to name
+                        position = n;
+                        playerNames.remove(position);               //removing name from playerNames arrayList
+                    }
+                }
+                playerResults.remove(position);         //removing score from playerResults arrayList
+
+                break;
+
+            case "edit":                            //undoing editing of record
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(undoName)) {                          //getting matching position of score to name
+                        position = n;
+                    }
+                }
+                playerResults.remove(position);         //removing score from playerResults arrayList
+
+                playerRecords.put(undoName, undoScore);
+                playerResults.add(undoScore);
+                break;
+
+            case "delete":                          //undoing deleting of record
+                //adding back the records
+                if (!playerRecords.containsKey(undoName)) {         //making sure that records aren't duplicated
+                    playerRecords.put(undoName, undoScore);
+                    playerResults.add(undoScore);
+                    playerNames.add(undoName);
+                }
+                break;
+
+            default:
+                System.out.println("Unable to undo, no change of data has happened before.");
+
+        }
+
+
+    }
+
+    private static void redo() {
+        /*
+        String redoName = stackRedoName.pop();
+        int redoScore = stackRedoScore.pop();
+
+        stackUndoName.push(redoName);
+        stackUndoScore.push(redoScore);
+
+        //adding back the records
+        playerRecords.put(redoName,redoScore);
+        playerResults.add(redoScore);
+        playerNames.add(redoName);
+*/
+
+    }
 }
