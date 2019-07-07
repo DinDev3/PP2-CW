@@ -23,8 +23,10 @@ public abstract class GolfClub {
     static Stack<Integer> stackUndoScore = new Stack<>();                      //stack used for undo score of Golfer
     static Stack<String> stackRedoName = new Stack<>();                        //stack used for redo name of Golfer
     static Stack<Integer> stackRedoScore = new Stack<>();                      //stack used for redo score of Golfer
-    static Stack<String> stackCommand = new Stack<>();                         //stack used to identify process
+    static Stack<String> stackUndoCommand = new Stack<>();                     //stack used to identify process to undo
+    static Stack<String> stackRedoCommand = new Stack<>();                     //stack used to identify process to redo
 
+    static int changedScore;                   //used to redo, undone editing of score
 
     public static void main(String[] args) {
 
@@ -51,6 +53,7 @@ public abstract class GolfClub {
                 for (int i = 0; i < playerResults.size(); i++) {            //considering all positions of records
                     int p = playerResults.get(i);                   //score at the sorted position
 
+                    //if same score is entered in this method, things get messed up when displaying an deleting (some names won't match scores)
                     for (Map.Entry<String, Integer> entry : playerRecords.entrySet()) {         //checking for all HashMap entries
                         if (p == entry.getValue())
                             playerNames.add(entry.getKey());              //adding value of selected key into playerNames arrayList
@@ -213,7 +216,7 @@ public abstract class GolfClub {
 
         //updating undo stacks
         stackUndoScore.push(playerRecords.get(enteredName));
-        stackCommand.push("edit");
+        stackUndoCommand.push("edit");
 
         playerRecords.put(enteredName, result);                //updating entry
         playerResults.add(result);
@@ -271,7 +274,7 @@ public abstract class GolfClub {
                 playerResults.add(result);
 
                 //updating undo stacks
-                stackCommand.push("add");
+                stackUndoCommand.push("add");
                 stackUndoName.push(name);
                 stackUndoScore.push(result);
 
@@ -318,7 +321,7 @@ public abstract class GolfClub {
             }
 
             //updating undo stacks
-            stackCommand.push("delete");
+            stackUndoCommand.push("delete");
             stackUndoName.push(name);
             stackUndoScore.push(playerResults.get(position));
 
@@ -341,7 +344,7 @@ public abstract class GolfClub {
 
         if (deletedRecords.containsKey(name)) {
             //updating undo stacks
-            stackCommand.push("restore");
+            stackUndoCommand.push("restore");
             stackUndoName.push(name);
             stackUndoScore.push(deletedRecords.get(name));
 
@@ -365,13 +368,16 @@ public abstract class GolfClub {
 
         String undoName = stackUndoName.pop();
         int undoScore = stackUndoScore.pop();
-        String undoCommand = stackCommand.pop();
+        String undoCommand = stackUndoCommand.pop();
 
         stackRedoName.push(undoName);
         stackRedoScore.push(undoScore);
-        stackCommand.push(undoCommand);
+        stackRedoCommand.push(undoCommand);
 
         int position = 0;                               //to be used later in switch
+
+        /*if multiple undos are required, numOfGolfers can be assigned to a variable and the switch statement can
+          be looped till all the entries are removed*/
 
         switch (undoCommand) {                     //to check which process happened last
             case "add":                             //undoing adding of record
@@ -397,6 +403,8 @@ public abstract class GolfClub {
                 }
                 playerResults.remove(position);         //removing score from playerResults arrayList
 
+                changedScore = playerRecords.get(undoName);         //used, if required to redo
+
                 playerRecords.put(undoName, undoScore);
                 playerResults.add(undoScore);
                 break;
@@ -419,18 +427,60 @@ public abstract class GolfClub {
     }
 
     private static void redo() {
-        /*
+
         String redoName = stackRedoName.pop();
         int redoScore = stackRedoScore.pop();
+        String redoCommand = stackRedoCommand.pop();
 
+        //adding back to the undo stack. If required to undo again, can be done
         stackUndoName.push(redoName);
         stackUndoScore.push(redoScore);
+        stackUndoCommand.push(redoCommand);
 
-        //adding back the records
-        playerRecords.put(redoName,redoScore);
-        playerResults.add(redoScore);
-        playerNames.add(redoName);
-*/
+        int position = 0;                               //to be used later in switch
 
+        switch (redoCommand) {                     //to check which process happened last
+            case "add":                             //undoing adding of record
+            case "restore":                         //undoing restoring of deleted record
+                //adding back the records
+                playerRecords.put(redoName, redoScore);
+                playerResults.add(redoScore);
+                playerNames.add(redoName);
+
+                break;
+
+            case "edit":                            //changing record back to edited score
+
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(redoName)) {                          //getting matching position of score to name
+                        position = n;
+                    }
+                }
+                playerResults.remove(position);         //removing current score from playerResults arrayList
+
+
+                playerRecords.put(redoName, changedScore);
+                playerResults.add(changedScore);
+                break;
+
+            case "delete":                          //undoing deleting of record
+                //removing the records
+                playerRecords.remove(redoName);
+
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(redoName)) {                          //getting matching position of score to name
+                        position = n;
+                        playerNames.remove(position);               //removing name from playerNames arrayList
+                    }
+                }
+                playerResults.remove(position);         //removing score from playerResults arrayList
+
+                break;
+
+
+            default:
+                System.out.println("Unable to redo, undo action hasn't been used.");
+
+        }
     }
 }
