@@ -5,6 +5,10 @@ IIT ID - 2018373
 PSEUDOCODE for PP02 Assignment-1
 GOLF CLUB
 
+*delete, restore options included in Pseudocode.
+ undo, redo options aren't included in Pseudocode,
+    but included in code*
+
   BEGIN
 1.SET input=0, name="", arrLength=0
 2.SET playerRecords = <name,result>, playerResults=[]
