@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GolfClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GolfClub.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,10 +36,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="215" column="34" lean-forward="true" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
+            <state relative-caret-position="109">
+              <caret line="362" column="9" selection-start-line="362" selection-start-column="9" selection-end-line="362" selection-end-column="9" />
               <folding>
-                <element signature="e#0#16965#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -102,20 +100,16 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -213,7 +207,7 @@
       <workItem from="1562266963506" duration="45000" />
       <workItem from="1562435230198" duration="259000" />
       <workItem from="1562492899975" duration="748000" />
-      <workItem from="1562522678095" duration="1019000" />
+      <workItem from="1562522678095" duration="3400000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -348,11 +342,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562492942526</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fixed bug with edit-undo">
+      <created>1562523917820</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1562523917820</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added redo functionality">
+      <created>1562527816159</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1562527816159</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82608000" />
+    <option name="totallyTimeSpent" value="84989000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -395,7 +403,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
-      <window_info anchor="right" id="Run" order="9" weight="0.41566265" />
+      <window_info anchor="right" id="Run" order="9" weight="0.44511378" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +469,9 @@
     <MESSAGE value="Gugsi's new requirements added. (delete and restore)" />
     <MESSAGE value="Added methods action defining comments" />
     <MESSAGE value="Added undo facility to code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added undo facility to code" />
+    <MESSAGE value="Fixed bug with edit-undo" />
+    <MESSAGE value="Added redo functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added redo functionality" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -521,10 +531,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="215" column="34" lean-forward="true" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
+        <state relative-caret-position="109">
+          <caret line="362" column="9" selection-start-line="362" selection-start-column="9" selection-end-line="362" selection-end-column="9" />
           <folding>
-            <element signature="e#0#16965#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
