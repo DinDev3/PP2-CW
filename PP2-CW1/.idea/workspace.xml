@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            <state relative-caret-position="420">
+              <caret line="215" column="34" lean-forward="true" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
               <folding>
                 <element signature="e#0#16965#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -77,6 +77,7 @@
       <find>Collections.sort</find>
       <find>&lt;result,name&gt;</find>
       <find>scanInput</find>
+      <find>change</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,7 +111,11 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -207,7 +212,8 @@
       <workItem from="1562266123209" duration="90000" />
       <workItem from="1562266963506" duration="45000" />
       <workItem from="1562435230198" duration="259000" />
-      <workItem from="1562492899975" duration="17000" />
+      <workItem from="1562492899975" duration="748000" />
+      <workItem from="1562522678095" duration="1019000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -335,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562435460144</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added undo facility to code">
+      <created>1562492942526</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1562492942526</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80858000" />
+    <option name="totallyTimeSpent" value="82608000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -382,7 +395,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
-      <window_info anchor="right" id="Run" order="9" weight="0.3922356" />
+      <window_info anchor="right" id="Run" order="9" weight="0.41566265" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +460,8 @@
     <MESSAGE value="Got rid of irrelevant error message" />
     <MESSAGE value="Gugsi's new requirements added. (delete and restore)" />
     <MESSAGE value="Added methods action defining comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added methods action defining comments" />
+    <MESSAGE value="Added undo facility to code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added undo facility to code" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -507,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="420">
+          <caret line="215" column="34" lean-forward="true" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
           <folding>
             <element signature="e#0#16965#0" expanded="true" />
             <element signature="imports" expanded="true" />

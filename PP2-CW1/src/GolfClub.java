@@ -211,11 +211,13 @@ public abstract class GolfClub {
             result = scanInput.nextInt();
         }
 
+        //updating undo stacks
+        stackUndoScore.push(playerRecords.get(enteredName));
+        stackCommand.push("edit");
+
         playerRecords.put(enteredName, result);                //updating entry
         playerResults.add(result);
 
-        stackUndoScore.push(result);
-        stackCommand.push("edit");
     }
 
 
