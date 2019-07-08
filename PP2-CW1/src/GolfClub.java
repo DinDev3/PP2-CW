@@ -32,7 +32,9 @@ public abstract class GolfClub {
     public static void main(String[] args) {
 
         int input;                                         //initializing input
-        System.out.println("\nWelcome to Springfield Golf Club!");
+        System.out.println("\n~~``````````````````````````````````~~");
+        System.out.println("   Welcome to Springfield Golf Club!");
+        System.out.println("~~__________________________________~~");
 
         do {
             input = 0;                                          //resetting input
