@@ -1,0 +1,784 @@
+Dinuka Piyadigama
+UOW ID - w17421047
+IIT ID - 2018373
+```````````````------------------------------------------PSEUDOCODE------------------------------------------------`````````````````
+
+PSEUDOCODE for PP02 Assignment-1
+GOLF CLUB
+
+*delete, restore options included in Pseudocode.
+ undo, redo options aren't included in Pseudocode,
+    but included in code*
+
+  BEGIN
+1.SET input=0, name="", arrLength=0
+2.SET playerRecords = <name,result>, playerResults=[]
+2.SET deletedRecords = <name,result>, playerResults=[]
+3.DISPLAY "Welcome to Springfield Golf Club"
+4.DISPLAY "Select Option:
+            1) Enter Scores
+            2) Find Golfer
+            3) Display Scoreboard
+            4) Exit Program"
+5.PROMPT input
+6.GET input
+7.inputValidation
+8.DO WHILE input!=4:
+9.    IF input == number
+10.        SET input == 0
+11.       DO WHILE input<=0:
+12.           PROMPT input
+13.           GET input
+14.           Sort playerResults in ascending order
+15.           playerNames=[]
+
+16.           SET i=0
+17.           DO WHILE i<arrLength:
+18.               p = playerResults[i]
+19.               SET t=0
+20.               DO WHILE t<arrLength;
+21.                   (Map.Entry)
+22.                   IF p==Value of entry AND !playerNames contains Key of entry:
+23.                     Key of entry in playerNames[i]
+                      END IF
+24.                   t=t+1
+                  END DO
+25.               playerRecords<p,> in playerNames
+26.               i=i+1
+              END DO
+
+27.           IF input == 1:
+28.             enterScores
+29.           ELSE IF input == 2:
+30.                   findGolfer
+31.                ELSE IF input == 3:
+32.                       displayScores
+33.                     ELSE IF input ==4:
+34.                             DISPLAY "We hope you enjoyed your Golf session at Springfield Golf Club.
+                                          Looking forward to assist you in your next session.
+                                          Exiting Program..."
+35.                          ELSE:
+36.                             DISPLAY Invalid input!!! Reenter..."
+                             END IF
+                        END IF
+                   END IF
+              END IF
+          END DO
+37.     ELSE:
+38.         DISPLAY "Only numeric characters are accepted. Please provide a valid input"
+        END IF
+  END DO
+  END    
+    
+    
+ 
+    ------------------------------------methods--------------------------------------
+
+
+    ---~~~main menu methods~~~---
+
+enterScores
+
+1.DISPLAY "Enter Scores:
+            1) Enter Details
+            2) Edit Records
+            3) Delete Records
+            4) Restore Records
+            5) Exit Program"
+2.PROMPT input
+3.GET input
+4.inputValidation
+5.DO WHILE (input<1 OR input>5):
+6.    IF input == number
+7.           IF input == 1:
+8.             enterDetails
+9.           ELSE IF input == 2:
+10.                   editData
+11.                ELSE IF input == 3:
+12.                        deleteData
+13.                     ELSE IF input ==4:
+14.                              restoreData
+15.                           ELSE:
+16.                              DISPLAY Invalid input!!! Reenter..."
+                              END IF
+                        END IF
+                   END IF
+              END IF      
+       END IF
+  END DO
+
+
+---------
+
+
+findGolfer
+
+1.PROMPT name
+2.GET name
+3.IF name in playerRecords:
+4.   DISPLAY "Score: " + playerRecords<name, >
+5.ELSE:
+6.   DISPLAY "There is no recorded entry related to this name."
+  END IF
+
+    ---------
+
+    
+displayScores
+
+1.SET index[i] = 0
+2.DO WHILE i<arrLength:
+3.    DISPLAY playerNames[i]"       "+ playerResults[i]
+4.    i = i + 1
+  END DO
+
+    ---------
+
+
+inputValidation
+
+1.DO WHILE scanInput != INTEGER:
+2.    DISPLAY "Only integer numbers are allowed! Please try again."
+3.    CLEAR scanInput
+  END DO
+
+    ---------
+
+
+changeScore
+
+17.SET result=0
+18.SET position = 0
+19.SET n=0
+
+20.DO WHILE n<arrLength:
+21.   IF playerNames[n] = name:
+22.       position = n
+      END IF
+23.   n = n+1
+  .END DO
+
+24.playerResults[position] = 0
+
+25.DO WHILE result<18 OR result>108:
+26.   PROMPT result
+27.   inputValidation
+28.   GET result
+   END DO
+29.result, name in playerRecords<name,result>
+30.result in playerResults[i]
+
+    ---------
+
+
+    ---~~~sub menu methods~~~---
+
+
+
+enterDetails
+
+1.SET numOfGolfers=0
+2.DO WHILE numOfGolfers=0 OR numOfGolfers != number:
+3.    PROMPT numOfGolfers
+4.    inputValidation
+5.    GET numOfGolfers
+  END DO
+
+7.DO WHILE numOfGolfers>0:
+8.    SET result = 0
+9.    SET alter == ''
+
+10.    PROMPT for name
+11.    GET name
+
+12.    IF name in playerRecords<,name>:
+
+13.        DO WHILE name in playerRecords<,name>:
+14.            PROMPT alter: "This Golfer has a previous entry! Do you wish to over-write this?"
+15.            GET alter
+
+16.            IF alter == 'yes' OR alter == 'y':
+                  changeScore
+
+
+31.            ELSE IF alter =='no' OR alter =='n':
+32.                    DISPLAY "The new record for Golfer, "+name+" wasn't changed."
+33.                 ELSE:
+34.                    DISPLAY "Invalid input."
+                    END IF
+               END IF
+           END DO
+
+35.    ELSE:
+36.        SET result=0
+37.        DO WHILE result<18 OR result>108:
+38.            PROMPT result
+39.            inputValidation
+40.            GET result
+           END DO
+41.        arrLength = arrLength + 1
+42.        name, result in playerRecords<name,result>
+43.        result in playerResults[i]
+       END IF
+44.    numOfGolfers -= 1
+   END DO
+
+    ---------
+
+
+editData
+
+1.displayScores
+2.DISPLAY "Enter a name that you want to edit the score of: "
+3.PROMPT name
+4.GET name
+.IF name in playerRecords:
+.   changeScore
+.ELSE:
+.   DISPLAY "There is no record related to this name."
+  END IF
+
+    ---------
+
+
+deleteData
+
+1.displayScores
+2.DISPLAY "Enter a name that you want to delete the record of: "
+3.IF name in playerRecords:
+4.   name, playerRecords<name,result> in deletedRecords<name, result>
+5.   < , > in playerRecords<name, >
+6.   DO WHILE n<arrLength:
+7.      IF playerNames[n] == name
+8.        position = n
+9.        n = n+1
+        END IF
+     END DO
+
+10.  playerResults[position] = 0
+
+11.  DISPLAY "The record for, " + name + " was deleted"
+
+12.ELSE:
+13.   DISPLAY "There is no record related to this name."
+   END IF
+
+    ---------
+
+
+restoreData
+
+1.DISPLAY "Enter a name that you want to restore the record of: "
+2.PROMPT name
+3.GET name
+4.IF <name , > in deletedRecords<, >
+5.    playerRecords<name, > remove from playerResults[]
+6.    deletedRecords<name, > in playerResults[]
+
+7.    <name, deletedRecords<name, >> in playerRecords<, >
+
+8.    <,> in deletedRecords <name,>
+9.    DISPLAY "The record for player, " + name + " was restored."
+
+10.ELSE
+11.   DISPLAY "There is no deleted record related to this name."
+
+
+
+
+
+
+
+
+
+```````````````----------------------------------------------CODE----------------------------------------------------`````````````````
+
+
+//Dinuka Piyadigama
+//UOW ID - w17421047
+//IIT ID - 2018373
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Stack;
+
+//@SuppressWarnings("Duplicates")                     //undo redo initial codes are shown as duplicates otherwise
+public abstract class GolfClub {
+    static HashMap<String, Integer> playerRecords = new HashMap<>();
+    static ArrayList<String> playerNames = new ArrayList<>();
+    static ArrayList<Integer> playerResults = new ArrayList<>();
+
+    static HashMap<String, Integer> deletedRecords = new HashMap<>();               //to add deleted records in order to restore if required.
+
+    static Scanner scanInput = new Scanner(System.in);                  //getting input, for process that needs to be carried out
+    static Scanner scanName = new Scanner(System.in);                   //getting name input
+
+    static Stack<String> stackUndoName = new Stack<>();                        //stack used for undo name of Golfer
+    static Stack<Integer> stackUndoScore = new Stack<>();                      //stack used for undo score of Golfer
+    static Stack<String> stackRedoName = new Stack<>();                        //stack used for redo name of Golfer
+    static Stack<Integer> stackRedoScore = new Stack<>();                      //stack used for redo score of Golfer
+    static Stack<String> stackUndoCommand = new Stack<>();                     //stack used to identify process to undo
+    static Stack<String> stackRedoCommand = new Stack<>();                     //stack used to identify process to redo
+
+    static int changedScore;                   //used to redo, undone editing of score
+
+    public static void main(String[] args) {
+
+        int input;                                         //initializing input
+        System.out.println("\n~~``````````````````````````````````~~");
+        System.out.println("   Welcome to Springfield Golf Club!");
+        System.out.println("~~__________________________________~~");
+        
+        do {
+            input = 0;                                          //resetting input
+
+
+            while (input <= 0) {
+                System.out.println("\nSelect Option:\n\t1) Enter Scores\n\t2) Find Golfer\n\t3) Display Scoreboard\n\t4) Exit Program");
+
+                System.out.print("\nEnter input in range 1-4\n\t>");
+
+                inputValidation();                     //validating integer input
+
+                input = scanInput.nextInt();
+
+                Collections.sort(playerResults);                //sorting scores in ascending order
+                playerNames.clear();                            //removing names from arrayList,
+
+                //matching the names with the same positions as the new/updated results
+                for (int i = 0; i < playerResults.size(); i++) {            //considering all positions of records
+                    int p = playerResults.get(i);                   //score at the sorted position
+
+                    for (Map.Entry<String, Integer> entry : playerRecords.entrySet()) {         //checking for all HashMap entries
+                        if (p == entry.getValue() && !playerNames.contains(entry.getKey()))              //making sure that name isn't duplicated in arrayList
+                            playerNames.add(entry.getKey());              //adding value of selected key into playerNames arrayList
+                    }
+                }
+
+                switch (input) {
+                    case 1:
+                        enterScores();
+                        break;
+
+
+                    case 2:
+                        findGolfer();
+                        break;
+
+
+                    case 3:
+                        displayScores();
+                        break;
+
+                    case 4:
+                        System.out.println("\nWe hope you enjoyed your Golf session at Springfield Golf Club.");      //Exit message, when exiting program
+                        System.out.println("\tLooking forward to assist you in your next session.");
+                        System.out.println("\tExiting Program...");
+                        System.exit(0);                             //ending program
+                        break;
+
+                    default:                                            //message to display, if input number not in required range
+                        System.out.println("Invalid input!!! Reenter...");
+                }
+
+            }
+
+        } while (input != 4);
+
+    }
+
+
+    //------------------------------------------methods----------------------------------------------
+
+
+    //---~~~main menu methods~~~---
+
+
+    private static void enterScores() {//input = 1
+        int inputSub;
+
+        do {
+            inputSub = 0;                                          //resetting input
+
+
+            System.out.println("\n~Enter Scores~\n\t1) Enter Details\n\t2) Edit Records\n\t3) Delete Records\n\t4) Restore Records" +
+                    "\n\t5) Undo\n\t6) Redo\n\t7) Back to Main Menu");
+
+            System.out.print("\nEnter input in range 1-7\n\t>");
+
+            inputValidation();                     //validating integer input
+
+            inputSub = scanInput.nextInt();
+
+            switch (inputSub) {
+                case 1:
+                    enterDetails();
+                    break;
+
+                case 2:
+                    editData();
+                    break;
+
+                case 3:
+                    deleteData();
+                    break;
+
+                case 4:
+                    restoreData();
+                    break;
+
+                case 5:
+                    undo();
+                    break;
+
+                case 6:
+                    redo();
+                    break;
+
+                case 7:
+                    break;
+
+                default:                                            //message to display, if input number not in required range
+                    System.out.println("Invalid input!!! Reenter...");
+            }
+
+        } while (inputSub < 1 || inputSub > 7);
+
+    }
+
+
+    private static void findGolfer() {//input = 2
+
+        System.out.println("\nEnter a name of a Golfer");
+        String name = scanName.nextLine();
+
+        if (playerRecords.containsKey(name)) {
+            System.out.println("Score: " + playerRecords.get(name));
+
+        } else {
+            System.out.println("There is no recorded entry related to this name.");
+        }
+    }
+
+
+    private static void displayScores() {//input = 3
+
+        System.out.println("\n-----------------------------------------");                               //for clarity of output
+        System.out.println("Name       Score");
+        System.out.println("-----------------------------------------");                               //for clarity of output
+
+        for (int i = 0; i < playerResults.size(); i++) {
+
+            System.out.println(playerNames.get(i) + "       " + playerResults.get(i));
+
+            System.out.println("-----------------------------------------");                               //for clarity of output
+        }
+        //System.out.println("stack: "+stackUndoName.peek());       //used to check whether stack contains required data
+    }
+
+
+    private static void inputValidation() {                     //validating integer input
+
+        while (!scanInput.hasNextInt()) {
+            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message for characters other than integers
+            scanInput.next();                                                     //removing incorrect input entered
+        }
+    }
+
+
+    private static void changeScore(String enteredName) {
+
+        int result = 0;                                 //resetting result that will be input, if the user wishes to change it
+        int position = 0;                                       //resetting position
+
+        //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
+        for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+            if (playerNames.get(n).equals(enteredName)) {                          //getting matching position of score to name
+                position = n;
+            }
+        }
+
+        //playerRecords value will be automatically replaced
+        playerResults.remove(position);                //removing old result from results array list
+
+        while (result < 18 || result > 108) {                             //result range: 18-108
+            //getting result of golfer
+            System.out.print("Enter the result (in range 18-108): ");
+
+            inputValidation();                     //validating integer input
+            result = scanInput.nextInt();
+        }
+
+        //updating undo stacks
+        stackUndoScore.push(playerRecords.get(enteredName));
+        stackUndoCommand.push("edit");
+
+        playerRecords.put(enteredName, result);                //updating entry
+        playerResults.add(result);
+
+    }
+
+
+    //---~~~sub menu methods~~~---
+    private static void enterDetails() {
+        //getting the count of golfers in the group
+        System.out.println("How many golfers are in this group?");
+
+        inputValidation();                     //validating integer input
+        int numOfGolfers = scanInput.nextInt();
+
+
+        while (numOfGolfers > 0) {
+
+            System.out.println("\nEnter a name of a Golfer");
+            String name = scanName.nextLine();
+
+
+            if (playerRecords.containsKey(name)) {
+
+                Scanner alterInput = new Scanner(System.in);                  //Asking the user whether to alter results or not
+                System.out.println("This Golfer has a previous entry! Do you wish to over-write this?");
+                String alter = alterInput.nextLine();
+
+                alter = alter.toLowerCase();                        //to accept input in capital letters as well    |   reassigned because strings are immutable
+
+                if (alter.equals("yes") || alter.equals("y")) {
+
+                    changeScore(name);                              //change the score of the record related to this name
+                    stackUndoName.push(name);
+
+                } else if (alter.equals("no") || alter.equals("n")) {
+                    System.out.println("The record for Golfer, " + name + " wasn't changed.");
+
+                } else {
+                    System.out.println("Invalid input.");
+                }
+
+            } else {
+                int result;                                 //initialing result to get the while loop to work
+                do {                                            //result range: 18-108
+
+                    //getting result of golfer
+                    System.out.print("Enter the result (in range 18-108): ");
+
+                    inputValidation();                     //validating integer input
+                    result = scanInput.nextInt();
+
+                } while (result < 18 || result > 108);
+                playerRecords.put(name, result);                //new entry
+                playerResults.add(result);
+
+                //updating undo stacks
+                stackUndoCommand.push("add");
+                stackUndoName.push(name);
+                stackUndoScore.push(result);
+
+            }
+            numOfGolfers -= 1;
+        }
+    }
+
+
+    private static void editData() {
+        displayScores();                //show the user the available records
+
+        System.out.println("Enter a name that you want to edit the score of: ");
+        String name = scanName.nextLine();
+        if (playerRecords.containsKey(name)) {
+            changeScore(name);                              //change the score of the record related to this name
+            stackUndoName.push(name);
+
+        } else {
+            System.out.println("There is no record related to this name");
+        }
+
+    }
+
+
+    private static void deleteData() {
+        displayScores();
+
+        System.out.println("Enter a name that you want to delete the record of: ");
+        String name = scanName.nextLine();
+
+        if (playerRecords.containsKey(name)) {
+
+            deletedRecords.put(name, playerRecords.get(name));                //adding deleted record into HashMap
+            playerRecords.remove(name);
+
+
+            int position = 0;                                       //resetting position
+            //finding the same positions of the name entered in both playerNames & playerResults ArrayLists
+            for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                if (playerNames.get(n).equals(name)) {                          //getting matching position of score to name
+                    position = n;
+                }
+            }
+
+            //updating undo stacks
+            stackUndoCommand.push("delete");
+            stackUndoName.push(name);
+            stackUndoScore.push(playerResults.get(position));
+
+
+            //playerRecords value will be automatically removed
+            playerResults.remove(position);                //removing old result from results array list
+
+            System.out.println("The record for, " + name + " was deleted");
+
+
+        } else {
+            System.out.println("There is no recorded entry related to this name.");
+        }
+    }
+
+
+    private static void restoreData() {
+        System.out.println("Enter a name that you want to restore the record of: ");
+        String name = scanName.nextLine();
+
+        if (deletedRecords.containsKey(name)) {
+            //updating undo stacks
+            stackUndoCommand.push("restore");
+            stackUndoName.push(name);
+            stackUndoScore.push(deletedRecords.get(name));
+
+
+            //changing in playerResults
+            playerResults.remove(playerRecords.get(name));                //removing previously changed result from playerResults array list
+            playerResults.add(deletedRecords.get(name));        //restoring deleted record to playerRecords ArrayList
+
+            playerRecords.put(name, deletedRecords.get(name));                //adding deleted record into HashMap
+
+            deletedRecords.remove(name);                        //removing record from deleted, since restored now.
+            System.out.println("The record for player, " + name + " was restored.");
+
+        } else {
+            System.out.println("There is no deleted record related to this name.");
+        }
+    }
+
+
+    private static void undo() {
+
+        String undoName = stackUndoName.pop();
+        int undoScore = stackUndoScore.pop();
+        String undoCommand = stackUndoCommand.pop();
+
+        stackRedoName.push(undoName);
+        stackRedoScore.push(undoScore);
+        stackRedoCommand.push(undoCommand);
+
+        int position = 0;                               //to be used later in switch
+
+        /*if multiple undos are required, numOfGolfers can be assigned to a variable and the switch statement can
+          be looped till all the entries are removed*/
+
+        switch (undoCommand) {                     //to check which process happened last
+            case "add":                             //undoing adding of record
+            case "restore":                         //undoing restoring of deleted record
+                //removing the records
+                playerRecords.remove(undoName);
+
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(undoName)) {                          //getting matching position of score to name
+                        position = n;
+                        playerNames.remove(position);               //removing name from playerNames arrayList
+                    }
+                }
+                playerResults.remove(position);         //removing score from playerResults arrayList
+
+                break;
+
+            case "edit":                            //undoing editing of record
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(undoName)) {                          //getting matching position of score to name
+                        position = n;
+                    }
+                }
+                playerResults.remove(position);         //removing score from playerResults arrayList
+
+                changedScore = playerRecords.get(undoName);         //used, if required to redo
+
+                playerRecords.put(undoName, undoScore);
+                playerResults.add(undoScore);
+                break;
+
+            case "delete":                          //undoing deleting of record
+                //adding back the records
+                if (!playerRecords.containsKey(undoName)) {         //making sure that records aren't duplicated
+                    playerRecords.put(undoName, undoScore);
+                    playerResults.add(undoScore);
+                    playerNames.add(undoName);
+                }
+                break;
+
+            default:
+                System.out.println("Unable to undo, no change of data has happened before.");
+
+        }
+
+
+    }
+
+    private static void redo() {
+
+        String redoName = stackRedoName.pop();
+        int redoScore = stackRedoScore.pop();
+        String redoCommand = stackRedoCommand.pop();
+
+        //adding back to the undo stack. If required to undo again, can be done
+        stackUndoName.push(redoName);
+        stackUndoScore.push(redoScore);
+        stackUndoCommand.push(redoCommand);
+
+        int position = 0;                               //to be used later in switch
+
+        switch (redoCommand) {                     //to check which process happened last
+            case "add":                             //undoing adding of record
+            case "restore":                         //undoing restoring of deleted record
+                //adding back the records
+                playerRecords.put(redoName, redoScore);
+                playerResults.add(redoScore);
+                playerNames.add(redoName);
+
+                break;
+
+            case "edit":                            //changing record back to edited score
+
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(redoName)) {                          //getting matching position of score to name
+                        position = n;
+                    }
+                }
+                playerResults.remove(position);         //removing current score from playerResults arrayList
+
+
+                playerRecords.put(redoName, changedScore);
+                playerResults.add(changedScore);
+                break;
+
+            case "delete":                          //undoing deleting of record
+                //removing the records
+                playerRecords.remove(redoName);
+
+                for (int n = 0; n < playerNames.size(); n++) {                        //n is an index of the two Array Lists, above
+                    if (playerNames.get(n).equals(redoName)) {                          //getting matching position of score to name
+                        position = n;
+                        playerNames.remove(position);               //removing name from playerNames arrayList
+                    }
+                }
+                playerResults.remove(position);         //removing score from playerResults arrayList
+
+                break;
+
+
+            default:
+                System.out.println("Unable to redo, undo action hasn't been used.");
+
+        }
+    }
+}
