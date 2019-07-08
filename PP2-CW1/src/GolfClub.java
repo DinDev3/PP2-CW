@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Stack;
 
+//@SuppressWarnings("Duplicates")                     //undo redo initial codes are shown as duplicates otherwise
 public abstract class GolfClub {
     static HashMap<String, Integer> playerRecords = new HashMap<>();
     static ArrayList<String> playerNames = new ArrayList<>();
@@ -53,9 +54,8 @@ public abstract class GolfClub {
                 for (int i = 0; i < playerResults.size(); i++) {            //considering all positions of records
                     int p = playerResults.get(i);                   //score at the sorted position
 
-                    //if same score is entered in this method, things get messed up when displaying an deleting (some names won't match scores)
                     for (Map.Entry<String, Integer> entry : playerRecords.entrySet()) {         //checking for all HashMap entries
-                        if (p == entry.getValue())
+                        if (p == entry.getValue() && !playerNames.contains(entry.getKey()))              //making sure that name isn't duplicated in arrayList
                             playerNames.add(entry.getKey());              //adding value of selected key into playerNames arrayList
                     }
                 }
