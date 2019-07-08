@@ -37,8 +37,8 @@ GOLF CLUB
 19.               SET t=0
 20.               DO WHILE t<arrLength;
 21.                   (Map.Entry)
-22.                   IF p==Value of entry
-23.                      Key of entry in playerNames[i]
+22.                   IF p==Value of entry AND !playerNames contains Key of entry:
+23.                     Key of entry in playerNames[i]
                       END IF
 24.                   t=t+1
                   END DO
