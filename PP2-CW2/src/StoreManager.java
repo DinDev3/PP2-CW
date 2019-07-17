@@ -1,3 +1,5 @@
-public class StoreManager {
+interface StoreManager {
 //    public static final
+
+
 }
