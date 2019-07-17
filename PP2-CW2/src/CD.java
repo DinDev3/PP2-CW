@@ -1,5 +1,5 @@
 import java.util.HashMap;
 
-public class CD {
-    static HashMap <String, Integer> cdInfo= new HashMap<>();
+class CD extends MusicItem{
+    static HashMap <String, Integer> cdInfo= new HashMap<>();       //used to store songTitle & duration
 }
