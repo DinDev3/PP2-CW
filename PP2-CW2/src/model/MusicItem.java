@@ -1,3 +1,7 @@
+package model;
+
+import java.util.Date;
+
 abstract class MusicItem {
 
     abstract String itemID();
