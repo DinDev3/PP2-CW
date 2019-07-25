@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class WestminsterMusicStoreManager {
     static ArrayList <String> items= new ArrayList<>();
@@ -23,10 +24,10 @@ public class WestminsterMusicStoreManager {
                 return null;
             }
 
-//            @Override
-//            Date releaseDate() {                                          ???????
-//                return null;
-//            }
+            @Override
+            Date releaseDate() {
+                return null;
+            }
 
             @Override
             String artist() {
@@ -37,6 +38,6 @@ public class WestminsterMusicStoreManager {
             Double price() {
                 return null;
             }
-        }
+        };
     }
 }

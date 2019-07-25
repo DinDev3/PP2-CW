@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="" />
+    <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/Vinyl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/Vinyl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/WestminsterMusicStoreManager.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,13 +36,14 @@
     <favorites_list name="Assignment 1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="-8063">
+              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
+                <element signature="e#0#20005#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -74,6 +81,7 @@
       <find>&lt;result,name&gt;</find>
       <find>scanInput</find>
       <find>change</find>
+      <find>changeScore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,26 +115,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PP2-CW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PP2-CW1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PP2-CW1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PP2-CW1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -234,6 +223,11 @@
       <workItem from="1563035059223" duration="546000" />
       <workItem from="1563291814402" duration="51000" />
       <workItem from="1563422641266" duration="21000" />
+      <workItem from="1564030682635" duration="1137000" />
+      <workItem from="1564037922516" duration="1493000" />
+      <workItem from="1564049162947" duration="238000" />
+      <workItem from="1564049559520" duration="348000" />
+      <workItem from="1564061134889" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -400,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91569000" />
+    <option name="totallyTimeSpent" value="94833000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -434,7 +428,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32816902" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32808024" />
-      <window_info anchor="bottom" id="Run" order="12" weight="0.36197183" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.5253521" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -573,9 +567,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="-8063">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
+            <element signature="e#0#20005#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
