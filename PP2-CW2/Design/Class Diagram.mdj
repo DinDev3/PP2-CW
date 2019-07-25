@@ -2062,7 +2062,7 @@
 											"top": 142,
 											"width": 163.744140625,
 											"height": 13,
-											"text": "-List of itemsStore: -----?",
+											"text": "-List of itemsInStore: -----?",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3002,7 +3002,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFr7MPusgR7rxE="
 							},
-							"name": "List of itemsStore",
+							"name": "List of itemsInStore",
 							"visibility": "private",
 							"type": "-----?"
 						},
