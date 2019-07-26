@@ -2,31 +2,34 @@ package model;
 
 
 abstract class MusicItem {
+    private static int itemID;
     private String title;
-    private Integer itemID;
     private String genre;
-    //private Date releaseDate;               //thid should be fixed!!!!!!!
+    //private Date releaseDate;               //Lec 7 - slide 46!!!
     private String artist;
-    private Double price;
+    private double price;
 
-
-    public MusicItem(String title, Integer itemID, String genre, String artist, Double price) {
+    public MusicItem(String title, String genre, String artist, double price) {
         this.title = title;
-        this.itemID = itemID;
         this.genre = genre;
-        //this.releaseDate = releaseDate;
         this.artist = artist;
         this.price = price;
+
+        ++itemID;
     }
 
-    @Override           //to check
+    @Override
     public String toString() {
         return "MusicItem{" +
                 "title='" + title + '\'' +
-                ", itemID=" + itemID +
                 ", genre='" + genre + '\'' +
                 ", artist='" + artist + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+
+    public static int getItemID() {
+        return itemID;
     }
 }
