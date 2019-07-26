@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class WestminsterMusicStoreManager implements StoreManager {
     static ArrayList<String> itemsInStore = new ArrayList<>();
@@ -10,7 +9,9 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void addItem() {
+        //      if CD option selected;
         System.out.println();
+        //CD newCD = new CD();            //pass variables as parameters?????
     }
 
     @Override

@@ -22,7 +22,7 @@ public class ConApp {
             System.out.print("\nEnter Option:\n>>");
             chosenOption = sc.nextInt();                    //validate for integer inputs!!!!!!!!!!
 
-            WestminsterMusicStoreManager managementAction = new WestminsterMusicStoreManager();
+            WestminsterMusicStoreManager managementAction = new WestminsterMusicStoreManager();         //new object
 
             switch (chosenOption) {
                 case 1:         //add item
