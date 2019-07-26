@@ -3,41 +3,33 @@ package model;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class WestminsterMusicStoreManager {
-    static ArrayList <String> items= new ArrayList<>();
-    static ArrayList <String> shoppingCart= new ArrayList<>();
+public class WestminsterMusicStoreManager implements StoreManager {
+    static ArrayList<String> itemsInStore = new ArrayList<>();
+    static ArrayList<String> shoppingCart = new ArrayList<>();
 
-    public static void main(String[] args) {
-        MusicItem newItem = new MusicItem() {
-            @Override
-            String itemID() {
-                return null;
-            }
 
-            @Override
-            String title() {
-                return null;
-            }
+    @Override
+    public void addItem() {
 
-            @Override
-            String genre() {
-                return null;
-            }
+    }
 
-            @Override
-            Date releaseDate() {
-                return null;
-            }
+    @Override
+    public void deleteItem() {
 
-            @Override
-            String artist() {
-                return null;
-            }
+    }
 
-            @Override
-            Double price() {
-                return null;
-            }
-        };
+    @Override
+    public void printList() {
+
+    }
+
+    @Override
+    public void sortItem() {
+
+    }
+
+    @Override
+    public void buyItem() {
+
     }
 }

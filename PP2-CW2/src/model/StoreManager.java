@@ -4,6 +4,7 @@ interface StoreManager {
     //constants
 //    public static final
 
+
     //methods
     void addItem();
     void deleteItem();
