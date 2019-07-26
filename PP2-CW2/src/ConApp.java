@@ -1,3 +1,5 @@
+import model.WestminsterMusicStoreManager;
+
 import java.util.Scanner;
 
 public class ConApp {
@@ -20,29 +22,30 @@ public class ConApp {
             System.out.print("\nEnter Option:\n>>");
             chosenOption = sc.nextInt();                    //validate for integer inputs!!!!!!!!!!
 
+            WestminsterMusicStoreManager managementAction = new WestminsterMusicStoreManager();
+
             switch (chosenOption) {
-                case 1:
-                    //add item
+                case 1:         //add item
+                    managementAction.addItem();
                     break;
 
-                case 2:
-                    //delete item
+                case 2:         //delete item
+                    managementAction.deleteItem();
                     break;
 
-                case 3:
-                    //print list
+                case 3:         //print list
+                    managementAction.printList();
                     break;
 
-                case 4:
-                    //sort items
+                case 4:         //sort items
+                    managementAction.sortItem();
                     break;
 
-                case 5:
-                    //buy items
+                case 5:         //buy items
+                    managementAction.buyItem();
                     break;
 
-                case 6:
-                    //open GUI
+                case 6:         //open GUI
                     break;
 
                 case 7:

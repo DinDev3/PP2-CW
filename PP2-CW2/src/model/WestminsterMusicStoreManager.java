@@ -10,7 +10,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void addItem() {
-
+        System.out.println();
     }
 
     @Override
