@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class WestminsterMusicStoreManager implements StoreManager {
-    static Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
     static ArrayList<Object> itemsInStore = new ArrayList<>();
     static ArrayList<Object> shoppingCart = new ArrayList<>();
@@ -69,14 +69,16 @@ public class WestminsterMusicStoreManager implements StoreManager {
         MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
         //use if else to search for CD/ Vinyl separately
 
+        Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+
         if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given
-            System.out.println(itemsInStore.get(linearSearch(itemsInStore, searchMusicItem)));
+//            System.out.println(itemsInStore.get(linearSearch(itemsInStore, searchMusicItem)));    //checking whether correct item was selected
+            CD.cdDuration.remove(searchID);
+            itemsInStore.remove(itemToBeDeleted);
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
-
-
 
 
     }
