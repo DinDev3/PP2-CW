@@ -25,7 +25,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
         if (MusicItem.getCount() <= maxItems) {     //checking whether number of items stored is less than 1000
 
             System.out.println("\nChoose item to be added:");
-            System.out.println("1)CD\n2)Vinyl");        //validate!!!!!!
+            System.out.println("1)CD\n2)Vinyl");        //validate for integer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             System.out.print(">");
             int itemType = sc.nextInt();
             sc.nextLine();              //to consume the rest of the line
@@ -66,12 +66,13 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
                 System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
                 System.out.println(Vinyl.vinylSpeed);               //to check!!!!!!!!!
+            } else{
+                System.out.println("Please choose an option out of 1 & 2");
             }
-
-            System.out.println(itemsInStore);               //to check!!!!!!!!!
-
-
+//            System.out.println(itemsInStore);               //to check
             System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
+
+
 
         } else {
             System.out.println("There are no available spaces. 1000 items have been added!");
@@ -134,6 +135,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     public void buyItem() {
 
     }
+
 
 
 //---------reused methods---------
