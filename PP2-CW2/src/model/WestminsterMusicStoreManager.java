@@ -67,6 +67,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
                 System.out.println(Vinyl.vinylSpeed);               //to check!!!!!!!!!
             }
+
             System.out.println(itemsInStore);               //to check!!!!!!!!!
 
 
@@ -85,23 +86,32 @@ public class WestminsterMusicStoreManager implements StoreManager {
         System.out.print(">");              //get itemID from user to choose item to be deleted
         String searchID = sc.nextLine();
 
-        MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
-        MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-        //use if else to search for CD/ Vinyl separately!!!!!!!!!!!!!
-
-        System.out.println(MusicItem.getCount());
-
-        Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
-
         if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given
+            MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
+            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+            Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 //            System.out.println(itemsInStore.get(linearSearch(itemsInStore, searchMusicItem)));    //checking whether correct item was selected
+
             CD.cdDuration.remove(searchID);
             itemsInStore.remove(itemToBeDeleted);
-
             MusicItem.count -= 1;          //decreasing the number of items in store
-            System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
 
+            System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
             System.out.println("A CD has been deleted");
+
+        } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
+            MusicItem searchMusicItem = new Vinyl(searchID, title, genre, artist, price, speed, diameter);
+            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+            Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+
+            Vinyl.vinylDiameter.remove(searchID);
+            Vinyl.vinylSpeed.remove(searchID);
+            itemsInStore.remove(itemToBeDeleted);
+            MusicItem.count -= 1;          //decreasing the number of items in store
+
+            System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
+            System.out.println("A Vinyl has been deleted");
+
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
@@ -126,8 +136,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
     }
 
 
+//---------reused methods---------
+
     private static void addCommonInfo() {       //common information related to CD and Vinyl in addItem
-        System.out.println("\nEnter Item ID:");
+        System.out.println("\nEnter Item ID:");             //!!!!!!!!!!!!have an if with AND to check whether itemID exists in hashMaps of either CD/Vinyl!!!!!!!!!!!
         System.out.print(">");
         itemID = sc.nextLine();
 
