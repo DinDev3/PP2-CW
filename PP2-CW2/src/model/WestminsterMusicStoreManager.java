@@ -1,8 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Arrays;            //remove this!!!
-import java.util.List;
 import java.util.Scanner;
 
 public class WestminsterMusicStoreManager implements StoreManager {
@@ -67,7 +65,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
         String searchID = sc.nextLine();
 
         MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
-        //use if else to search for CD/ Vinyl separately
+        MusicItem.count-=1;         //making sure that count isn't increased for the temporary object created
+        //use if else to search for CD/ Vinyl separately!!!!!!!!!!!!!
+
+        System.out.println(MusicItem.getCount());
 
         Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -76,6 +77,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
             CD.cdDuration.remove(searchID);
             itemsInStore.remove(itemToBeDeleted);
 
+            MusicItem.count-=1;          //decreasing the number of items in store
+            System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
+
+            System.out.println("A CD has been deleted");
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }

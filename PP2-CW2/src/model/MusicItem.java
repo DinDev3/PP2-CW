@@ -11,7 +11,7 @@ abstract class MusicItem {
     private String artist;
     private double price;
 
-    private static int count;
+    public static int count=0;
 
 
     public MusicItem(String itemID, String title, String genre, String artist, double price) {
