@@ -16,6 +16,8 @@ public class WestminsterMusicStoreManager implements StoreManager {
     static private String artist;
     static private double price;
     static private double duration;
+    static private double speed;
+    static private double diameter;
 
     @Override
     public void addItem() {
@@ -40,14 +42,33 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 CD newCD = new CD(itemID, title, genre, artist, price, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
 
-                System.out.println(itemsInStore);
-                System.out.println(CD.cdDuration);
+                System.out.println(CD.cdDuration);               //to check!!!!!!!!!
 
 
             } else if (itemType == 2) {         //Vinyl item chosen
+                addCommonInfo();        //used to get common information
+
+                System.out.println("Enter Speed of Vinyl:");
+                System.out.print(">");
+                speed = sc.nextDouble();
+                Vinyl.vinylSpeed.put(itemID, speed);             //adding speed into hashMap
+                sc.nextLine();              //to consume the rest of the line
+
+                System.out.println("Enter Diameter of Vinyl:");
+                System.out.print(">");
+                diameter = sc.nextDouble();
+                Vinyl.vinylDiameter.put(itemID, diameter);             //adding diameter into hashMap
+                sc.nextLine();              //to consume the rest of the line
 
 
+                Vinyl newVinyl = new Vinyl(itemID, title, genre, artist, price, speed, diameter);
+                itemsInStore.add(newVinyl);                            //adding Vinyl object into itemsInStore arrayList
+
+                System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
+                System.out.println(Vinyl.vinylSpeed);               //to check!!!!!!!!!
             }
+            System.out.println(itemsInStore);               //to check!!!!!!!!!
+
 
             System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
 
@@ -65,7 +86,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
         String searchID = sc.nextLine();
 
         MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
-        MusicItem.count-=1;         //making sure that count isn't increased for the temporary object created
+        MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
         //use if else to search for CD/ Vinyl separately!!!!!!!!!!!!!
 
         System.out.println(MusicItem.getCount());
@@ -77,7 +98,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             CD.cdDuration.remove(searchID);
             itemsInStore.remove(itemToBeDeleted);
 
-            MusicItem.count-=1;          //decreasing the number of items in store
+            MusicItem.count -= 1;          //decreasing the number of items in store
             System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
 
             System.out.println("A CD has been deleted");
@@ -87,6 +108,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
 
     }
+
 
     @Override
     public void printList() {
