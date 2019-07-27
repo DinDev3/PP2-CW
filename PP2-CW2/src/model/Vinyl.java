@@ -2,8 +2,8 @@ package model;
 
 
 //class Vinyl extends MusicItem{
-//    private double Speed;
-//    private double diameter;
+//    private double Speed;             //use hashMap to store with itemID????
+//    private double diameter;          //use hashMap to store with itemID????
 //
 //
 //    public Vinyl(String title, String itemID, String genre, Date releaseDate, String artist, Double price, double speed, double diameter) {

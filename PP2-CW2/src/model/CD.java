@@ -6,7 +6,7 @@ class CD extends MusicItem{
     private double totalDuration;
     private double durationOfSong;              //is this needed??? anyway will be accessible from hashmap!!
 
-    static HashMap <String, Double> cdDuration = new HashMap<>();       //used to store songTitle & duration
+    static HashMap <String, Double> cdDuration = new HashMap<>();       //used to store itemID & duration
 
 
     public CD(String itemID, String title, String genre, String artist, double price, double durationOfSong) {

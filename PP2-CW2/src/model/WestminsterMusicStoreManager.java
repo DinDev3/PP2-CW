@@ -36,7 +36,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 System.out.println("Enter Duration of song:");
                 System.out.print(">");
                 duration = sc.nextDouble();
-                CD.cdDuration.put(title, duration);             //adding duration to hashMap
+                CD.cdDuration.put(itemID, duration);             //adding duration to hashMap
                 sc.nextLine();              //to consume the rest of the line
 
                 CD newCD = new CD(itemID, title, genre, artist, price, duration);
@@ -67,14 +67,17 @@ public class WestminsterMusicStoreManager implements StoreManager {
         String searchID = sc.nextLine();
 
         MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
-
         //use if else to search for CD/ Vinyl separately
-        if () {
+
+        if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given
             System.out.println(itemsInStore.get(linearSearch(itemsInStore, searchMusicItem)));
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
+
+
+
 
     }
 
