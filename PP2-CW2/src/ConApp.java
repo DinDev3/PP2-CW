@@ -10,7 +10,7 @@ public class ConApp {
         System.out.println("~~\tOnline Music Store Management System\t~~");
         System.out.println("/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\");
 
-        do {
+        do {//display main menu
             System.out.println("\n1)Add item");
             System.out.println("2)Delete item");
             System.out.println("3)Print list of items");

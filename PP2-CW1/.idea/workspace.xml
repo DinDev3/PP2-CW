@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/ConApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/ConApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/Vinyl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/Vinyl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/MusicItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/MusicItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/StoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/StoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/WestminsterMusicStoreManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8063">
-              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="321" column="17" lean-forward="true" selection-start-line="321" selection-start-column="17" selection-end-line="321" selection-end-column="17" />
               <folding>
                 <element signature="e#0#20005#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -228,6 +229,7 @@
       <workItem from="1564049162947" duration="238000" />
       <workItem from="1564049559520" duration="348000" />
       <workItem from="1564061134889" duration="48000" />
+      <workItem from="1564217488994" duration="815000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -394,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94833000" />
+    <option name="totallyTimeSpent" value="95648000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -407,7 +409,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" weight="0.1793842" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.09731544" />
@@ -429,6 +430,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32816902" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32808024" />
       <window_info anchor="bottom" id="Run" order="12" weight="0.5253521" />
+      <window_info anchor="right" id="Mongo Explorer" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -567,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8063">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="321" column="17" lean-forward="true" selection-start-line="321" selection-start-column="17" selection-end-line="321" selection-end-column="17" />
           <folding>
             <element signature="e#0#20005#0" expanded="true" />
             <element signature="imports" expanded="true" />
