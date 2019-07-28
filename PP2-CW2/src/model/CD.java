@@ -10,8 +10,8 @@ class CD extends MusicItem {
     static HashMap<String, Double> cdDuration = new HashMap<>();       //used to store itemID & duration
 
 
-    public CD(String itemID, String title, String genre, String artist, double price, double durationOfSong) {
-        super(itemID, title, genre, artist, price);
+    public CD(String itemID, String title, String genre, Date releaseDate, String artist, double price, double durationOfSong) {
+        super(itemID, title, genre, releaseDate, artist, price);
         this.durationOfSong = durationOfSong;                 //making sure that this extra info is added when adding a new CD object
         totalDuration += durationOfSong;            //calculating total duration of songs
     }

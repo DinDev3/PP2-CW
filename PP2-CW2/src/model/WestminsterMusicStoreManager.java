@@ -12,7 +12,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     static private String itemID;
     static private String title;
     static private String genre;
-    static private double date;
+    static private Date date;
     static private String artist;
     static private double price;
     static private double duration;
@@ -39,7 +39,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 CD.cdDuration.put(itemID, duration);             //adding duration to hashMap
                 sc.nextLine();              //to consume the rest of the line
 
-                CD newCD = new CD(itemID, title, genre, artist, price, duration);
+                CD newCD = new CD(itemID, title, genre, date, artist, price, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
 
                 System.out.println(CD.cdDuration);               //to check!!!!!!!!!
@@ -61,17 +61,16 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 sc.nextLine();              //to consume the rest of the line
 
 
-                Vinyl newVinyl = new Vinyl(itemID, title, genre, artist, price, speed, diameter);
+                Vinyl newVinyl = new Vinyl(itemID, title, genre, date, artist, price, speed, diameter);
                 itemsInStore.add(newVinyl);                            //adding Vinyl object into itemsInStore arrayList
 
                 System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
                 System.out.println(Vinyl.vinylSpeed);               //to check!!!!!!!!!
-            } else{
+            } else {
                 System.out.println("Please choose an option out of 1 & 2");
             }
 //            System.out.println(itemsInStore);               //to check
             System.out.println("There are " + (maxItems - MusicItem.getCount()) + " spaces left to store items.");
-
 
 
         } else {
@@ -88,7 +87,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
         String searchID = sc.nextLine();
 
         if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given
-            MusicItem searchMusicItem = new CD(searchID, title, genre, artist, price, duration);
+            MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, duration);
             MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
             Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 //            System.out.println(itemsInStore.get(linearSearch(itemsInStore, searchMusicItem)));    //checking whether correct item was selected
@@ -101,7 +100,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             System.out.println("A CD has been deleted");
 
         } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
-            MusicItem searchMusicItem = new Vinyl(searchID, title, genre, artist, price, speed, diameter);
+            MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, speed, diameter);
             MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
             Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -123,7 +122,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void printList() {
-
+        System.out.println(itemsInStore);
     }
 
     @Override
@@ -135,7 +134,6 @@ public class WestminsterMusicStoreManager implements StoreManager {
     public void buyItem() {
 
     }
-
 
 
 //---------reused methods---------
@@ -153,10 +151,24 @@ public class WestminsterMusicStoreManager implements StoreManager {
         System.out.print(">");
         genre = sc.nextLine();
 
-        System.out.println("Enter Release Date:");                      //Date class should be fixed as req!!!!
-        System.out.print(">");
-        date = sc.nextDouble();
+        System.out.println("Enter Release Date");
+        System.out.println("\tEnter day:");                       //getting input for day
+        System.out.print("\t>");
+        int day = sc.nextInt();
         sc.nextLine();              //to consume the rest of the line
+
+        System.out.println("\tEnter month:");
+        System.out.print("\t>");
+        int month = sc.nextInt();
+        sc.nextLine();              //to consume the rest of the line
+
+        System.out.println("\tEnter year:");
+        System.out.print("\t>");
+        int year = sc.nextInt();
+        sc.nextLine();              //to consume the rest of the line
+
+        date = new Date(day, month, year);
+
 
         System.out.println("Enter Artist:");
         System.out.print(">");

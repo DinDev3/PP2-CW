@@ -11,8 +11,8 @@ class Vinyl extends MusicItem {
     static HashMap<String, Double> vinylDiameter = new HashMap<>();       //used to store itemID & diameter
 
 
-    public Vinyl(String itemID, String title, String genre, String artist, double price, double speed, double diameter) {
-        super(itemID, title, genre, artist, price);
+    public Vinyl(String itemID, String title, String genre, Date releaseDate, String artist, double price, double speed, double diameter) {
+        super(itemID, title, genre, releaseDate, artist, price);
         this.speed = speed;                 //making sure that this extra info is added when adding a new Vinyl object
         this.diameter = diameter;           //making sure that this extra info is added when adding a new Vinyl object
     }
