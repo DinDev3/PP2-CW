@@ -16,7 +16,7 @@ class CD extends MusicItem {
         totalDuration += durationOfSong;            //calculating total duration of songs
     }
 
-//    public double getDurationOfSong() {
+    //    public double getDurationOfSong() {
 //        return durationOfSong;
 //    }
 //

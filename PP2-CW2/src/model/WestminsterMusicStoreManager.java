@@ -1,6 +1,8 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class WestminsterMusicStoreManager implements StoreManager {
@@ -8,6 +10,8 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     static ArrayList<Object> itemsInStore = new ArrayList<>();
     static ArrayList<Object> shoppingCart = new ArrayList<>();
+
+    static HashMap<String, String> itemTitles = new HashMap<>();        //to retrieve item titles
 
     static private String itemID;
     static private String title;
@@ -40,11 +44,11 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 CD.cdDuration.put(itemID, duration);             //adding duration to hashMap
                 sc.nextLine();              //to consume the rest of the line
 
-                CD newCD = new CD(itemID, title, genre, date, artist, price, duration);
+                MusicItem newCD = new CD(itemID, title, genre, date, artist, price, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
+                itemTitles.put(newCD.getItemID(), newCD.getTitle());
 
                 System.out.println(CD.cdDuration);               //to check!!!!!!!!!
-
 
             } else if (itemType == 2) {         //Vinyl item chosen
                 addCommonInfo();        //used to get common information
@@ -64,6 +68,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
                 Vinyl newVinyl = new Vinyl(itemID, title, genre, date, artist, price, speed, diameter);
                 itemsInStore.add(newVinyl);                            //adding Vinyl object into itemsInStore arrayList
+                itemTitles.put(newVinyl.getItemID(), newVinyl.getTitle());
 
                 System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
                 System.out.println(Vinyl.vinylSpeed);               //to check!!!!!!!!!
@@ -123,15 +128,27 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void printList()                 //prints list of items in store
-    {
-                        //print only item ID, item type, title!!!!!!!!!!!!!!!!!
-        System.out.println(itemsInStore);
+    {   //print only item ID, item type, title
+
+        System.out.println(itemsInStore);           //to check !!!!!!!!!
+
+        for (Map.Entry<String, String> entry : itemTitles.entrySet()) {         //checking for all HashMap entries
+            if (CD.cdDuration.containsKey(entry.getKey())) {                 //checking whether the ID selected is of a CD
+                System.out.println(entry.getKey() + "\t" + entry.getValue() + "\tCD");
+
+            } else if (Vinyl.vinylDiameter.containsKey(entry.getKey())) {
+                System.out.println(entry.getKey() + "\t" + entry.getValue() + "\tVinyl");
+            }
+        }
+
     }
+
 
     @Override
     public void sortItem() {                //sorts items in ascending order of title
 
     }
+
 
     @Override
     public void buyItem() {                 //buy item by selecting item ID and generate a report
@@ -145,7 +162,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             Object itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
             multipleCopies(itemToBeBought);         //buying multiple items or not?
-            System.out.println("Total cost= "+totalCost);
+            System.out.println("Total cost= " + totalCost);
 
         } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
             MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, speed, diameter);
@@ -153,7 +170,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             Object itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
             multipleCopies(itemToBeBought);         //buying multiple items or not?
-            System.out.println("Total cost= "+totalCost);
+            System.out.println("Total cost= " + totalCost);
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
@@ -227,7 +244,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
         System.out.print(">");
         multipleReq = sc.nextLine().toLowerCase();
 
-        if (multipleReq.equals("yes") || multipleReq.equals("y")){              //buying more than one copy
+        if (multipleReq.equals("yes") || multipleReq.equals("y")) {              //buying more than one copy
             System.out.println("How many copies of this item do you require?");
             System.out.print("\t>");
             int copies = sc.nextInt();
@@ -238,10 +255,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 totalCost += price;
             }
 
-        }else if(multipleReq.equals("no") || multipleReq.equals("n")){
+        } else if (multipleReq.equals("no") || multipleReq.equals("n")) {
             shoppingCart.add(chosenItem);
             totalCost = price;
-        } else{
+        } else {
             System.out.println("Invalid input. Please try again.");             //loop this and handle!!!!!!
         }
 

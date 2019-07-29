@@ -18,7 +18,7 @@ public class Date {
         if (month > 0 && month <= 12) {
             this.month = month;
         } else {
-            System.out.printf("Invalid month (%d) set to 1\n", month);
+            System.out.printf("Invalid month (%d); set to 1\n", month);
             this.month = 1;             //inserted to maintain object in consistent state
         }
     }
@@ -35,7 +35,7 @@ public class Date {
             this.day = day;
         }
 
-        System.out.printf("Invalid day (%d) set to 1\n", day);
+        System.out.printf("Invalid day (%d); set to 1\n", day);
         this.day = 1;             //inserted to maintain object in consistent state
     }
 
