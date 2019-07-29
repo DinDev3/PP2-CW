@@ -213,7 +213,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
         int year = sc.nextInt();
         sc.nextLine();              //to consume the rest of the line
 
-        date = new Date(day, month, year);
+        date = new Date(year, month, day);
 
 
         System.out.println("Enter Artist:");
