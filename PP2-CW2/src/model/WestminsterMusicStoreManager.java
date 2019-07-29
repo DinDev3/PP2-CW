@@ -12,15 +12,16 @@ public class WestminsterMusicStoreManager implements StoreManager {
     static private String itemID;
     static private String title;
     static private String genre;
-    static private Date date;
+    static private Date date;           //object is created here as it's required to be accessed from several methods
     static private String artist;
     static private double price;
     static private double duration;
     static private double speed;
     static private double diameter;
+    static private double totalCost;
 
     @Override
-    public void addItem() {
+    public void addItem() {             //adding new item
 
         if (MusicItem.getCount() <= maxItems) {     //checking whether number of items stored is less than 1000
 
@@ -80,13 +81,13 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
 
     @Override
-    public void deleteItem() {
+    public void deleteItem() {                  //delete item by entering item ID
 
         System.out.println("Enter itemID of item that u desire to delete:");
         System.out.print(">");              //get itemID from user to choose item to be deleted
         String searchID = sc.nextLine();
 
-        if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given
+        if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given!!!!!!!!!FIX!!!!!!!!
             MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, duration);
             MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
             Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
@@ -121,18 +122,46 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
 
     @Override
-    public void printList() {
+    public void printList()                 //prints list of items in store
+    {
+                        //print only item ID, item type, title!!!!!!!!!!!!!!!!!
         System.out.println(itemsInStore);
     }
 
     @Override
-    public void sortItem() {
+    public void sortItem() {                //sorts items in ascending order of title
 
     }
 
     @Override
-    public void buyItem() {
+    public void buyItem() {                 //buy item by selecting item ID and generate a report
+        System.out.println("Enter itemID of item that u desire to buy:");
+        System.out.print(">");              //get itemID from user to choose item to be deleted
+        String searchID = sc.nextLine();
 
+        if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given!!!!!!!!!!!FIX!!!!!!
+            MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, duration);
+            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+            Object itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+
+            multipleCopies(itemToBeBought);         //buying multiple items or not?
+            System.out.println("Total cost= "+totalCost);
+
+        } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
+            MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, speed, diameter);
+            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+            Object itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+
+            multipleCopies(itemToBeBought);         //buying multiple items or not?
+            System.out.println("Total cost= "+totalCost);
+
+        } else {
+            System.out.println("There's no item related to the item ID: " + searchID);
+        }
+
+        System.out.println(shoppingCart);               //to check
+
+        shoppingCart.clear();           //emptying the shopping cart
     }
 
 
@@ -188,6 +217,34 @@ public class WestminsterMusicStoreManager implements StoreManager {
             }
         }
         return itemIndex;
+    }
+
+    private static void multipleCopies(Object chosenItem) {
+        String multipleReq;
+        totalCost = 0;
+
+        System.out.println("Do you want to buy more than one copy of this item?");
+        System.out.print(">");
+        multipleReq = sc.nextLine().toLowerCase();
+
+        if (multipleReq.equals("yes") || multipleReq.equals("y")){              //buying more than one copy
+            System.out.println("How many copies of this item do you require?");
+            System.out.print("\t>");
+            int copies = sc.nextInt();
+            sc.nextLine();              //to consume the rest of the line
+
+            for (int i = 0; i < copies; i++) {
+                shoppingCart.add(chosenItem);
+                totalCost += price;
+            }
+
+        }else if(multipleReq.equals("no") || multipleReq.equals("n")){
+            shoppingCart.add(chosenItem);
+            totalCost = price;
+        } else{
+            System.out.println("Invalid input. Please try again.");             //loop this and handle!!!!!!
+        }
+
     }
 
 }

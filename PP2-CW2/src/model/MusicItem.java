@@ -25,7 +25,7 @@ abstract class MusicItem {
     }
 
     @Override
-    public String toString() {
+    public String toString() {                          //edit this to change output!!!!!!!!!
         return "MusicItem{" +
                 "itemID='" + itemID + '\'' +
                 ", title='" + title + '\'' +
@@ -40,7 +40,6 @@ abstract class MusicItem {
         return count;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -50,11 +49,12 @@ abstract class MusicItem {
                 Objects.equals(itemID, musicItem.itemID) &&
                 Objects.equals(title, musicItem.title) &&
                 Objects.equals(genre, musicItem.genre) &&
+                Objects.equals(releaseDate, musicItem.releaseDate) &&
                 Objects.equals(artist, musicItem.artist);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(itemID, title, genre, artist, price);
+        return Objects.hash(itemID, title, genre, releaseDate, artist, price);
     }
 }
