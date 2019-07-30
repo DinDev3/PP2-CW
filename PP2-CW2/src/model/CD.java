@@ -3,11 +3,11 @@ package model;
 
 import java.util.HashMap;
 
-class CD extends MusicItem {
+public class CD extends MusicItem {
     private double totalDuration;
     private double durationOfSong;              //is this needed??? anyway will be accessible from hashmap!!
 
-    static HashMap<String, Double> cdDuration = new HashMap<>();       //used to store itemID & duration
+    public static HashMap<String, Double> cdDuration = new HashMap<>();       //used to store itemID & duration
 
 
     public CD(String itemID, String title, String genre, Date releaseDate, String artist, double price, double durationOfSong) {
@@ -16,13 +16,13 @@ class CD extends MusicItem {
         totalDuration += durationOfSong;            //calculating total duration of songs
     }
 
-    //    public double getDurationOfSong() {
-//        return durationOfSong;
-//    }
-//
-//    public double getTotalDuration() {
-//        return totalDuration;
-//    }
+    public double getDurationOfSong() {
+        return durationOfSong;
+    }
+
+    public double getTotalDuration() {
+        return totalDuration;
+    }
 
 
 }

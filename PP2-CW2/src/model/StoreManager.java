@@ -1,6 +1,6 @@
 package model;
 
-interface StoreManager {
+public interface StoreManager {
     //constants
      int maxItems = 1000;
 
@@ -11,5 +11,6 @@ interface StoreManager {
     void printList();
     void sortItem();
     void buyItem();
+    void viewGUI();
 
 }

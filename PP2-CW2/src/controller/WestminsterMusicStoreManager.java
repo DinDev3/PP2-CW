@@ -1,4 +1,8 @@
-package model;
+package controller;
+
+import controller.GUIController;
+import model.*;
+import view.GUI;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +11,10 @@ import java.util.Scanner;
 
 public class WestminsterMusicStoreManager implements StoreManager {
     private static Scanner sc = new Scanner(System.in);
+
+    public static ArrayList<Object> getItemsInStore() {
+        return itemsInStore;
+    }
 
     static ArrayList<Object> itemsInStore = new ArrayList<>();
     static ArrayList<Object> shoppingCart = new ArrayList<>();
@@ -41,13 +49,12 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 System.out.println("Enter Duration of song:");
                 System.out.print(">");
                 duration = sc.nextDouble();
-                CD.cdDuration.put(itemID, duration);             //adding duration to hashMap
                 sc.nextLine();              //to consume the rest of the line
 
-                MusicItem newCD = new CD(itemID, title, genre, date, artist, price, duration);
+                CD newCD = new CD(itemID, title, genre, date, artist, price, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
-                itemTitles.put(newCD.getItemID(), newCD.getTitle());
-
+                CD.cdDuration.put(itemID, newCD.getDurationOfSong());             //adding duration to hashMap
+                itemTitles.put(newCD.getItemID(), newCD.getTitle());        //to access later when printing the list of items
                 System.out.println(CD.cdDuration);               //to check!!!!!!!!!
 
             } else if (itemType == 2) {         //Vinyl item chosen
@@ -56,18 +63,18 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 System.out.println("Enter Speed of Vinyl:");
                 System.out.print(">");
                 speed = sc.nextDouble();
-                Vinyl.vinylSpeed.put(itemID, speed);             //adding speed into hashMap
                 sc.nextLine();              //to consume the rest of the line
 
                 System.out.println("Enter Diameter of Vinyl:");
                 System.out.print(">");
                 diameter = sc.nextDouble();
-                Vinyl.vinylDiameter.put(itemID, diameter);             //adding diameter into hashMap
                 sc.nextLine();              //to consume the rest of the line
 
 
                 Vinyl newVinyl = new Vinyl(itemID, title, genre, date, artist, price, speed, diameter);
                 itemsInStore.add(newVinyl);                            //adding Vinyl object into itemsInStore arrayList
+                Vinyl.vinylSpeed.put(itemID, newVinyl.getSpeed());             //adding speed into hashMap
+                Vinyl.vinylDiameter.put(itemID, newVinyl.getDiameter());             //adding diameter into hashMap
                 itemTitles.put(newVinyl.getItemID(), newVinyl.getTitle());
 
                 System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
@@ -127,17 +134,16 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
 
     @Override
-    public void printList()                 //prints list of items in store
+    public void printList()                 //prints list of items in store             //change displaying format!!!!!!!!!!!!!
     {   //print only item ID, item type, title
-
         System.out.println(itemsInStore);           //to check !!!!!!!!!
 
         for (Map.Entry<String, String> entry : itemTitles.entrySet()) {         //checking for all HashMap entries
             if (CD.cdDuration.containsKey(entry.getKey())) {                 //checking whether the ID selected is of a CD
-                System.out.println(entry.getKey() + "\t" + entry.getValue() + "\tCD");
+                System.out.println(entry.getKey() + "\tCD" + "\t" + entry.getValue());
 
             } else if (Vinyl.vinylDiameter.containsKey(entry.getKey())) {
-                System.out.println(entry.getKey() + "\t" + entry.getValue() + "\tVinyl");
+                System.out.println(entry.getKey() + "\tVinyl" + "\t" + entry.getValue());
             }
         }
 
@@ -178,9 +184,15 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         System.out.println(shoppingCart);               //to check
 
+        generateReport();             //generate report when items are bought
+
         shoppingCart.clear();           //emptying the shopping cart
     }
 
+    @Override
+    public void viewGUI() {
+        GUI.main(null);
+    }
 
 //---------reused methods---------
 
@@ -261,6 +273,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
         } else {
             System.out.println("Invalid input. Please try again.");             //loop this and handle!!!!!!
         }
+
+    }
+
+    private void generateReport() {
 
     }
 

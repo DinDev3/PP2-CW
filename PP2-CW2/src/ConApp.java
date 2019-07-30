@@ -1,4 +1,4 @@
-import model.WestminsterMusicStoreManager;
+import controller.WestminsterMusicStoreManager;
 
 import java.util.Scanner;
 
@@ -46,6 +46,7 @@ public class ConApp {
                     break;
 
                 case 6:         //open GUI
+                    managementAction.viewGUI();
                     break;
 
                 case 7:

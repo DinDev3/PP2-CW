@@ -3,7 +3,7 @@ package model;
 
 import java.util.Objects;
 
-abstract class MusicItem {
+public abstract class MusicItem {
     private String itemID;
     private String title;
     private String genre;
@@ -48,21 +48,13 @@ abstract class MusicItem {
         return title;
     }
 
-//    public String getGenre() {
-//        return genre;
-//    }
-//
-//    public Date getReleaseDate() {
-//        return releaseDate;
-//    }
-//
-//    public String getArtist() {
-//        return artist;
-//    }
-//
-//    public double getPrice() {
-//        return price;
-//    }
+    public String getGenre() { return genre; }
+
+    public Date getReleaseDate() { return releaseDate; }
+
+    public String getArtist() { return artist; }
+
+    public double getPrice() { return price; }
 
     @Override
     public boolean equals(Object o) {
