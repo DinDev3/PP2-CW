@@ -4,6 +4,9 @@ import controller.GUIController;
 import model.*;
 import view.GUI;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -276,8 +279,26 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     }
 
-    private void generateReport() {
+    private void generateReport(){          //change written data
+        try {       //creating the file
+            File myFile = new File("soldItems.txt");
+            if (myFile.createNewFile()) {
+                System.out.println("File created: " + myFile.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+
+            //writing into the file
+            FileWriter soldFile = new FileWriter("soldItems.txt",true);
+            soldFile.write("\nFiles in Java might be tricky, but it is fun enough!");
+            soldFile.close();
+            System.out.println("Successfully wrote to the file.");
+
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
 
     }
-
 }
