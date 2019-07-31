@@ -1,15 +1,13 @@
 package controller;
 
 import model.*;
+import model.Date;
 import view.GUI;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class WestminsterMusicStoreManager implements StoreManager {
     private static Scanner sc = new Scanner(System.in);
@@ -148,10 +146,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         for (Map.Entry<String, String> entry : itemTitles.entrySet()) {         //checking for all HashMap entries
             if (CD.cdDuration.containsKey(entry.getKey())) {                 //checking whether the ID selected is of a CD
-                System.out.format(leftAlignFormat, entry.getKey() , "CD" , entry.getValue());
+                System.out.format(leftAlignFormat, entry.getKey(), "CD", entry.getValue());
 
             } else if (Vinyl.vinylDiameter.containsKey(entry.getKey())) {
-                System.out.format(leftAlignFormat, entry.getKey() , "Vinyl" , entry.getValue());
+                System.out.format(leftAlignFormat, entry.getKey(), "Vinyl", entry.getValue());
             }
         }
         System.out.format("+------------+-------+---------------------------+%n");
@@ -178,6 +176,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             multipleCopies(itemToBeBought);         //buying multiple items or not?
             System.out.println("Total cost= " + totalCost);
 
+            generateReport(title, searchID, price);             //generate report when items are bought
         } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
             MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, speed, diameter);
             MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
@@ -186,13 +185,13 @@ public class WestminsterMusicStoreManager implements StoreManager {
             multipleCopies(itemToBeBought);         //buying multiple items or not?
             System.out.println("Total cost= " + totalCost);
 
+            generateReport(title, searchID, price);             //generate report when items are bought
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
 
         System.out.println(shoppingCart);               //to check
 
-        generateReport();             //generate report when items are bought
 
         shoppingCart.clear();           //emptying the shopping cart
     }
@@ -284,24 +283,27 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     }
 
-    private void generateReport(){          //change written data
+    private void generateReport(String titleOfBought, String IDOfBought, Double priceOfBought) {          //change written data
         try {       //creating the file
             File myFile = new File("soldItems.txt");
             if (myFile.createNewFile()) {
-                System.out.println("File created: " + myFile.getName());
+                System.out.println("\nFile created: " + myFile.getName());
             } else {
-                System.out.println("File already exists.");
+                System.out.println("\nFile already exists.");
             }
 
             //writing into the file
-            FileWriter soldFile = new FileWriter("soldItems.txt",true);
-            soldFile.write("\nFiles in Java might be tricky, but it is fun enough!");
+            FileWriter soldFile = new FileWriter("soldItems.txt", true);
+
+            java.util.Date sellingDate = Calendar.getInstance().getTime();          //getting current(selling) time and date
+            soldFile.write("\n" + titleOfBought + "\t" + IDOfBought + "\t" + priceOfBought+"\t"+sellingDate);
+
             soldFile.close();
             System.out.println("Successfully wrote to the file.");
 
 
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("\nAn error occurred.");
             e.printStackTrace();
         }
 
