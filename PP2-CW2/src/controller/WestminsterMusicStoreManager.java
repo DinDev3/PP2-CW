@@ -1,6 +1,5 @@
 package controller;
 
-import controller.GUIController;
 import model.*;
 import view.GUI;
 
@@ -15,7 +14,7 @@ import java.util.Scanner;
 public class WestminsterMusicStoreManager implements StoreManager {
     private static Scanner sc = new Scanner(System.in);
 
-    public static ArrayList<Object> getItemsInStore() {
+    public static ArrayList<Object> getItemsInStore() {         //accessed in GUI
         return itemsInStore;
     }
 
@@ -137,19 +136,25 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
 
     @Override
-    public void printList()                 //prints list of items in store             //change displaying format!!!!!!!!!!!!!
+    public void printList()                 //prints list of items in store
     {   //print only item ID, item type, title
-        System.out.println(itemsInStore);           //to check !!!!!!!!!
+//        System.out.println(itemsInStore);           //to check
+
+        String leftAlignFormat = "| %-10s | %-5s | %-25s |%n";
+
+        System.out.format("+------------+-------+---------------------------+%n");
+        System.out.format("| Item ID    | Type  |     Title                 |%n");
+        System.out.format("+------------+-------+---------------------------+%n");
 
         for (Map.Entry<String, String> entry : itemTitles.entrySet()) {         //checking for all HashMap entries
             if (CD.cdDuration.containsKey(entry.getKey())) {                 //checking whether the ID selected is of a CD
-                System.out.println(entry.getKey() + "\tCD" + "\t" + entry.getValue());
+                System.out.format(leftAlignFormat, entry.getKey() , "CD" , entry.getValue());
 
             } else if (Vinyl.vinylDiameter.containsKey(entry.getKey())) {
-                System.out.println(entry.getKey() + "\tVinyl" + "\t" + entry.getValue());
+                System.out.format(leftAlignFormat, entry.getKey() , "Vinyl" , entry.getValue());
             }
         }
-
+        System.out.format("+------------+-------+---------------------------+%n");
     }
 
 

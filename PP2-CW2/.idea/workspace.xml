@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9607d7-64aa-4402-9eaa-b3424d336197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/ConApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/ConApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/CD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/CD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/StoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/StoreManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/Vinyl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/Vinyl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/WestminsterMusicStoreManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/view/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/view/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/MusicItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="249">
               <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
             </state>
           </provider>
@@ -35,14 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/CD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding>
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#907#908#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="396">
+              <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -50,14 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Vinyl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="145">
               <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding>
-                <element signature="e#922#923#0" expanded="true" />
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -65,14 +49,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="281" column="65" selection-start-line="281" selection-start-column="65" selection-end-line="281" selection-end-column="65" />
+            <state relative-caret-position="74">
+              <caret line="139" column="46" lean-forward="true" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-                <element signature="e#9090#9091#0" expanded="true" />
-                <element signature="e#9120#9121#0" expanded="true" />
+                <element signature="e#9560#9561#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+            <state relative-caret-position="63">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,19 +72,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/StoreManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="72">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -111,12 +83,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="87">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,6 +108,7 @@
       <find>MusicItem</find>
       <find>addItem</find>
       <find>getItems</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,10 +129,10 @@
         <option value="$PROJECT_DIR$/src/model/WestminsterMusicStoreManager.java" />
         <option value="$PROJECT_DIR$/src/model/MusicItem.java" />
         <option value="$PROJECT_DIR$/src/controller/GUIController.java" />
-        <option value="$PROJECT_DIR$/src/view/GUI.java" />
         <option value="$PROJECT_DIR$/src/model/StoreManager.java" />
-        <option value="$PROJECT_DIR$/src/model/CD.java" />
         <option value="$PROJECT_DIR$/src/model/Vinyl.java" />
+        <option value="$PROJECT_DIR$/src/view/GUI.java" />
+        <option value="$PROJECT_DIR$/src/model/CD.java" />
         <option value="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" />
       </list>
     </option>
@@ -173,10 +144,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -302,7 +273,8 @@
       <workItem from="1564308763428" duration="7755000" />
       <workItem from="1564376672006" duration="6044000" />
       <workItem from="1564399539011" duration="8661000" />
-      <workItem from="1564482391336" duration="21025000" />
+      <workItem from="1564482391336" duration="21129000" />
+      <workItem from="1564556591053" duration="2942000" />
     </task>
     <task id="LOCAL-00001" summary="Added all the classes and most data types required for CW2">
       <created>1563029339436</created>
@@ -451,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564510380007</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Started to implement generate a file">
+      <created>1564514088339</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1564514088339</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93472000" />
+    <option name="totallyTimeSpent" value="96518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -470,14 +449,14 @@
       <window_info content_ui="combo" id="Project" order="6" weight="0.19544846" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.69859153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.628169" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32957748" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32957748" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32957748" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32957748" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32816902" />
@@ -518,7 +497,8 @@
     <MESSAGE value="Printing item kinda works" />
     <MESSAGE value="Fixed Date class day :)" />
     <MESSAGE value="JavaFX GUI working " />
-    <option name="LAST_COMMIT_MESSAGE" value="JavaFX GUI working " />
+    <MESSAGE value="Started to implement generate a file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to implement generate a file" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -555,35 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/StoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -593,47 +544,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Vinyl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="145">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/MusicItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="249">
           <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/CD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="396">
+          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="281" column="65" selection-start-line="281" selection-start-column="65" selection-end-line="281" selection-end-column="65" />
+        <state relative-caret-position="74">
+          <caret line="139" column="46" lean-forward="true" selection-start-line="139" selection-start-column="46" selection-end-line="139" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#9090#9091#0" expanded="true" />
-            <element signature="e#9120#9121#0" expanded="true" />
+            <element signature="e#9560#9561#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,5 +24,5 @@ public class CD extends MusicItem {
         return totalDuration;
     }
 
-
+    //create Time class for duration!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }

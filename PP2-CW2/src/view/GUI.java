@@ -42,7 +42,7 @@ public class GUI extends Application {
         artistColumn.setCellValueFactory(new PropertyValueFactory<>("artist"));
 
         TableColumn<String, MusicItem> durationColumn = new TableColumn<>("Duration");
-        durationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        durationColumn.setCellValueFactory(new PropertyValueFactory<>("durationOfSong"));
 
         TableColumn<String, MusicItem> speedColumn = new TableColumn<>(" Speed");
         speedColumn.setCellValueFactory(new PropertyValueFactory<>("speed"));
