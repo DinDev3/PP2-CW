@@ -41,6 +41,9 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> artistColumn = new TableColumn<>("Artist");
         artistColumn.setCellValueFactory(new PropertyValueFactory<>("artist"));
 
+        TableColumn<String, MusicItem> priceColumn = new TableColumn<>("Price");
+        artistColumn.setCellValueFactory(new PropertyValueFactory<>("artist"));
+
         TableColumn<String, MusicItem> durationColumn = new TableColumn<>("Duration");
         durationColumn.setCellValueFactory(new PropertyValueFactory<>("durationOfSong"));
 
@@ -50,7 +53,7 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> diameterColumn = new TableColumn<>(" Diameter");
         diameterColumn.setCellValueFactory(new PropertyValueFactory<>("diameter"));
 
-        tableOfItems.getColumns().addAll(itemIDColumn, titleColumn, genreColumn, dateColumn, artistColumn, durationColumn, speedColumn, diameterColumn);
+        tableOfItems.getColumns().addAll(itemIDColumn, titleColumn, genreColumn, dateColumn, artistColumn, priceColumn, durationColumn, speedColumn, diameterColumn);
 
 
         tableOfItems.getItems().addAll(WestminsterMusicStoreManager.getItemsInStore());

@@ -188,9 +188,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
 
-        System.out.println(shoppingCart);               //to check
-
-
+//        System.out.println(shoppingCart);               //to check
         shoppingCart.clear();           //emptying the shopping cart
     }
 
@@ -256,6 +254,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     private static void multipleCopies(Object chosenItem, String searchID) {
         String multipleReq;
         totalCost = 0;
+        int copies = 1;
 
         System.out.println("Do you want to buy more than one copy of this item?");
         System.out.print(">");
@@ -264,20 +263,26 @@ public class WestminsterMusicStoreManager implements StoreManager {
         if (multipleReq.equals("yes") || multipleReq.equals("y")) {              //buying more than one copy
             System.out.println("How many copies of this item do you require?");
             System.out.print("\t>");
-            int copies = sc.nextInt();
+            copies = sc.nextInt();
             sc.nextLine();              //to consume the rest of the line
+
+
+            //PRICE NEEDS TO BE FIXED!!!!!!! LAST ENTERED ITEM'S PRICE IS ALWAYS GIVEN!!!!!
+
+
+
 
             for (int i = 0; i < copies; i++) {
                 shoppingCart.add(chosenItem);
-                generateReport(title, searchID, price);             //generate report when items are bought
                 totalCost += price;
             }
+            generateReport(title, searchID, price, copies, totalCost);             //generate report when items are bought
             separatePurchase();               //separating purchases
 
         } else if (multipleReq.equals("no") || multipleReq.equals("n")) {
             shoppingCart.add(chosenItem);
             totalCost = price;
-            generateReport(title, searchID, price);             //generate report when items are bought
+            generateReport(title, searchID, price, copies,totalCost);             //generate report when items are bought
 
             separatePurchase();               //separating purchases
 
@@ -287,29 +292,30 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     }
 
-    private static void generateReport(String titleOfBought, String IDOfBought, Double priceOfBought) {          //change written data
+    private static void generateReport(String titleOfBought, String IDOfBought, Double priceOfBought, int numOfCopies, double total) {
         try {       //creating the file
             File myFile = new File("soldItems.txt");
             if (myFile.createNewFile()) {
-                System.out.println("\nFile created: " + myFile.getName());
+//                System.out.println("\nFile created: " + myFile.getName());
                 FileWriter soldFile = new FileWriter("soldItems.txt", true);
-                soldFile.write("Title" + "\t" + "Item ID" + "\t\t" + "Price" + "\t" + "Date/Time");
-                soldFile.write(System.getProperty("line.separator"));       //line break
-                soldFile.close();
 
-            } else {
-                System.out.println("\nFile already exists.");
+                soldFile.write(String.format("+---------------------------+------------+------------+---------+------------+------------------------------+%n"));
+                soldFile.write(String.format("|     Title                 | Item ID    |  Price($)  | Copies  |  Total($)  |       Selling Date/Time      |%n"));
+                soldFile.write(String.format("+---------------------------+------------+------------+---------+------------+------------------------------+%n"));
+//                soldFile.write(System.getProperty("line.separator"));       //line break
+                soldFile.close();
             }
+
+            String leftAlignFormat2 = "| %-25s | %-10s | %-10s | %-7s | %-10s | %-27s |%n";
+
 
             //writing into the file
             FileWriter soldFile = new FileWriter("soldItems.txt", true);
 
             java.util.Date sellingDate = Calendar.getInstance().getTime();          //getting current(selling) time and date
-            soldFile.write(titleOfBought + "\t" + IDOfBought + "\t\t" + priceOfBought + "\t" + sellingDate);
-            soldFile.write(System.getProperty("line.separator"));       //line break
+            soldFile.write(String.format(leftAlignFormat2, titleOfBought, IDOfBought, priceOfBought, numOfCopies, total, sellingDate));
+//            soldFile.write(System.getProperty("line.separator"));       //line break
             soldFile.close();
-
-            System.out.println("Successfully wrote to the file.");
 
 
         } catch (IOException e) {
@@ -322,7 +328,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     public static void separatePurchase() {               //separating purchases
         try {               //separating purchases
             FileWriter soldFile = new FileWriter("soldItems.txt", true);
-            soldFile.write("\n-------------------------------------------------------------");
+            soldFile.write("+-----------------------------------------------------------------------------------------------------------+");
             soldFile.write(System.getProperty("line.separator"));       //line break
             soldFile.close();
         } catch (IOException e) {
