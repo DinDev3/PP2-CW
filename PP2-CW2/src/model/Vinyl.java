@@ -5,17 +5,17 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class Vinyl extends MusicItem {
-    private double speed;             //use hashMap to store with itemID????
-    private double diameter;          //use hashMap to store with itemID????
+    protected double speed;             //use hashMap to store with itemID????
+    protected double diameter;          //use hashMap to store with itemID????
 
     public static HashMap<String, Double> vinylSpeed = new HashMap<>();       //used to store itemID & speed
     public static HashMap<String, Double> vinylDiameter = new HashMap<>();       //used to store itemID & diameter
 
 
-    public Vinyl(String itemID, String title, String genre, Date releaseDate, String artist, double price, double speed, double diameter) {
-        super(itemID, title, genre, releaseDate, artist, price);
+    public Vinyl(String itemID, String title, String genre, Date releaseDate, String artist, double price, String type, double speed, double diameter) {
+        super(itemID, title, genre, releaseDate, artist, price, type);
         this.speed = speed;                 //making sure that this extra info is added when adding a new Vinyl object
-        this.diameter = diameter;           //making sure that this extra info is added when adding a new Vinyl object
+        this.diameter = diameter;
     }
 
     public double getSpeed() {

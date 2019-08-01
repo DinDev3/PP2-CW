@@ -13,18 +13,17 @@ public class WestminsterMusicStoreManager implements StoreManager {
     private static Scanner sc = new Scanner(System.in);
 
 //    private static final int MAX_ITEMS =1000;
-
     private static ArrayList<MusicItem> itemsInStore = new ArrayList<>();
     private static ArrayList<MusicItem> shoppingCart = new ArrayList<>();
-
-//    static HashMap<String, String> itemTitles = new HashMap<>();        //to retrieve item titles               //try to use getmethod!!!!!!!!!
-
 
     public static ArrayList<MusicItem> getItemsInStore() {         //accessed in GUI
         return itemsInStore;
     }
 
+    public static HashMap<String,String> allItemIDs = new HashMap<>();             //used to check whether itemID exists
+
     static private String itemID;
+    static private String type;
     static private String title;
     static private String genre;
     static private Date date;           //object is created here as it's required to be accessed from several methods
@@ -43,25 +42,27 @@ public class WestminsterMusicStoreManager implements StoreManager {
             System.out.println("\nChoose item to be added:");
             System.out.println("1)CD\n2)Vinyl");        //validate for integer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             System.out.print(">");
-            int itemType = sc.nextInt();
+            int typeSelection = sc.nextInt();
             sc.nextLine();              //to consume the rest of the line
 
-            if (itemType == 1) {       //CD item chosen
+            if (typeSelection == 1) {       //CD item chosen
                 addCommonInfo();        //used to get common information
+                type = "CD";
 
                 System.out.println("Enter Duration of song:");
                 System.out.print(">");
                 duration = sc.nextDouble();
                 sc.nextLine();              //to consume the rest of the line
 
-                CD newCD = new CD(itemID, title, genre, date, artist, price, duration);
+                CD newCD = new CD(itemID, title, genre, date, artist, price, type, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
+                allItemIDs.put(itemID,type);
                 CD.cdDuration.put(itemID, newCD.getDurationOfSong());             //adding duration to hashMap
-//                itemTitles.put(newCD.getItemID(), newCD.getTitle());                    //not required, can be removed
-                System.out.println(CD.cdDuration);               //to check!!!!!!!!!
 
-            } else if (itemType == 2) {         //Vinyl item chosen
+
+            } else if (typeSelection == 2) {         //Vinyl item chosen
                 addCommonInfo();        //used to get common information
+                type = "Vinyl";
 
                 System.out.println("Enter Speed of Vinyl:");
                 System.out.print(">");
@@ -74,14 +75,13 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 sc.nextLine();              //to consume the rest of the line
 
 
-                Vinyl newVinyl = new Vinyl(itemID, title, genre, date, artist, price, speed, diameter);
+                Vinyl newVinyl = new Vinyl(itemID, title, genre, date, artist, price, type, speed, diameter);
                 itemsInStore.add(newVinyl);                            //adding Vinyl object into itemsInStore arrayList
+                allItemIDs.put(itemID,type);
+
                 Vinyl.vinylSpeed.put(itemID, newVinyl.getSpeed());             //adding speed into hashMap
                 Vinyl.vinylDiameter.put(itemID, newVinyl.getDiameter());             //adding diameter into hashMap
-//                itemTitles.put(newVinyl.getItemID(), newVinyl.getTitle());            //not required, can be removed
 
-                System.out.println(Vinyl.vinylDiameter);               //to check!!!!!!!!!
-                System.out.println(Vinyl.vinylSpeed);               //to check!!!!!!!!!
             } else {
                 System.out.println("Please choose an option out of 1 & 2");
             }
@@ -97,42 +97,37 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void deleteItem() {                  //delete item by entering item ID
-
         System.out.println("Enter itemID of item that u desire to delete:");
         System.out.print(">");              //get itemID from user to choose item to be deleted
         String searchID = sc.nextLine();
 
-        if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given!!!!!!!!!FIX!!!!!!!!
-            MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, duration);
-            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-            Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
-//            System.out.println(itemsInStore.get(linearSearch(itemsInStore, searchMusicItem)));    //checking whether correct item was selected
+        if (allItemIDs.containsKey(searchID)) {
+            if (allItemIDs.containsValue("CD")) {
+                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
+                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
-            CD.cdDuration.remove(searchID);
-            itemsInStore.remove(itemToBeDeleted);
-            MusicItem.count -= 1;          //decreasing the number of items in store
+                System.out.println("A " + itemToBeBought.getType() + " has been deleted");
+                itemsInStore.remove(itemToBeBought);
+                allItemIDs.remove(searchID);
+                MusicItem.count -= 1;          //decreasing the number of items in store
+                System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
-            System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
-            System.out.println("A CD has been deleted");
+            }else if (allItemIDs.containsValue("Vinyl")){
+                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
+                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
-        } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
-            MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, speed, diameter);
-            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-            Object itemToBeDeleted = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+                System.out.println("A " + itemToBeBought.getType() + " has been deleted");
+                itemsInStore.remove(itemToBeBought);
+                MusicItem.count -= 1;          //decreasing the number of items in store
+                System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
+                allItemIDs.remove(searchID);
 
-            Vinyl.vinylDiameter.remove(searchID);
-            Vinyl.vinylSpeed.remove(searchID);
-            itemsInStore.remove(itemToBeDeleted);
-            MusicItem.count -= 1;          //decreasing the number of items in store
-
-            System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
-            System.out.println("A Vinyl has been deleted");
-
+            }
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
-
-
     }
 
 
@@ -146,15 +141,6 @@ public class WestminsterMusicStoreManager implements StoreManager {
         System.out.format("+------------+-------+---------------------------+%n");
         System.out.format("| Item ID    | Type  |     Title                 |%n");
         System.out.format("+------------+-------+---------------------------+%n");
-
-//        for (Map.Entry<String, String> entry : itemTitles.entrySet()) {         //checking for all HashMap entries
-//            if (CD.cdDuration.containsKey(entry.getKey())) {                 //checking whether the ID selected is of a CD
-//                System.out.format(leftAlignFormat, entry.getKey(), "CD", entry.getValue());
-//
-//            } else if (Vinyl.vinylDiameter.containsKey(entry.getKey())) {
-//                System.out.format(leftAlignFormat, entry.getKey(), "Vinyl", entry.getValue());
-//            }
-//        }
 
         for (MusicItem item : itemsInStore) {
             if (item instanceof CD) {
@@ -179,29 +165,30 @@ public class WestminsterMusicStoreManager implements StoreManager {
         System.out.print(">");              //get itemID from user to choose item to be deleted
         String searchID = sc.nextLine();
 
-        if (CD.cdDuration.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given!!!!!!!!!!!FIX!!!!!!
-            MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, duration);          //PROBLEM WITH PRICE!!!
-            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-            MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+        if (allItemIDs.containsKey(searchID)) {     //if itemID that isn't in the store is entered, 1st item is given!!!!!!!!!!!FIX!!!!!!
+            if (allItemIDs.containsValue("CD")) {
+                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
+                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
-            multipleCopies(itemToBeBought, searchID, itemToBeBought.getPrice());         //buying multiple items or not?
-            System.out.println("\nTotal cost= " + totalCost);
+                multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
+                System.out.println("\nTotal cost= " + totalCost);
+            }else if (allItemIDs.containsValue("Vinyl")){
+                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
+                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
+                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
-        } else if (Vinyl.vinylDiameter.containsKey(searchID)) {
-            MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, speed, diameter);
-            MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-            MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
-
-            multipleCopies(itemToBeBought, searchID, itemToBeBought.getPrice());         //buying multiple items or not?
-            System.out.println("\nTotal cost= " + totalCost);
+                multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
+                System.out.println("\nTotal cost= " + totalCost);
+            }
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
 
-//        System.out.println(shoppingCart);               //to check
         shoppingCart.clear();           //emptying the shopping cart
     }
+
 
     @Override
     public void viewGUI() {
@@ -211,7 +198,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 //---------reused methods---------
 
     private static void addCommonInfo() {       //common information related to CD and Vinyl in addItem
-        System.out.println("\nEnter Item ID:");             //!!!!!!!!!!!!have an if with AND to check whether itemID exists in hashMaps of either CD/Vinyl!!!!!!!!!!!
+        System.out.println("\nEnter Item ID:");             //!!!!!!!!!!!!have an if with AND to check whether itemID exists in Arraylist of itemsInStore
         System.out.print(">");
         itemID = sc.nextLine();
 
@@ -262,7 +249,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
         return itemIndex;
     }
 
-    private static void multipleCopies(MusicItem chosenItem, String searchID, double priceOfChosen) {
+    private static void multipleCopies(MusicItem chosenItem, String searchID) {
         String multipleReq;
         totalCost = 0;
         int copies = 1;
@@ -277,28 +264,17 @@ public class WestminsterMusicStoreManager implements StoreManager {
             copies = sc.nextInt();
             sc.nextLine();              //to consume the rest of the line
 
-
-
-
-
-            //PROBLEM WITH PRICE!!!!!!!!!!!! GIVING PRICE OF LAST ENTERED
-
-
-
-
-
-
             for (int i = 0; i < copies; i++) {
                 shoppingCart.add(chosenItem);
-                totalCost += priceOfChosen;
+                totalCost += chosenItem.getPrice();
             }
-            generateReport(chosenItem.getTitle(), searchID, priceOfChosen, copies, totalCost);             //generate report when items are bought
+            generateReport(chosenItem.getTitle(), searchID, chosenItem.getPrice(), copies, totalCost);             //generate report when items are bought
             separatePurchase();               //separating purchases
 
         } else if (multipleReq.equals("no") || multipleReq.equals("n")) {
             shoppingCart.add(chosenItem);
-            totalCost = priceOfChosen;
-            generateReport(title, searchID, priceOfChosen, copies, totalCost);             //generate report when items are bought
+            totalCost = chosenItem.getPrice();
+            generateReport(chosenItem.getTitle(), searchID, chosenItem.getPrice(), copies, totalCost);             //generate report when items are bought
 
             separatePurchase();               //separating purchases
 

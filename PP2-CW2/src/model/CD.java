@@ -5,13 +5,13 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class CD extends MusicItem {
-    private double durationOfSong;
+    protected double durationOfSong;
 
     public static HashMap<String, Double> cdDuration = new HashMap<>();       //used to store itemID & duration
 
 
-    public CD(String itemID, String title, String genre, Date releaseDate, String artist, double price, double durationOfSong) {
-        super(itemID, title, genre, releaseDate, artist, price);
+    public CD(String itemID, String title, String genre, Date releaseDate, String artist, double price, String type, double durationOfSong) {
+        super(itemID, title, genre, releaseDate, artist, price, type);
         this.durationOfSong = durationOfSong;                 //making sure that this extra info is added when adding a new CD object
     }
 

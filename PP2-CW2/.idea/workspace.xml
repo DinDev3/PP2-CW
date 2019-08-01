@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9607d7-64aa-4402-9eaa-b3424d336197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/StoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/StoreManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/soldItems.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/ConApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/ConApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/CD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/CD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/MusicItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/MusicItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/model/Vinyl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/model/Vinyl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/soldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/soldItems.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/MusicItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MusicItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/StoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/StoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Vinyl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vinyl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GUI.java" afterDir="false" />
     </list>
@@ -50,11 +50,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/MusicItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="67" column="60" lean-forward="true" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+            <state>
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#992#993#0" expanded="true" />
                 <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#2181#2182#0" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
                 <element signature="e#2149#2150#0" expanded="true" />
                 <element signature="e#2204#2205#0" expanded="true" />
               </folding>
@@ -65,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/CD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="342">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#760#761#0" expanded="true" />
@@ -81,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Vinyl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+            <state relative-caret-position="216">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1466#1467#0" expanded="true" />
@@ -92,17 +95,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1602">
-              <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8293#8294#0" expanded="true" />
-                <element signature="e#8396#8397#0" expanded="true" />
-                <element signature="e#10251#10252#0" expanded="true" />
-                <element signature="e#10281#10282#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#7274#7275#0" expanded="true" />
+                <element signature="e#9143#9144#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="47" column="89" lean-forward="true" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
+            <state relative-caret-position="249">
+              <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,12 +152,15 @@
       <find>addItem</find>
       <find>getItems</find>
       <find>print</find>
-      <find>price</find>
       <find>maxItems</find>
       <find>MAX_COUNT</find>
       <find>itemTitles</find>
-      <find>sort</find>
       <find>mul</find>
+      <find>sort</find>
+      <find>chosenItem</find>
+      <find>multipleCopies</find>
+      <find>price</find>
+      <find>dele</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,13 +182,13 @@
         <option value="$PROJECT_DIR$/src/controller/MongoClient.java" />
         <option value="$PROJECT_DIR$/src/model/MongoClientURI.java" />
         <option value="$PROJECT_DIR$/src/controller/DatabaseController.java" />
-        <option value="$PROJECT_DIR$/src/model/CD.java" />
         <option value="$PROJECT_DIR$/src/ConApp.java" />
         <option value="$PROJECT_DIR$/src/model/StoreManager.java" />
-        <option value="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" />
         <option value="$PROJECT_DIR$/src/model/Vinyl.java" />
-        <option value="$PROJECT_DIR$/src/model/MusicItem.java" />
         <option value="$PROJECT_DIR$/src/view/GUI.java" />
+        <option value="$PROJECT_DIR$/src/model/CD.java" />
+        <option value="$PROJECT_DIR$/src/model/MusicItem.java" />
+        <option value="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" />
       </list>
     </option>
   </component>
@@ -330,7 +336,7 @@
       <workItem from="1564633522173" duration="228000" />
       <workItem from="1564633917322" duration="35000" />
       <workItem from="1564638551492" duration="192000" />
-      <workItem from="1564653985267" duration="3068000" />
+      <workItem from="1564653985267" duration="14760000" />
     </task>
     <task id="LOCAL-00001" summary="Added all the classes and most data types required for CW2">
       <created>1563029339436</created>
@@ -514,11 +520,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564600633270</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Sorting itemsInStore arrayList according to title works">
+      <created>1564657322677</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1564657322677</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117577000" />
+    <option name="totallyTimeSpent" value="129269000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,6 +544,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="1" />
@@ -538,10 +552,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.14859438" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.15327978" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8464789" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933067" weight="0.5084507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -550,7 +564,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32957748" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32957748" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32957748" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50066936" side_tool="true" weight="0.60422534" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32816902" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32957748" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -569,7 +583,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added all the classes and most data types required for CW2" />
     <MESSAGE value="Started working on PP2 CW2" />
     <MESSAGE value="Trying to get the package/ class structure right." />
     <MESSAGE value="Understanding implements class" />
@@ -594,7 +607,8 @@
     <MESSAGE value="Generate a file when item bought, implemented" />
     <MESSAGE value="Generate a file looking better" />
     <MESSAGE value="Generate a file created table format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate a file created table format" />
+    <MESSAGE value="Sorting itemsInStore arrayList according to title works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sorting itemsInStore arrayList according to title works" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -627,33 +641,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/CD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,10 +668,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Vinyl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1466#1467#0" expanded="true" />
@@ -687,13 +697,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1164#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/MusicItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="67" column="60" lean-forward="true" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+        <state>
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#992#993#0" expanded="true" />
             <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#2181#2182#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
             <element signature="e#2149#2150#0" expanded="true" />
             <element signature="e#2204#2205#0" expanded="true" />
           </folding>
@@ -702,24 +729,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1602">
-          <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state relative-caret-position="340">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8293#8294#0" expanded="true" />
-            <element signature="e#8396#8397#0" expanded="true" />
-            <element signature="e#10251#10252#0" expanded="true" />
-            <element signature="e#10281#10282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="47" column="89" lean-forward="true" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#7274#7275#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
           </folding>
         </state>
       </provider>
