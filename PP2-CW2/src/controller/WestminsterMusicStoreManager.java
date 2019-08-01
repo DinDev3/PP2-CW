@@ -54,11 +54,9 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 duration = sc.nextDouble();
                 sc.nextLine();              //to consume the rest of the line
 
-                CD newCD = new CD(itemID, title, genre, date, artist, price, type, duration);
+                MusicItem newCD = new CD(itemID, title, genre, date, artist, price, type, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
                 allItemIDs.put(itemID,type);
-                CD.cdDuration.put(itemID, newCD.getDurationOfSong());             //adding duration to hashMap
-
 
             } else if (typeSelection == 2) {         //Vinyl item chosen
                 addCommonInfo();        //used to get common information
@@ -75,12 +73,9 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 sc.nextLine();              //to consume the rest of the line
 
 
-                Vinyl newVinyl = new Vinyl(itemID, title, genre, date, artist, price, type, speed, diameter);
+                MusicItem newVinyl = new Vinyl(itemID, title, genre, date, artist, price, type, speed, diameter);
                 itemsInStore.add(newVinyl);                            //adding Vinyl object into itemsInStore arrayList
                 allItemIDs.put(itemID,type);
-
-                Vinyl.vinylSpeed.put(itemID, newVinyl.getSpeed());             //adding speed into hashMap
-                Vinyl.vinylDiameter.put(itemID, newVinyl.getDiameter());             //adding diameter into hashMap
 
             } else {
                 System.out.println("Please choose an option out of 1 & 2");
@@ -88,6 +83,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 //            System.out.println(itemsInStore);               //to check
             System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
+            System.out.println(itemsInStore);
 
         } else {
             System.out.println("There are no available spaces. 1000 items have been added!");

@@ -41,11 +41,11 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> artistColumn = new TableColumn<>("Artist");
         artistColumn.setCellValueFactory(new PropertyValueFactory<>("artist"));
 
-        TableColumn<String, MusicItem> priceColumn = new TableColumn<>("Price");
-        artistColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        TableColumn<String, MusicItem> priceColumn = new TableColumn<>("Price");            //not showing entries??????
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         TableColumn<String, MusicItem> typeColumn = new TableColumn<>("Type");
-        artistColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
+        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
 
         TableColumn<String, MusicItem> durationColumn = new TableColumn<>("Duration");
         durationColumn.setCellValueFactory(new PropertyValueFactory<>("durationOfSong"));
@@ -56,7 +56,7 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> diameterColumn = new TableColumn<>(" Diameter");
         diameterColumn.setCellValueFactory(new PropertyValueFactory<>("diameter"));
 
-        tableOfItems.getColumns().addAll(itemIDColumn, titleColumn, genreColumn, dateColumn, artistColumn, priceColumn, durationColumn, speedColumn, diameterColumn, typeColumn);
+        tableOfItems.getColumns().addAll(itemIDColumn, titleColumn, genreColumn, dateColumn, artistColumn, priceColumn,typeColumn, durationColumn, speedColumn, diameterColumn);
 
 
         tableOfItems.getItems().addAll(WestminsterMusicStoreManager.getItemsInStore());

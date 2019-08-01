@@ -7,7 +7,7 @@ public class ConApp {
     public static void main(String[] args) {
         int chosenOption;
 
-        System.out.println("\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
+        System.out.println("\n\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
         System.out.println("~~\tOnline Music Store Management System\t~~");
         System.out.println("/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\");
 
