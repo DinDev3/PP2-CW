@@ -2,7 +2,7 @@ package model;
 
 public interface StoreManager {
     //constants
-     int maxItems = 1000;
+     int MAX_ITEMS = 1000;
 
 
     //methods

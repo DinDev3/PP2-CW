@@ -1,4 +1,5 @@
 import controller.WestminsterMusicStoreManager;
+import model.MusicItem;
 
 import java.util.Scanner;
 

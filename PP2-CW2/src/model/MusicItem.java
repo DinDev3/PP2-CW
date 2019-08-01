@@ -3,13 +3,13 @@ package model;
 
 import java.util.Objects;
 
-public abstract class MusicItem {
-    private String itemID;
-    private String title;
-    private String genre;
-    private Date releaseDate;
-    private String artist;
-    private double price;
+public abstract class MusicItem implements Comparable<MusicItem>{
+    protected String itemID;
+    protected String title;
+    protected String genre;
+    protected Date releaseDate;
+    protected String artist;
+    protected double price;
 
     public static int count = 0;
 
@@ -72,5 +72,11 @@ public abstract class MusicItem {
     @Override
     public int hashCode() {
         return Objects.hash(itemID, title, genre, releaseDate, artist, price);
+    }
+
+
+    @Override
+    public int compareTo(MusicItem obj) {
+        return this.title.compareTo(obj.getTitle());
     }
 }
