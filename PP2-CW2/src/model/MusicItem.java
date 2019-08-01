@@ -1,7 +1,6 @@
 package model;
 
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public abstract class MusicItem implements Comparable<MusicItem>{

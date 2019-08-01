@@ -21,6 +21,8 @@ public class GUI extends Application {
 //        VBox parent = new VBox();
 //        parent.getChildren().add(new Label("Hey there folks!"));
 
+        //-----------------------------------------
+
         primaryStage.setTitle("List of items in store");
 //        primaryStage.setHeight(800);
 
@@ -41,7 +43,7 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> artistColumn = new TableColumn<>("Artist");
         artistColumn.setCellValueFactory(new PropertyValueFactory<>("artist"));
 
-        TableColumn<String, MusicItem> priceColumn = new TableColumn<>("Price");            //not showing entries??????
+        TableColumn<String, MusicItem> priceColumn = new TableColumn<>("Price($)");
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         TableColumn<String, MusicItem> typeColumn = new TableColumn<>("Type");
@@ -50,7 +52,7 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> durationColumn = new TableColumn<>("Duration");
         durationColumn.setCellValueFactory(new PropertyValueFactory<>("durationOfSong"));
 
-        TableColumn<String, MusicItem> speedColumn = new TableColumn<>(" Speed");
+        TableColumn<String, MusicItem> speedColumn = new TableColumn<>(" Speed(RPM)");
         speedColumn.setCellValueFactory(new PropertyValueFactory<>("speed"));
 
         TableColumn<String, MusicItem> diameterColumn = new TableColumn<>(" Diameter");
@@ -61,6 +63,14 @@ public class GUI extends Application {
 
         tableOfItems.getItems().addAll(WestminsterMusicStoreManager.getItemsInStore());
 
+        //-----------------------------------------
+
+
+
+
+
+
+        //-----------------------------------------
 
         VBox parent = new VBox(tableOfItems);
         Scene newScene = new Scene(parent);
