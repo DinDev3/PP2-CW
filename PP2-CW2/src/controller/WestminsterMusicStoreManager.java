@@ -60,7 +60,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 allItemIDs.put(itemID, type);
 
                 //adding to noSQL database
-                DatabaseController.addToDB(itemID, title, genre, date.getDay(),date.getMonth(),date.getYear(), artist, price, type, duration);
+                DatabaseController.addToDB(itemID, title, genre, date.getYear(),date.getMonth(),date.getDay(), artist, price, type, duration);
 
             } else if (typeSelection == 2) {         //Vinyl item chosen
                 addCommonInfo();        //used to get common information
@@ -82,7 +82,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 allItemIDs.put(itemID, type);
 
                 //adding to noSQL database
-                DatabaseController.addToDB(itemID, title, genre, date.getDay(),date.getMonth(),date.getYear(), artist, price, type, speed, diameter);
+                DatabaseController.addToDB(itemID, title, genre, date.getYear(),date.getMonth(),date.getDay(), artist, price, type, speed, diameter);
             } else {
                 System.out.println("Please choose an option out of 1 & 2");
             }

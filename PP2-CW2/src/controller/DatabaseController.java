@@ -10,8 +10,6 @@ import model.MusicItem;
 import model.Vinyl;
 import org.bson.Document;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class DatabaseController {
 
@@ -112,7 +110,6 @@ public class DatabaseController {
 
             //creating Date object using Date constructor in Date class (Otherwise won't show up in GUI)
             Date releasedDate = new Date(year, month, date);
-            System.out.println(releasedDate);
 
             if(type.equals("CD")){
                 double duration = (double) selectedDoc.get("Duration");
