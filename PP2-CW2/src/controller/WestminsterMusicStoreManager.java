@@ -24,9 +24,9 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
 
     private static String itemID;
-    private static  String type;
+    private static String type;
     private static String genre;
-    private static Date date;           //object is created here as it's required to be accessed from several methods in this class
+    private static Date date;
     private static String artist;
     private static double price;
     private static double duration;
@@ -60,7 +60,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 allItemIDs.put(itemID, type);
 
                 //adding to noSQL database
-                DatabaseController.addToDB(itemID, title, genre, date.toString(), artist, price, type, duration);
+                DatabaseController.addToDB(itemID, title, genre, date.getDay(),date.getMonth(),date.getYear(), artist, price, type, duration);
 
             } else if (typeSelection == 2) {         //Vinyl item chosen
                 addCommonInfo();        //used to get common information
@@ -82,7 +82,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 allItemIDs.put(itemID, type);
 
                 //adding to noSQL database
-                DatabaseController.addToDB(itemID, title, genre, date.toString(), artist, price, type, speed, diameter);
+                DatabaseController.addToDB(itemID, title, genre, date.getDay(),date.getMonth(),date.getYear(), artist, price, type, speed, diameter);
             } else {
                 System.out.println("Please choose an option out of 1 & 2");
             }
@@ -102,7 +102,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         if (allItemIDs.containsKey(searchID)) {
             if (allItemIDs.containsValue("CD")) {
-                MusicItem searchMusicItem = new CD(searchID, null, null, null, null, 0, null, 0);
+                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -113,7 +113,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
             } else if (allItemIDs.containsValue("Vinyl")) {
-                MusicItem searchMusicItem = new Vinyl(searchID, null, null, null, null, 0, null, 0, 0);
+                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -168,14 +168,14 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         if (allItemIDs.containsKey(searchID)) {
             if (allItemIDs.containsValue("CD")) {
-                MusicItem searchMusicItem = new CD(searchID, null, null, null, null, 0, null, 0);
+                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
                 multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
                 System.out.println("\nTotal cost= " + totalCost);
             } else if (allItemIDs.containsValue("Vinyl")) {
-                MusicItem searchMusicItem = new Vinyl(searchID, null, null, null, null, 0, null, 0, 0);
+                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -230,7 +230,6 @@ public class WestminsterMusicStoreManager implements StoreManager {
         sc.nextLine();              //to consume the rest of the line
 
         date = new Date(year, month, day);
-
 
         System.out.println("Enter Artist:");
         System.out.print(">");

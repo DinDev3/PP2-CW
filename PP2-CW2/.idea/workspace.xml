@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9607d7-64aa-4402-9eaa-b3424d336197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/soldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/soldItems.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/ConApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/ConApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Date.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+            <state relative-caret-position="-396">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,10 +51,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Date.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+              <folding>
+                <element signature="e#1444#1445#0" expanded="true" />
+                <element signature="e#1471#1472#0" expanded="true" />
+                <element signature="e#1500#1501#0" expanded="true" />
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
+                <element signature="e#1581#1582#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="532">
+              <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#658#659#0" expanded="true" />
@@ -68,10 +86,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="46">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,6 +138,8 @@
       <find>searchRelease</find>
       <find>searchitemID</find>
       <find>genre</find>
+      <find>db</find>
+      <find>dateForDB</find>
     </findStrings>
     <replaceStrings>
       <replace>searchArtist</replace>
@@ -127,7 +159,6 @@
         <option value="$PROJECT_DIR$/src/view/MusicItem.java" />
         <option value="$PROJECT_DIR$/src/Date.java" />
         <option value="$PROJECT_DIR$/src/StoreManager.java" />
-        <option value="$PROJECT_DIR$/src/model/Date.java" />
         <option value="$PROJECT_DIR$/src/model/WestminsterMusicStoreManager.java" />
         <option value="$PROJECT_DIR$/src/controller/MongoClient.java" />
         <option value="$PROJECT_DIR$/src/model/MongoClientURI.java" />
@@ -139,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/view/GUI.java" />
         <option value="$PROJECT_DIR$/src/controller/GUIController.java" />
         <option value="$PROJECT_DIR$/src/controller/GUI.java" />
+        <option value="$PROJECT_DIR$/src/model/Date.java" />
         <option value="$PROJECT_DIR$/src/ConApp.java" />
         <option value="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" />
         <option value="$PROJECT_DIR$/src/controller/DatabaseController.java" />
@@ -305,7 +337,7 @@
       <workItem from="1564633917322" duration="35000" />
       <workItem from="1564638551492" duration="192000" />
       <workItem from="1564653985267" duration="26725000" />
-      <workItem from="1564725102377" duration="15722000" />
+      <workItem from="1564725102377" duration="20568000" />
     </task>
     <task id="LOCAL-00001" summary="Added all the classes and most data types required for CW2">
       <created>1563029339436</created>
@@ -531,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564738358815</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Importing documents from MongoDB works perfectly">
+      <created>1564754197929</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1564754197929</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156956000" />
+    <option name="totallyTimeSpent" value="161802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,10 +595,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.15327978" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4973545" weight="0.31586206" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4973545" weight="0.31526104" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986613" weight="0.34929577" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986613" weight="0.32253522" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -620,7 +659,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding item kinda working" />
     <MESSAGE value="Fixed scanner issue when adding items" />
     <MESSAGE value="Adding items looking good! XD" />
     <MESSAGE value="searching for objects in itemsInStore is working" />
@@ -645,7 +683,8 @@
     <MESSAGE value="Adding items to and deleting items from noSQL DB (Atlas) works perfectly!! XXD" />
     <MESSAGE value="created GUI to display searched items" />
     <MESSAGE value="Trying ot get created GUI to display searched item's info. Search not working properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying ot get created GUI to display searched item's info. Search not working properly" />
+    <MESSAGE value="Importing documents from MongoDB works perfectly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Importing documents from MongoDB works perfectly" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -678,13 +717,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -723,17 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="176" column="63" lean-forward="true" selection-start-line="176" selection-start-column="63" selection-end-line="176" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#539#570#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/StoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -741,20 +762,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConApp.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="201">
+          <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding>
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="532">
+          <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#658#659#0" expanded="true" />
@@ -769,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+        <state relative-caret-position="-396">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

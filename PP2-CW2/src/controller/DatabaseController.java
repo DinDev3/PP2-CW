@@ -10,9 +10,12 @@ import model.MusicItem;
 import model.Vinyl;
 import org.bson.Document;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class DatabaseController {
 
-    public static void addToDB(String itemID, String title, String genre, String date, String artist, double price, String type, double duration) {
+    public static void addToDB(String itemID, String title, String genre, int year, int month,int day, String artist, double price, String type, double duration) {
         //Adding a CD to the Collection
 
         MongoClientURI uri = new MongoClientURI(
@@ -27,7 +30,9 @@ public class DatabaseController {
         Document newItem = new Document("item ID", itemID)
                 .append("Title", title)
                 .append("Genre", genre)
-                .append("Release Date", date)
+                .append("Release Date",new Document("year",year)            //document inside document
+                        .append("month",month)
+                        .append("day", day))
                 .append("Artist", artist)
                 .append("Price", price)
                 .append("Type", type)
@@ -37,7 +42,7 @@ public class DatabaseController {
         collection.insertOne(newItem);
     }
 
-    public static void addToDB(String itemID, String title, String genre, String date, String artist, double price, String type, double speed, double diameter) {
+    public static void addToDB(String itemID, String title, String genre,int year, int month,int day, String artist, double price, String type, double speed, double diameter) {
         //Adding a Vinyl to the Collection
 
         MongoClientURI uri = new MongoClientURI(
@@ -52,7 +57,9 @@ public class DatabaseController {
         Document newItem = new Document("item ID", itemID)
                 .append("Title", title)
                 .append("Genre", genre)
-                .append("Release Date", date)
+                .append("Release Date",new Document("year",year)            //document inside document
+                        .append("month",month)
+                        .append("day", day))
                 .append("Artist", artist)
                 .append("Price", price)
                 .append("Type", type)
@@ -92,24 +99,34 @@ public class DatabaseController {
             String itemID = (String)selectedDoc.get("item ID");
             String title = (String) selectedDoc.get("Title");
             String genre = (String) selectedDoc.get("Genre");
-            Date date = (Date) selectedDoc.get("Date");
+            Document dateObject = (Document) selectedDoc.get("Release Date");          //Date will give null, need to add day, month, year separately to db when adding
+
             String artist = (String) selectedDoc.get("Artist");
             double price = (double) selectedDoc.get("Price");
             String type = (String) selectedDoc.get("Type");
 
+            //breaking down date document to create date using Date constructor
+            int year = dateObject.getInteger("year");
+            int month = dateObject.getInteger("month");
+            int date = dateObject.getInteger("day");
+
+            //creating Date object using Date constructor in Date class (Otherwise won't show up in GUI)
+            Date releasedDate = new Date(year, month, date);
+            System.out.println(releasedDate);
+
             if(type.equals("CD")){
                 double duration = (double) selectedDoc.get("Duration");
-                MusicItem storedCD = new CD(itemID, title, genre, date, artist, price, type, duration);
+                MusicItem storedCD = new CD(itemID, title, genre, releasedDate, artist, price, type, duration);
                 WestminsterMusicStoreManager.itemsInStore.add(storedCD);
 //                System.out.println(storedCD);            //to check whether item was added
 
             }else if(type.equals("Vinyl")){
                 double speed = (double) selectedDoc.get("Speed(RPM)");
                 double diameter = (double) selectedDoc.get("Diameter(cm)");
-                MusicItem storedVinyl = new Vinyl(itemID, title, genre, date, artist, price, type, speed, diameter);
+                MusicItem storedVinyl = new Vinyl(itemID, title, genre, releasedDate, artist, price, type, speed, diameter);
                 WestminsterMusicStoreManager.itemsInStore.add(storedVinyl);
 
-//                System.out.println(storedVinyl);            //to check whether item was added
+                System.out.println(storedVinyl);            //to check whether item was added
             }
         }
     }
