@@ -2,7 +2,6 @@ package controller;
 
 import model.*;
 import model.Date;
-import view.GUI;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -23,17 +22,18 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     public static HashMap<String, String> allItemIDs = new HashMap<>();             //used to check whether itemID exists
 
-    static private String itemID;
-    static private String type;
-    static private String title;
-    static private String genre;
-    static private Date date;           //object is created here as it's required to be accessed from several methods in this class
-    static private String artist;
-    static private double price;
-    static private double duration;
-    static private double speed;
-    static private double diameter;
-    static private double totalCost;
+
+    private static String itemID;
+    private static  String type;
+    private static String genre;
+    private static Date date;           //object is created here as it's required to be accessed from several methods in this class
+    private static String artist;
+    private static double price;
+    private static double duration;
+    private static double speed;
+    private static double diameter;
+    private static double totalCost;
+    private static String title;
 
     @Override
     public void addItem() {             //adding new item                 //check passing Music Item item!!!!!!!!!!
