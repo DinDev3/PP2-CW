@@ -2,10 +2,7 @@ package controller;
 
 
 import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.*;
 import com.mongodb.ConnectionString;
 
 import static com.mongodb.client.model.Filters.*;
@@ -13,10 +10,8 @@ import static com.mongodb.client.model.Filters.*;
 import com.mongodb.client.model.CreateCollectionOptions;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.ValidationOptions;
-import model.Date;
 import org.bson.Document;
 
-import java.util.Arrays;
 
 
 public class DatabaseController {
@@ -84,5 +79,38 @@ public class DatabaseController {
         MongoCollection<Document> collection = database.getCollection("ItemsInStore");
 
         collection.deleteOne(Filters.eq("item ID", searchID));
+    }
+
+    public static void importDB() {
+        //importing stored data in db to application
+
+        MongoClientURI uri = new MongoClientURI(
+                "mongodb+srv://cw_user:123098@cluster0-gxfyy.gcp.mongodb.net/test?retryWrites=true&w=majority");
+        com.mongodb.MongoClient mongoClient = new com.mongodb.MongoClient(uri);
+        MongoDatabase database = mongoClient.getDatabase("OnlineMusicStore");
+
+        //Access collection
+        MongoCollection<Document> collection = database.getCollection("ItemsInStore");
+
+
+//        List<Document> itemsInStore = (List<Document>) collection.find().into(
+//                new ArrayList());
+//
+//        WestminsterMusicStoreManager.itemsInStore.add(collection.find().into(MusicItem));             //adding object into itemsInStore arrayList
+//
+//        // Getting the iterable object
+//        FindIterable<Document> iterDoc = collection.find();
+//        int i = 1;
+//
+//        // Getting the iterator
+//        Iterator it = iterDoc.iterator();
+//
+//        while (it.hasNext()) {
+////            allItemIDs.put(itemID, type);
+//            System.out.println(it.next());
+//            i++;
+//        }
+//
+//        System.out.println(WestminsterMusicStoreManager.itemsInStore);
     }
 }

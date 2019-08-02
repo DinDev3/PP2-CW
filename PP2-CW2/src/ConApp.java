@@ -1,9 +1,12 @@
+import controller.DatabaseController;
 import controller.WestminsterMusicStoreManager;
 import java.util.Scanner;
 
 public class ConApp {
     public static void main(String[] args) {
         int chosenOption;
+
+//        DatabaseController.importDB();              //importing items saved in database to itemsInStore ArrayList
 
         System.out.println("\n\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
         System.out.println("~~\tOnline Music Store Management System\t~~");

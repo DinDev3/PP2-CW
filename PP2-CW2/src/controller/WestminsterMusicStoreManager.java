@@ -14,7 +14,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     private static final int MAX_COPIES = 20;                           //maximum quantity of a selected item in-store
     //    private static final int MAX_ITEMS =1000;
-    private static ArrayList<MusicItem> itemsInStore = new ArrayList<>();
+    protected static ArrayList<MusicItem> itemsInStore = new ArrayList<>();
     private static ArrayList<MusicItem> shoppingCart = new ArrayList<>();
 
     public static ArrayList<MusicItem> getItemsInStore() {         //accessed in GUI

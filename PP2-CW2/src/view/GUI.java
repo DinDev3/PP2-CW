@@ -2,9 +2,9 @@ package view;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.MusicItem;
@@ -18,10 +18,6 @@ public class GUI extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        VBox parent = new VBox();
-//        parent.getChildren().add(new Label("Hey there folks!"));
-
-        //-----------------------------------------
 
         primaryStage.setTitle("List of items in store");
 //        primaryStage.setHeight(800);
@@ -58,21 +54,79 @@ public class GUI extends Application {
         TableColumn<String, MusicItem> diameterColumn = new TableColumn<>(" Diameter");
         diameterColumn.setCellValueFactory(new PropertyValueFactory<>("diameter"));
 
-        tableOfItems.getColumns().addAll(itemIDColumn, titleColumn, genreColumn, dateColumn, artistColumn, priceColumn,typeColumn, durationColumn, speedColumn, diameterColumn);
+        tableOfItems.getColumns().addAll(itemIDColumn, titleColumn, genreColumn, dateColumn, artistColumn, priceColumn, typeColumn, durationColumn, speedColumn, diameterColumn);
 
 
         tableOfItems.getItems().addAll(WestminsterMusicStoreManager.getItemsInStore());
 
         //-----------------------------------------
+        VBox searchSection = new VBox();
+        searchSection.setMinWidth(250);
+
+        searchSection.getChildren().add(new Label("Search Title:"));
+
+        HBox searchInput = new HBox();
+        searchInput.setMinWidth(220);
+        searchSection.getChildren().add(searchInput);
+
+        searchInput.getChildren().add(new TextField());
+        searchInput.getChildren().add(new Button("Search"));
 
 
+        HBox idOutput = new HBox();
+        searchSection.getChildren().add(idOutput);
+        idOutput.getChildren().add(new Label("Item ID: "));
+        idOutput.getChildren().add(new Label());    //display searched!!!
 
+        HBox titleOutput = new HBox();
+        searchSection.getChildren().add(titleOutput);
+        titleOutput.getChildren().add(new Label("Title: "));
+        titleOutput.getChildren().add(new Label());    //display searched!!!
 
+        HBox genreOutput = new HBox();
+        searchSection.getChildren().add(genreOutput);
+        genreOutput.getChildren().add(new Label("Genre: "));
+        genreOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox releaseOutput = new HBox();
+        searchSection.getChildren().add(releaseOutput);
+        releaseOutput.getChildren().add(new Label("Release Date: "));
+        releaseOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox artistOutput = new HBox();
+        searchSection.getChildren().add(artistOutput);
+        artistOutput.getChildren().add(new Label("Artist: "));
+        artistOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox priceOutput = new HBox();
+        searchSection.getChildren().add(priceOutput);
+        priceOutput.getChildren().add(new Label("Price($): "));
+        priceOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox typeOutput = new HBox();
+        searchSection.getChildren().add(typeOutput);
+        typeOutput.getChildren().add(new Label("Type: "));
+        typeOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox durationOutput = new HBox();
+        searchSection.getChildren().add(durationOutput);
+        durationOutput.getChildren().add(new Label("Duration: "));
+        durationOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox speedOutput = new HBox();
+        searchSection.getChildren().add(speedOutput);
+        speedOutput.getChildren().add(new Label("Speed(RPM): "));
+        speedOutput.getChildren().add(new Label());    //display searched!!!
+
+        HBox diameterOutput = new HBox();
+        searchSection.getChildren().add(diameterOutput);
+        diameterOutput.getChildren().add(new Label("Diameter: "));
+        diameterOutput.getChildren().add(new Label());    //display searched!!!
 
 
         //-----------------------------------------
 
-        VBox parent = new VBox(tableOfItems);
+        HBox parent = new HBox(tableOfItems,searchSection);
         Scene newScene = new Scene(parent);
         primaryStage.setScene(newScene);
         primaryStage.show();
