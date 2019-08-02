@@ -102,7 +102,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         if (allItemIDs.containsKey(searchID)) {
             if (allItemIDs.containsValue("CD")) {
-                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
+                MusicItem searchMusicItem = new CD(searchID, null, null, null, null, 0, null, 0);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -113,7 +113,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
             } else if (allItemIDs.containsValue("Vinyl")) {
-                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
+                MusicItem searchMusicItem = new Vinyl(searchID, null, null, null, null, 0, null, 0, 0);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
@@ -168,14 +168,14 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         if (allItemIDs.containsKey(searchID)) {
             if (allItemIDs.containsValue("CD")) {
-                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
+                MusicItem searchMusicItem = new CD(searchID, null, null, null, null, 0, null, 0);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
                 multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
                 System.out.println("\nTotal cost= " + totalCost);
             } else if (allItemIDs.containsValue("Vinyl")) {
-                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
+                MusicItem searchMusicItem = new Vinyl(searchID, null, null, null, null, 0, null, 0, 0);
                 MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
                 MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 

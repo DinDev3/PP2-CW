@@ -1,18 +1,14 @@
 package controller;
 
 
-import com.mongodb.MongoClientURI;
+import com.mongodb.*;
 import com.mongodb.client.*;
-import com.mongodb.ConnectionString;
-
-import static com.mongodb.client.model.Filters.*;
-
-import com.mongodb.client.model.CreateCollectionOptions;
 import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.ValidationOptions;
+import model.CD;
+import model.Date;
+import model.MusicItem;
+import model.Vinyl;
 import org.bson.Document;
-
-
 
 public class DatabaseController {
 
@@ -90,27 +86,31 @@ public class DatabaseController {
         MongoDatabase database = mongoClient.getDatabase("OnlineMusicStore");
 
         //Access collection
-        MongoCollection<Document> collection = database.getCollection("ItemsInStore");
+        MongoCollection<Document> oldCollection = database.getCollection("ItemsInStore");
 
+        for(Document selectedDoc : oldCollection.find()){
+            String itemID = (String)selectedDoc.get("item ID");
+            String title = (String) selectedDoc.get("Title");
+            String genre = (String) selectedDoc.get("Genre");
+            Date date = (Date) selectedDoc.get("Date");
+            String artist = (String) selectedDoc.get("Artist");
+            double price = (double) selectedDoc.get("Price");
+            String type = (String) selectedDoc.get("Type");
 
-//        List<Document> itemsInStore = (List<Document>) collection.find().into(
-//                new ArrayList());
-//
-//        WestminsterMusicStoreManager.itemsInStore.add(collection.find().into(MusicItem));             //adding object into itemsInStore arrayList
-//
-//        // Getting the iterable object
-//        FindIterable<Document> iterDoc = collection.find();
-//        int i = 1;
-//
-//        // Getting the iterator
-//        Iterator it = iterDoc.iterator();
-//
-//        while (it.hasNext()) {
-////            allItemIDs.put(itemID, type);
-//            System.out.println(it.next());
-//            i++;
-//        }
-//
-//        System.out.println(WestminsterMusicStoreManager.itemsInStore);
+            if(type.equals("CD")){
+                double duration = (double) selectedDoc.get("Duration");
+                MusicItem storedCD = new CD(itemID, title, genre, date, artist, price, type, duration);
+                WestminsterMusicStoreManager.itemsInStore.add(storedCD);
+//                System.out.println(storedCD);            //to check whether item was added
+
+            }else if(type.equals("Vinyl")){
+                double speed = (double) selectedDoc.get("Speed(RPM)");
+                double diameter = (double) selectedDoc.get("Diameter(cm)");
+                MusicItem storedVinyl = new Vinyl(itemID, title, genre, date, artist, price, type, speed, diameter);
+                WestminsterMusicStoreManager.itemsInStore.add(storedVinyl);
+
+//                System.out.println(storedVinyl);            //to check whether item was added
+            }
+        }
     }
 }
