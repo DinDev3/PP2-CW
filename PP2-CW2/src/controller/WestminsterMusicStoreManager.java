@@ -60,7 +60,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 allItemIDs.put(itemID, type);
 
                 //adding to noSQL database
-                DatabaseController.addToDB(itemID, title, genre, date.getYear(),date.getMonth(),date.getDay(), artist, price, type, duration);
+                DatabaseController.addToDB(itemID, title, genre, date.getYear(), date.getMonth(), date.getDay(), artist, price, type, duration);
 
             } else if (typeSelection == 2) {         //Vinyl item chosen
                 addCommonInfo();        //used to get common information
@@ -82,7 +82,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
                 allItemIDs.put(itemID, type);
 
                 //adding to noSQL database
-                DatabaseController.addToDB(itemID, title, genre, date.getYear(),date.getMonth(),date.getDay(), artist, price, type, speed, diameter);
+                DatabaseController.addToDB(itemID, title, genre, date.getYear(), date.getMonth(), date.getDay(), artist, price, type, speed, diameter);
             } else {
                 System.out.println("Please choose an option out of 1 & 2");
             }
@@ -101,29 +101,15 @@ public class WestminsterMusicStoreManager implements StoreManager {
         String searchID = sc.nextLine();
 
         if (allItemIDs.containsKey(searchID)) {
-            if (allItemIDs.containsValue("CD")) {
-                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
-                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
+            MusicItem itemToBeDeleted = findItem(searchID);
 
-                System.out.println("A " + itemToBeBought.getType() + " has been deleted");
-                itemsInStore.remove(itemToBeBought);
-                allItemIDs.remove(searchID);
-                MusicItem.count -= 1;          //decreasing the number of items in store
-                System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
+            System.out.println("A " + itemToBeDeleted.getType() + " has been deleted");
+            itemsInStore.remove(itemToBeDeleted);
+            allItemIDs.remove(searchID);
+            MusicItem.count -= 1;          //decreasing the number of items in store
+            System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
-            } else if (allItemIDs.containsValue("Vinyl")) {
-                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
-                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
-                System.out.println("A " + itemToBeBought.getType() + " has been deleted");
-                itemsInStore.remove(itemToBeBought);
-                MusicItem.count -= 1;          //decreasing the number of items in store
-                System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
-                allItemIDs.remove(searchID);
-
-            }
             //Deleting from noSQL Database
             DatabaseController.deleteFromDB(searchID);
 
@@ -167,23 +153,12 @@ public class WestminsterMusicStoreManager implements StoreManager {
         String searchID = sc.nextLine();
 
         if (allItemIDs.containsKey(searchID)) {
-            if (allItemIDs.containsValue("CD")) {
-                MusicItem searchMusicItem = new CD(searchID, title, genre, date, artist, price, type, duration);
-                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
-
+                MusicItem itemToBeBought = findItem(searchID);
                 multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
-                System.out.println("\nTotal cost= " + totalCost);
-            } else if (allItemIDs.containsValue("Vinyl")) {
-                MusicItem searchMusicItem = new Vinyl(searchID, title, genre, date, artist, price, type, speed, diameter);
-                MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-                MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
 
-                multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
                 System.out.println("\nTotal cost= " + totalCost);
-            }
 
-            //quantity to be added!!!!!!!!!!!!!!!
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!quantity to be added!!!!!!!!!!!!!!!
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
@@ -241,15 +216,16 @@ public class WestminsterMusicStoreManager implements StoreManager {
         sc.nextLine();              //to consume the rest of the line
     }
 
-    public static int linearSearch(ArrayList itemsInStore, MusicItem searchValue) {
-        int itemIndex = 0;
-        for (int i = 0; i < itemsInStore.size(); i++) {            //searching indexes of a given integer.(Linear Search)
-            if (itemsInStore.get(i).equals(searchValue)) {
-                itemIndex = i;
+
+    public static MusicItem findItem(String searchItemID) {
+        for (MusicItem searchItem : itemsInStore) {
+            if (searchItem.getItemID().equals(searchItemID)) {
+                return searchItem;
             }
         }
-        return itemIndex;
+        return null;
     }
+
 
     private static void multipleCopies(MusicItem chosenItem, String searchID) {
         String multipleReq;
@@ -293,14 +269,14 @@ public class WestminsterMusicStoreManager implements StoreManager {
 //                System.out.println("\nFile created: " + myFile.getName());
                 FileWriter soldFile = new FileWriter("soldItems.txt", true);
 
-                soldFile.write(String.format("+---------------------------+------------+------------+---------+------------+------------------------------+%n"));
-                soldFile.write(String.format("|     Title                 | Item ID    |  Price($)  | Copies  |  Total($)  |       Selling Date/Time      |%n"));
-                soldFile.write(String.format("+---------------------------+------------+------------+---------+------------+------------------------------+%n"));
+                soldFile.write(String.format("+---------------------------+------------+------------+---------+-------------+------------------------------+%n"));
+                soldFile.write(String.format("|     Title                 | Item ID    |  Price($)  | Copies  |Total Cost($)|       Selling Date/Time      |%n"));
+                soldFile.write(String.format("+---------------------------+------------+------------+---------+-------------+------------------------------+%n"));
 //                soldFile.write(System.getProperty("line.separator"));       //line break
                 soldFile.close();
             }
 
-            String leftAlignFormat2 = "| %-25s | %-10s | %-10s | %-7s | %-10s | %-27s |%n";
+            String leftAlignFormat2 = "| %-25s | %-10s | %-10s | %-7s | %-11s | %-27s |%n";
 
 
             //writing into the file
@@ -319,10 +295,10 @@ public class WestminsterMusicStoreManager implements StoreManager {
     }
 
 
-    public static void separatePurchase() {               //separating purchases
+    public static void separatePurchase() {               //separating purchases in generated report
         try {               //separating purchases
             FileWriter soldFile = new FileWriter("soldItems.txt", true);
-            soldFile.write("+-----------------------------------------------------------------------------------------------------------+");
+            soldFile.write("+------------------------------------------------------------------------------------------------------------+");
             soldFile.write(System.getProperty("line.separator"));       //line break
             soldFile.close();
         } catch (IOException e) {

@@ -115,6 +115,7 @@ public class DatabaseController {
                 double duration = (double) selectedDoc.get("Duration");
                 MusicItem storedCD = new CD(itemID, title, genre, releasedDate, artist, price, type, duration);
                 WestminsterMusicStoreManager.itemsInStore.add(storedCD);
+                WestminsterMusicStoreManager.allItemIDs.put(itemID,type);
 //                System.out.println(storedCD);            //to check whether item was added
 
             }else if(type.equals("Vinyl")){
@@ -122,9 +123,10 @@ public class DatabaseController {
                 double diameter = (double) selectedDoc.get("Diameter(cm)");
                 MusicItem storedVinyl = new Vinyl(itemID, title, genre, releasedDate, artist, price, type, speed, diameter);
                 WestminsterMusicStoreManager.itemsInStore.add(storedVinyl);
-
-                System.out.println(storedVinyl);            //to check whether item was added
+                WestminsterMusicStoreManager.allItemIDs.put(itemID,type);
+//                System.out.println(storedVinyl);            //to check whether item was added
             }
         }
+        System.out.println("```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````");
     }
 }
