@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class WestminsterMusicStoreManager implements StoreManager{
+public class WestminsterMusicStoreManager implements StoreManager {
     private static Scanner scanInput = new Scanner(System.in);
 
     //    private static final int MAX_ITEMS =1000;
@@ -38,7 +38,7 @@ public class WestminsterMusicStoreManager implements StoreManager{
     private static String title;
 
     @Override
-    public void addItem() {             //adding new item                 //check passing MusicItem item!!!!!!!!!!
+    public void addItem() {             //adding new item
 
         if (MusicItem.getCount() <= MAX_ITEMS) {     //checking whether number of items stored is less than 1000
 
@@ -162,10 +162,10 @@ public class WestminsterMusicStoreManager implements StoreManager{
         String searchID = scanInput.nextLine();
 
         if (allItemIDs.containsKey(searchID)) {
-                MusicItem itemToBeBought = findItem(searchID);
-                multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
+            MusicItem itemToBeBought = findItem(searchID);
+            multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
 
-                System.out.println("\nTotal cost= " + totalCost);
+            System.out.println("\nTotal cost= " + totalCost);
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
@@ -183,12 +183,12 @@ public class WestminsterMusicStoreManager implements StoreManager{
     private static void addCommonInfo() {       //common information related to CD and Vinyl in addItem
         System.out.println("\nEnter Item ID:");
         System.out.print(">");
-        do{
+        do {
             itemID = scanInput.nextLine();
-            if (allItemIDs.containsKey(itemID)){
-            System.out.println("This item ID has already been taken. Please enter a different item ID");
+            if (allItemIDs.containsKey(itemID)) {
+                System.out.println("This item ID has already been taken. Please enter a different item ID");
             }
-        }while (allItemIDs.containsKey(itemID));
+        } while (allItemIDs.containsKey(itemID));
 
         System.out.println("Enter Title:");
         System.out.print(">");
@@ -266,7 +266,7 @@ public class WestminsterMusicStoreManager implements StoreManager{
         } else if (multipleReq.equals("no") || multipleReq.equals("n")) {
             totalCost = chosenItem.getPrice();
             generateReport(chosenItem.getTitle(), searchID, chosenItem.getPrice(), copies, totalCost);             //generate report when items are bought
-
+            //use Math.round for total in file??
             separatePurchase();               //separating purchases
 
         } else {
@@ -314,6 +314,7 @@ public class WestminsterMusicStoreManager implements StoreManager{
             scanInput.next();                                                     //removing incorrect input entered
         }
     }
+
     private static void doubleInputValidation() {                     //validating double input
 
         while (!scanInput.hasNextDouble()) {
