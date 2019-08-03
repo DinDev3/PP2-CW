@@ -34,5 +34,5 @@ public class CD extends MusicItem {
         return Objects.hash(super.hashCode(), durationOfSong);
     }
 
-//create Time class for duration!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//create Time class for duration!!!!!!
 }

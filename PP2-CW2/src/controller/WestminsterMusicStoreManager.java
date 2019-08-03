@@ -14,7 +14,6 @@ public class WestminsterMusicStoreManager implements StoreManager {
     private static final int MAX_COPIES = 20;                           //maximum quantity of a selected item in-store
     //    private static final int MAX_ITEMS =1000;
     protected static ArrayList<MusicItem> itemsInStore = new ArrayList<>();
-    private static ArrayList<MusicItem> shoppingCart = new ArrayList<>();
 
     public static ArrayList<MusicItem> getItemsInStore() {         //accessed in GUI
         return itemsInStore;
@@ -103,15 +102,16 @@ public class WestminsterMusicStoreManager implements StoreManager {
         if (allItemIDs.containsKey(searchID)) {
             MusicItem itemToBeDeleted = findItem(searchID);
 
-            System.out.println("A " + itemToBeDeleted.getType() + " has been deleted");
+            type = itemToBeDeleted.getType();
             itemsInStore.remove(itemToBeDeleted);
             allItemIDs.remove(searchID);
             MusicItem.count -= 1;          //decreasing the number of items in store
-            System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
-
 
             //Deleting from noSQL Database
             DatabaseController.deleteFromDB(searchID);
+
+            System.out.println("A " + type + " has been deleted");
+            System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
@@ -163,8 +163,6 @@ public class WestminsterMusicStoreManager implements StoreManager {
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
         }
-
-        shoppingCart.clear();           //emptying the shopping cart
     }
 
 
@@ -217,7 +215,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     }
 
 
-    public static MusicItem findItem(String searchItemID) {
+    private static MusicItem findItem(String searchItemID) {
         for (MusicItem searchItem : itemsInStore) {
             if (searchItem.getItemID().equals(searchItemID)) {
                 return searchItem;
@@ -243,14 +241,12 @@ public class WestminsterMusicStoreManager implements StoreManager {
             sc.nextLine();              //to consume the rest of the line
 
             for (int i = 0; i < copies; i++) {
-                shoppingCart.add(chosenItem);
                 totalCost += chosenItem.getPrice();
             }
             generateReport(chosenItem.getTitle(), searchID, chosenItem.getPrice(), copies, totalCost);             //generate report when items are bought
             separatePurchase();               //separating purchases
 
         } else if (multipleReq.equals("no") || multipleReq.equals("n")) {
-            shoppingCart.add(chosenItem);
             totalCost = chosenItem.getPrice();
             generateReport(chosenItem.getTitle(), searchID, chosenItem.getPrice(), copies, totalCost);             //generate report when items are bought
 

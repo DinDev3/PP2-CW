@@ -3,10 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9607d7-64aa-4402-9eaa-b3424d336197" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design/Class Diagram.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Class Diagram.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -AddItem.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -AddItem.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -BuyItem.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -BuyItem.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -DeleteItem.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -DeleteItem.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -PrintList.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -PrintList.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -SortList.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -SortList.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -AddItem.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -AddItem.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -DeleteItem.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -DeleteItem.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -PrintList.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -PrintList.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -SortItems.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -SortItems.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/ConApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/ConApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/soldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/soldItems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CD.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,24 +51,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2250">
-              <caret line="125" column="73" selection-start-line="125" selection-start-column="73" selection-end-line="125" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="116" column="55" lean-forward="true" selection-start-line="116" selection-start-column="55" selection-end-line="116" selection-end-column="55" />
+            <state relative-caret-position="54">
+              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#658#659#0" expanded="true" />
                 <element signature="e#719#720#0" expanded="true" />
               </folding>
@@ -64,21 +64,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/CD.java">
+        <entry file="file://$PROJECT_DIR$/src/ConApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="32">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/CD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2015">
-              <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
+            <state relative-caret-position="129">
+              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1564812778231" expanded="true" signature="6641:8391" ph="..." />
               </folding>
             </state>
           </provider>
@@ -140,15 +153,15 @@
         <option value="$PROJECT_DIR$/src/model/StoreManager.java" />
         <option value="$USER_HOME$/Downloads/test.java" />
         <option value="$PROJECT_DIR$/src/model/MusicItem.java" />
-        <option value="$PROJECT_DIR$/src/model/CD.java" />
         <option value="$PROJECT_DIR$/src/model/Vinyl.java" />
         <option value="$PROJECT_DIR$/src/view/GUI.java" />
         <option value="$PROJECT_DIR$/src/controller/GUIController.java" />
-        <option value="$PROJECT_DIR$/src/controller/GUI.java" />
         <option value="$PROJECT_DIR$/src/model/Date.java" />
-        <option value="$PROJECT_DIR$/src/ConApp.java" />
+        <option value="$PROJECT_DIR$/src/model/CD.java" />
         <option value="$PROJECT_DIR$/src/controller/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/ConApp.java" />
         <option value="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" />
+        <option value="$PROJECT_DIR$/src/controller/GUI.java" />
       </list>
     </option>
   </component>
@@ -160,7 +173,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="685" />
-    <option name="y" value="-19" />
+    <option name="y" value="-20" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -170,8 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +211,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,7 +327,10 @@
       <workItem from="1564653985267" duration="26725000" />
       <workItem from="1564725102377" duration="21440000" />
       <workItem from="1564761056237" duration="113000" />
-      <workItem from="1564768882613" duration="9185000" />
+      <workItem from="1564768882613" duration="11658000" />
+      <workItem from="1564806373993" duration="314000" />
+      <workItem from="1564808270241" duration="731000" />
+      <workItem from="1564809257178" duration="2085000" />
     </task>
     <task id="LOCAL-00001" summary="Added all the classes and most data types required for CW2">
       <created>1563029339436</created>
@@ -561,11 +577,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564759343967</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Fixed and optimized search! XD">
+      <created>1564780947859</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1564780947859</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171972000" />
+    <option name="totallyTimeSpent" value="177575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,7 +600,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5026455" side_tool="true" weight="0.15327978" />
@@ -589,7 +612,7 @@
       <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4973545" visible="true" weight="0.15729585" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986613" weight="0.7492958" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986613" weight="0.6169014" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -650,7 +673,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="searching for objects in itemsInStore is working" />
     <MESSAGE value="fixed searching for CD in itemsInStore!" />
     <MESSAGE value="Delete method working for CD" />
     <MESSAGE value="Delete method working perfectly for CD :)" />
@@ -675,7 +697,8 @@
     <MESSAGE value="Importing documents from MongoDB works perfectly" />
     <MESSAGE value="Fixed date in MongoDB database" />
     <MESSAGE value="Date is working perfectly in Mongo, Java and Java FX!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Date is working perfectly in Mongo, Java and Java FX!" />
+    <MESSAGE value="Fixed and optimized search! XD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed and optimized search! XD" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -781,7 +804,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="206.5" y="250.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="207.0" y="251.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -803,11 +826,11 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="67.0" y="259.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="67.0" y="260.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Methods</Category>
             <Category>Fields</Category>
+            <Category>Methods</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -826,7 +849,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.1" x="139.86363636363637" y="279.5454545454545" />
+          <settings layout="Hierarchic Group" zoom="1.1" x="140.0" y="280.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -837,37 +860,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="125" column="73" selection-start-line="125" selection-start-column="73" selection-end-line="125" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="99">
+          <caret line="747" column="19" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/CD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConApp.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2015">
-          <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
+        <state relative-caret-position="1139">
+          <caret line="129" column="72" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -876,12 +886,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="116" column="55" lean-forward="true" selection-start-line="116" selection-start-column="55" selection-end-line="116" selection-end-column="55" />
+        <state relative-caret-position="54">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#658#659#0" expanded="true" />
             <element signature="e#719#720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1564812778231" expanded="true" signature="6641:8391" ph="..." />
           </folding>
         </state>
       </provider>

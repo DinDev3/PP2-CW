@@ -150,7 +150,7 @@
 									"top": 36,
 									"width": 313,
 									"height": 13,
-									"text": "Database",
+									"text": "Data saved - memory",
 									"verticalAlignment": 3
 								}
 							],
@@ -337,9 +337,9 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 872,
-											"width": 93.919921875,
+											"width": 162.53173828125,
 											"height": 13,
-											"text": "(from Database)"
+											"text": "(from Data saved - memory)"
 										},
 										{
 											"_type": "LabelView",
@@ -659,7 +659,7 @@
 											"font": "Arial;13;0",
 											"left": -160,
 											"top": 16,
-											"width": 86.6708984375,
+											"width": 88,
 											"height": 13,
 											"text": "(from Activity1)"
 										},
@@ -1940,9 +1940,9 @@
 										"$ref": "AAAAAAFsOZ5oFNj9lBw="
 									},
 									"font": "Arial;13;0",
-									"left": 630,
+									"left": 629,
 									"top": 682,
-									"width": 23.841796875,
+									"width": 24,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3087,7 +3087,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFsOO71227L/ic="
 					},
-					"name": "Database",
+					"name": "Data saved - memory",
 					"nodes": [
 						{
 							"_type": "UMLAction",

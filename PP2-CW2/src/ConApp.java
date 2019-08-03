@@ -8,9 +8,9 @@ public class ConApp {
 
         DatabaseController.importDB();              //importing items saved in database to itemsInStore ArrayList
 
-        System.out.println("\n\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
-        System.out.println("~~\tOnline Music Store Management System\t~~");
-        System.out.println("/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\");
+        System.out.println("\n\t\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
+        System.out.println("\t~~\tOnline Music Store Management System\t~~");
+        System.out.println("\t/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\");
 
         do {//display main menu
             System.out.println("\n1)Add item");

@@ -10,18 +10,18 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import model.CD;
 import model.Date;
 import model.MusicItem;
 
-import static controller.WestminsterMusicStoreManager.itemsInStore;
-import static controller.WestminsterMusicStoreManager.linearSearch;
+import java.util.ArrayList;
 
-@SuppressWarnings("Duplicates")
+import static controller.WestminsterMusicStoreManager.itemsInStore;
+
+@SuppressWarnings("Duplicates")     //similar labels in search area
 
 public class GUI extends Application {
     private static String itemIDVar;
-    private static  String typeVar;
+    private static String typeVar;
     private static String genreVar;
     private static Date dateVar;           //object is created here as it's required to be accessed from several methods in this class
     private static String artistVar;
@@ -31,7 +31,6 @@ public class GUI extends Application {
     private static double diameterVar;
     private static double totalCostVar;
     private static String titleVar;
-
 
 
     public static void main(String[] args) {
@@ -163,29 +162,50 @@ public class GUI extends Application {
         //-----------------------------------------
 
 
-        //Always item added first is given!!!!! not finding any object???????????
-        //!!!!!!!!!!IF ITEM ISN'T IN ARRAYLIST, PROGRAM CRASHES!!!!!!!!!!!!!!!!!!
-
-        MusicItem searchMusicItem = new CD(itemIDVar, titleSearch.getText(), genreVar, dateVar, artistVar, priceVar, typeVar, durationVar);
-        MusicItem.count -= 1;         //making sure that count isn't increased for the temporary object created
-        MusicItem itemToBeBought = itemsInStore.get(linearSearch(itemsInStore, searchMusicItem));
-
-        searchClick.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        searchClick.setOnAction(new EventHandler<ActionEvent>() {           //actions when search button is clicked
 
             @Override
-            public void handle(MouseEvent event) {
-                idSelected.setText(itemToBeBought.getItemID());
-                titleSelected.setText(itemToBeBought.getTitle());
-                genreSelected.setText(itemToBeBought.getGenre());
-                releaseSelected.setText(itemToBeBought.getReleaseDate().toString());
-                artistSelected.setText(itemToBeBought.getArtist());
+            public void handle(ActionEvent event) {
+//                idSelected.setText(id);
+
+                MusicItem itemToBeBought = findItem(titleSearch.getText());
+                System.out.println(itemToBeBought);
+
+                tableOfItems.getItems().clear();
+
+                tableOfItems.getItems().add(itemToBeBought);
+
+                if (itemToBeBought != null) {
+
+                    idSelected.setText(itemToBeBought.getItemID());
+                    titleSelected.setText(itemToBeBought.getTitle());
+                    genreSelected.setText(itemToBeBought.getGenre());
+                    releaseSelected.setText(itemToBeBought.getReleaseDate().toString());
+                    artistSelected.setText(itemToBeBought.getArtist());
 //                priceSelected.setText(itemToBeBought.getPrice().toString);                    //FIX AFTER CHANGING TO BIG DECIMAL!!!!!
-                typeSelected.setText(itemToBeBought.getType());
+                    typeSelected.setText(itemToBeBought.getType());
 //                durationSelected.setText(itemToBeBought.getDurationOfSong());
-                speedSelected.setText("-");
-                diameterSelected.setText("-");
+                    speedSelected.setText("-");
+                    diameterSelected.setText("-");
+                } else {
+                    idSelected.setText("");
+                    titleSelected.setText("");
+                    genreSelected.setText("");
+                    releaseSelected.setText("");
+                    artistSelected.setText("");
+                    priceSelected.setText("");                    //FIX AFTER CHANGING TO BIG DECIMAL!!!!!
+                    typeSelected.setText("");
+                    durationSelected.setText("");
+                    speedSelected.setText("");
+                    diameterSelected.setText("");
+                }
+
             }
         });
+
+
+        //CREATE RESET BUTTON------------------------------------------------///////
+
 
         //-----------------------------------------
 
@@ -195,7 +215,12 @@ public class GUI extends Application {
         primaryStage.show();
     }
 
-    private static void searchInfo(){
-
+    private static MusicItem findItem(String searchTitle) {
+        for (MusicItem searchItem : itemsInStore) {
+            if (searchItem.getTitle().equals(searchTitle)) {
+                return searchItem;
+            }
+        }
+        return null;                //may return null, concern of getItemID in handle
     }
 }

@@ -127,6 +127,7 @@ public class DatabaseController {
 //                System.out.println(storedVinyl);            //to check whether item was added
             }
         }
+        System.out.println("\n----All items retrieved from database.----");
         System.out.println("```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````");
     }
 }
