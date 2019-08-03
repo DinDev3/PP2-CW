@@ -1,14 +1,17 @@
 package controller;
 
-import model.*;
+import model.CD;
 import model.Date;
+import model.MusicItem;
+import model.StoreManager;
+import model.Vinyl;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class WestminsterMusicStoreManager implements StoreManager {
+public class WestminsterMusicStoreManager implements StoreManager{
     private static Scanner scanInput = new Scanner(System.in);
 
     //    private static final int MAX_ITEMS =1000;
@@ -35,7 +38,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     private static String title;
 
     @Override
-    public void addItem() {             //adding new item                 //check passing Music Item item!!!!!!!!!!
+    public void addItem() {             //adding new item                 //check passing MusicItem item!!!!!!!!!!
 
         if (MusicItem.getCount() <= MAX_ITEMS) {     //checking whether number of items stored is less than 1000
 
@@ -148,6 +151,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
     @Override
     public void sortItem() {                //sorts items in ascending order of title
         Collections.sort(itemsInStore);
+        System.out.println("Items in store sorted in ascending order of title");
     }
 
 
