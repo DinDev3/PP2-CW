@@ -166,40 +166,37 @@ public class GUI extends Application {
 
             @Override
             public void handle(ActionEvent event) {
-//                idSelected.setText(id);
 
                 MusicItem itemToBeBought = findItem(titleSearch.getText());
                 System.out.println(itemToBeBought);
 
                 tableOfItems.getItems().clear();
-
                 tableOfItems.getItems().add(itemToBeBought);
 
-                if (itemToBeBought != null) {
-
-                    idSelected.setText(itemToBeBought.getItemID());
-                    titleSelected.setText(itemToBeBought.getTitle());
-                    genreSelected.setText(itemToBeBought.getGenre());
-                    releaseSelected.setText(itemToBeBought.getReleaseDate().toString());
-                    artistSelected.setText(itemToBeBought.getArtist());
-//                priceSelected.setText(itemToBeBought.getPrice().toString);                    //FIX AFTER CHANGING TO BIG DECIMAL!!!!!
-                    typeSelected.setText(itemToBeBought.getType());
-//                durationSelected.setText(itemToBeBought.getDurationOfSong());
-                    speedSelected.setText("-");
-                    diameterSelected.setText("-");
-                } else {
-                    idSelected.setText("");
-                    titleSelected.setText("");
-                    genreSelected.setText("");
-                    releaseSelected.setText("");
-                    artistSelected.setText("");
-                    priceSelected.setText("");                    //FIX AFTER CHANGING TO BIG DECIMAL!!!!!
-                    typeSelected.setText("");
-                    durationSelected.setText("");
-                    speedSelected.setText("");
-                    diameterSelected.setText("");
-                }
-
+//                if (itemToBeBought != null) {
+//
+//                    idSelected.setText(itemToBeBought.getItemID());
+//                    titleSelected.setText(itemToBeBought.getTitle());
+//                    genreSelected.setText(itemToBeBought.getGenre());
+//                    releaseSelected.setText(itemToBeBought.getReleaseDate().toString());
+//                    artistSelected.setText(itemToBeBought.getArtist());
+////                priceSelected.setText(itemToBeBought.getPrice().toString)
+//                    typeSelected.setText(itemToBeBought.getType());
+////                durationSelected.setText(itemToBeBought.getDurationOfSong());
+//                    speedSelected.setText("-");
+//                    diameterSelected.setText("-");
+//                } else {
+//                    idSelected.setText("");
+//                    titleSelected.setText("");
+//                    genreSelected.setText("");
+//                    releaseSelected.setText("");
+//                    artistSelected.setText("");
+//                    priceSelected.setText("");
+//                    typeSelected.setText("");
+//                    durationSelected.setText("");
+//                    speedSelected.setText("");
+//                    diameterSelected.setText("");
+//                }
             }
         });
 
