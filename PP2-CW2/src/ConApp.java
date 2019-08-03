@@ -1,6 +1,8 @@
 import controller.DatabaseController;
 import controller.WestminsterMusicStoreManager;
+
 import java.util.Scanner;
+
 
 public class ConApp {
     public static void main(String[] args) {
@@ -8,11 +10,12 @@ public class ConApp {
 
         DatabaseController.importDB();              //importing items saved in database to itemsInStore ArrayList
 
-        System.out.println("\n\t\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
-        System.out.println("\t~~\tOnline Music Store Management System\t~~");
-        System.out.println("\t/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\");
+        do {
+            System.out.println("\n\t\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/");
+            System.out.println("\t~~\tOnline Music Store Management System\t~~");
+            System.out.println("\t/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\");
 
-        do {//display main menu
+            //display main menu
             System.out.println("\n1)Add item");
             System.out.println("2)Delete item");
             System.out.println("3)Print list of items");
@@ -22,7 +25,13 @@ public class ConApp {
             System.out.println("7)Exit program");
             Scanner sc = new Scanner(System.in);
             System.out.print("\nEnter Option:\n>>");
-            chosenOption = sc.nextInt();                    //validate for integer inputs!!!!!!!!!!
+
+            while (!sc.hasNextInt()) {              //validation for integer input
+                System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message for characters other than integers
+                sc.next();                                                     //removing incorrect input entered
+            }
+
+            chosenOption = sc.nextInt();
 
             WestminsterMusicStoreManager managementAction = new WestminsterMusicStoreManager();         //new object
 

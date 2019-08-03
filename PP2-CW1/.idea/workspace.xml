@@ -2,14 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da518555-9e33-4f7a-94b0-b4e35d132190" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP2-CW2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/model/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/model/Date.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/model/MusicItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/model/MusicItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/model/WestminsterMusicStoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/model/WestminsterMusicStoreManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/Date.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/MusicItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/MusicItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/model/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/model/WestminsterMusicStoreManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -AddItem.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -BuyItem.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -DeleteItem.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -GUI.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -GenerateFile.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -GenerateReport.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -PrintList.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/ActD -SortList.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -AddItem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -BuyItem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -DeleteItem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -GUI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -GenerateFile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -PrintList.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Activity Diagrams/JPEG diagrams/ActD -SortItems.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Class Diagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Class Diagram.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Func, non-func requirements.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Reference/Tutorial 3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Use Case Description.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/Use Case Diagram.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/UseCaseDiagram-final.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/trash/UseCaseDiagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/Design/trash/UseCaseDiagram2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/controller/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/controller/GUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/controller/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/controller/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/controller/WestminsterMusicStoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/out/production/PP2/controller/WestminsterMusicStoreManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/soldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/soldItems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/ConApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/ConApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/controller/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/controller/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP2-CW2/src/controller/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW2/src/controller/WestminsterMusicStoreManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+            <state relative-caret-position="1225">
+              <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
               <folding>
                 <element signature="e#0#20005#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -234,6 +259,9 @@
       <workItem from="1564217488994" duration="823000" />
       <workItem from="1564221057206" duration="182000" />
       <workItem from="1564424488238" duration="523000" />
+      <workItem from="1564832245341" duration="686000" />
+      <workItem from="1564841794118" duration="67000" />
+      <workItem from="1564842005782" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="Removed the while true loop, to achieve marking standards.">
       <created>1561059359874</created>
@@ -400,7 +428,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96361000" />
+    <option name="totallyTimeSpent" value="97123000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -574,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GolfClub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        <state relative-caret-position="1225">
+          <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
           <folding>
             <element signature="e#0#20005#0" expanded="true" />
             <element signature="imports" expanded="true" />

@@ -6,14 +6,11 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.Date;
 import model.MusicItem;
-
-import java.util.ArrayList;
 
 import static controller.WestminsterMusicStoreManager.itemsInStore;
 

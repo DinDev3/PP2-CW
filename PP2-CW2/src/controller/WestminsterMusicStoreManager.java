@@ -9,17 +9,17 @@ import java.io.IOException;
 import java.util.*;
 
 public class WestminsterMusicStoreManager implements StoreManager {
-    private static Scanner sc = new Scanner(System.in);
+    private static Scanner scanInput = new Scanner(System.in);
 
-    private static final int MAX_COPIES = 20;                           //maximum quantity of a selected item in-store
     //    private static final int MAX_ITEMS =1000;
+
+    public static HashMap<String, String> allItemIDs = new HashMap<>();             //used to check whether the itemID exists
     protected static ArrayList<MusicItem> itemsInStore = new ArrayList<>();
+
 
     public static ArrayList<MusicItem> getItemsInStore() {         //accessed in GUI
         return itemsInStore;
     }
-
-    public static HashMap<String, String> allItemIDs = new HashMap<>();             //used to check whether itemID exists
 
 
     private static String itemID;
@@ -39,11 +39,12 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         if (MusicItem.getCount() <= MAX_ITEMS) {     //checking whether number of items stored is less than 1000
 
-            System.out.println("\nChoose item to be added:");
-            System.out.println("1)CD\n2)Vinyl");        //validate for integer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            System.out.println("\nChoose the type of the item to be added:");
+            System.out.println("1)CD\n2)Vinyl");
             System.out.print(">");
-            int typeSelection = sc.nextInt();
-            sc.nextLine();              //to consume the rest of the line
+            intInputValidation();
+            int typeSelection = scanInput.nextInt();
+            scanInput.nextLine();              //to consume the rest of the line
 
             if (typeSelection == 1) {       //CD item chosen
                 addCommonInfo();        //used to get common information
@@ -51,8 +52,9 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
                 System.out.println("Enter Duration of song:");
                 System.out.print(">");
-                duration = sc.nextDouble();
-                sc.nextLine();              //to consume the rest of the line
+                doubleInputValidation();
+                duration = scanInput.nextDouble();
+                scanInput.nextLine();              //to consume the rest of the line
 
                 MusicItem newCD = new CD(itemID, title, genre, date, artist, price, type, duration);
                 itemsInStore.add(newCD);                            //adding CD object into itemsInStore arrayList
@@ -67,13 +69,15 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
                 System.out.println("Enter Speed of Vinyl:(RPM)");
                 System.out.print(">");
-                speed = sc.nextDouble();
-                sc.nextLine();              //to consume the rest of the line
+                doubleInputValidation();
+                speed = scanInput.nextDouble();
+                scanInput.nextLine();              //to consume the rest of the line
 
                 System.out.println("Enter Diameter of Vinyl:(cm)");
                 System.out.print(">");
-                diameter = sc.nextDouble();
-                sc.nextLine();              //to consume the rest of the line
+                doubleInputValidation();
+                diameter = scanInput.nextDouble();
+                scanInput.nextLine();              //to consume the rest of the line
 
 
                 MusicItem newVinyl = new Vinyl(itemID, title, genre, date, artist, price, type, speed, diameter);
@@ -82,10 +86,11 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
                 //adding to noSQL database
                 DatabaseController.addToDB(itemID, title, genre, date.getYear(), date.getMonth(), date.getDay(), artist, price, type, speed, diameter);
+
             } else {
                 System.out.println("Please choose an option out of 1 & 2");
             }
-            System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
+            System.out.println("\nThere are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
         } else {
             System.out.println("There are no available spaces. 1000 items have been added!");
@@ -95,9 +100,9 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void deleteItem() {                  //delete item by entering item ID
-        System.out.println("Enter itemID of item that u desire to delete:");
+        System.out.println("Enter the itemID of the item that u desire to delete:");
         System.out.print(">");              //get itemID from user to choose item to be deleted
-        String searchID = sc.nextLine();
+        String searchID = scanInput.nextLine();
 
         if (allItemIDs.containsKey(searchID)) {
             MusicItem itemToBeDeleted = findItem(searchID);
@@ -110,7 +115,7 @@ public class WestminsterMusicStoreManager implements StoreManager {
             //Deleting from noSQL Database
             DatabaseController.deleteFromDB(searchID);
 
-            System.out.println("A " + type + " has been deleted");
+            System.out.println("\nA " + type + " has been deleted");
             System.out.println("There are " + (MAX_ITEMS - MusicItem.getCount()) + " spaces left to store items.");
 
         } else {
@@ -148,17 +153,15 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     @Override
     public void buyItem() {                 //buy item by selecting item ID and generate a report
-        System.out.println("Enter itemID of item that u desire to buy:");
+        System.out.println("Enter the itemID of the item that u desire to purchase:");
         System.out.print(">");              //get itemID from user to choose item to be deleted
-        String searchID = sc.nextLine();
+        String searchID = scanInput.nextLine();
 
         if (allItemIDs.containsKey(searchID)) {
                 MusicItem itemToBeBought = findItem(searchID);
                 multipleCopies(itemToBeBought, searchID);         //buying multiple items or not?
 
                 System.out.println("\nTotal cost= " + totalCost);
-
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!quantity to be added!!!!!!!!!!!!!!!
 
         } else {
             System.out.println("There's no item related to the item ID: " + searchID);
@@ -174,44 +177,53 @@ public class WestminsterMusicStoreManager implements StoreManager {
 //---------reused methods---------
 
     private static void addCommonInfo() {       //common information related to CD and Vinyl in addItem
-        System.out.println("\nEnter Item ID:");             //!!!!!!!!!!!!have an if with AND to check whether itemID exists in Arraylist of itemsInStore
+        System.out.println("\nEnter Item ID:");
         System.out.print(">");
-        itemID = sc.nextLine();
+        do{
+            itemID = scanInput.nextLine();
+            if (allItemIDs.containsKey(itemID)){
+            System.out.println("This item ID has already been taken. Please enter a different item ID");
+            }
+        }while (allItemIDs.containsKey(itemID));
 
         System.out.println("Enter Title:");
         System.out.print(">");
-        title = sc.nextLine();
+        title = scanInput.nextLine();
 
         System.out.println("Enter Genre:");
         System.out.print(">");
-        genre = sc.nextLine();
+        genre = scanInput.nextLine();
 
         System.out.println("Enter Release Date");
         System.out.println("\tEnter day:");                       //getting input for day
         System.out.print("\t>");
-        int day = sc.nextInt();
-        sc.nextLine();              //to consume the rest of the line
+        intInputValidation();
+        int day = scanInput.nextInt();
+        scanInput.nextLine();              //to consume the rest of the line
 
         System.out.println("\tEnter month:");
         System.out.print("\t>");
-        int month = sc.nextInt();
-        sc.nextLine();              //to consume the rest of the line
+        intInputValidation();
+        int month = scanInput.nextInt();
+        scanInput.nextLine();              //to consume the rest of the line
 
         System.out.println("\tEnter year:");
         System.out.print("\t>");
-        int year = sc.nextInt();
-        sc.nextLine();              //to consume the rest of the line
+        intInputValidation();
+        int year = scanInput.nextInt();
+        scanInput.nextLine();              //to consume the rest of the line
 
         date = new Date(year, month, day);
 
         System.out.println("Enter Artist:");
         System.out.print(">");
-        artist = sc.nextLine();
+        artist = scanInput.nextLine();
 
         System.out.println("Enter Price (in $):");
         System.out.print(">$");
-        price = sc.nextDouble();
-        sc.nextLine();              //to consume the rest of the line
+        doubleInputValidation();
+        price = scanInput.nextDouble();
+        scanInput.nextLine();              //to consume the rest of the line
     }
 
 
@@ -232,13 +244,14 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
         System.out.println("Do you want to buy more than one copy of this item?");
         System.out.print(">");
-        multipleReq = sc.nextLine().toLowerCase();
+        multipleReq = scanInput.nextLine().toLowerCase();
 
         if (multipleReq.equals("yes") || multipleReq.equals("y")) {              //buying more than one copy
             System.out.println("How many copies of this item do you require?");
             System.out.print("\t>");
-            copies = sc.nextInt();
-            sc.nextLine();              //to consume the rest of the line
+            intInputValidation();
+            copies = scanInput.nextInt();
+            scanInput.nextLine();              //to consume the rest of the line
 
             for (int i = 0; i < copies; i++) {
                 totalCost += chosenItem.getPrice();
@@ -290,6 +303,20 @@ public class WestminsterMusicStoreManager implements StoreManager {
         }
     }
 
+    private static void intInputValidation() {                     //validating integer input
+
+        while (!scanInput.hasNextInt()) {
+            System.out.println("Only integer numbers are allowed! Please provide a valid input");              //error handling message for characters other than integers
+            scanInput.next();                                                     //removing incorrect input entered
+        }
+    }
+    private static void doubleInputValidation() {                     //validating double input
+
+        while (!scanInput.hasNextDouble()) {
+            System.out.println("Only numbers are allowed! Please provide a valid input");              //error handling message for characters other than integers
+            scanInput.next();                                                     //removing incorrect input entered
+        }
+    }
 
     public static void separatePurchase() {               //separating purchases in generated report
         try {               //separating purchases

@@ -2,8 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9607d7-64aa-4402-9eaa-b3424d336197" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../PP2-CW1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PP2-CW1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -AddItem.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -BuyItem.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -DeleteItem.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -GUI.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -GenerateFile.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -GenerateReport.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -PrintList.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/ActD -SortList.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -AddItem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -BuyItem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -DeleteItem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -GUI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -GenerateFile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -PrintList.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Activity Diagrams/JPEG diagrams/ActD -SortItems.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Class Diagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Class Diagram.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Func, non-func requirements.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Reference/Tutorial 3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Use Case Description.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/Use Case Diagram.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/UseCaseDiagram-final.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/trash/UseCaseDiagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design/trash/UseCaseDiagram2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/controller/GUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/controller/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PP2/controller/WestminsterMusicStoreManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/soldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/soldItems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +68,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4482">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="248">
+              <caret line="185" selection-start-line="185" selection-end-line="185" />
               <folding>
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6977#6978#0" expanded="true" />
+                <element signature="e#7007#7008#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="76">
+              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +103,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
-              <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+            <state relative-caret-position="32">
+              <caret line="174" column="48" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1564819902997" expanded="true" signature="6641:8274" ph="..." />
               </folding>
             </state>
           </provider>
@@ -112,10 +143,17 @@
       <find>genre</find>
       <find>db</find>
       <find>dateForDB</find>
+      <find>sc</find>
+      <find>int</find>
+      <find>double</find>
+      <find>Double</find>
+      <find>nextInt()</find>
+      <find>nextDouble()</find>
     </findStrings>
     <replaceStrings>
       <replace>searchArtist</replace>
       <replace>idOutput</replace>
+      <replace>scanInput</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -143,9 +181,10 @@
         <option value="$PROJECT_DIR$/src/model/Date.java" />
         <option value="$PROJECT_DIR$/src/model/CD.java" />
         <option value="$PROJECT_DIR$/src/controller/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/GUI.java" />
+        <option value="$PROJECT_DIR$/src/controller/GUI.java" />
         <option value="$PROJECT_DIR$/src/ConApp.java" />
         <option value="$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java" />
-        <option value="$PROJECT_DIR$/src/controller/GUI.java" />
       </list>
     </option>
   </component>
@@ -156,8 +195,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="685" />
-    <option name="y" value="-20" />
+    <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -166,38 +204,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="OnlineMusicStore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PP2-CW2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OnlineMusicStore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PP2-CW2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OnlineMusicStore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PP2-CW2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OnlineMusicStore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PP2-CW2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -247,7 +254,7 @@
       <module name="PP2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -256,11 +263,11 @@
       </method>
     </configuration>
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller.GUI" />
+      <option name="MAIN_CLASS_NAME" value="GUI" />
       <module name="PP2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -314,7 +321,8 @@
       <workItem from="1564768882613" duration="11658000" />
       <workItem from="1564806373993" duration="314000" />
       <workItem from="1564808270241" duration="731000" />
-      <workItem from="1564809257178" duration="3371000" />
+      <workItem from="1564809257178" duration="3573000" />
+      <workItem from="1564831445326" duration="7013000" />
     </task>
     <task id="LOCAL-00001" summary="Added all the classes and most data types required for CW2">
       <created>1563029339436</created>
@@ -579,7 +587,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178861000" />
+    <option name="totallyTimeSpent" value="186076000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -600,7 +608,40 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.15327978" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4973545" visible="true" weight="0.15729585" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4973545" weight="0.15729585" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986613" weight="0.79577464" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32957748" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32957748" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32957748" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50133866" side_tool="true" weight="0.743662" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32816902" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32957748" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966533" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32931727" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.15327978" />
+      <window_info anchor="right" id="Mongo Explorer" order="9" weight="0.16800536" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" sideWeight="0.5026455" side_tool="true" weight="0.15327978" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5026455" side_tool="true" weight="0.15327978" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4973545" visible="true" weight="0.15729585" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986613" weight="0.6169014" />
@@ -625,39 +666,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.15327978" />
       <window_info anchor="right" id="Mongo Explorer" order="9" weight="0.16800536" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.15327978" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49933067" weight="0.5084507" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32957748" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32957748" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32957748" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50066936" side_tool="true" weight="0.60422534" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32816902" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32957748" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966533" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.3299866" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="right" id="Mongo Explorer" order="9" weight="0.1961178" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -858,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/CD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -875,10 +876,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/CD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="76">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -887,22 +895,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+        <state relative-caret-position="32">
+          <caret line="174" column="48" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1564819902997" expanded="true" signature="6641:8274" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/WestminsterMusicStoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4482">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="248">
+          <caret line="185" selection-start-line="185" selection-end-line="185" />
           <folding>
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6977#6978#0" expanded="true" />
+            <element signature="e#7007#7008#0" expanded="true" />
           </folding>
         </state>
       </provider>
