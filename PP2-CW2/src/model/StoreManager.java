@@ -14,3 +14,10 @@ public interface StoreManager {
     void viewGUI();
 
 }
+
+/*
+References:
+https://www.javatpoint.com/abstract-class-in-java
+https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html
+https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html
+*/

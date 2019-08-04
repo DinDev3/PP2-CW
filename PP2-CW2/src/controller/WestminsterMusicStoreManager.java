@@ -182,8 +182,8 @@ public class WestminsterMusicStoreManager implements StoreManager {
 
     private static void addCommonInfo() {       //common information related to CD and Vinyl in addItem
         System.out.println("\nEnter Item ID:");
-        System.out.print(">");
         do {
+            System.out.print(">");
             itemID = scanInput.nextLine();
             if (allItemIDs.containsKey(itemID)) {
                 System.out.println("This item ID has already been taken. Please enter a different item ID");
@@ -335,3 +335,33 @@ public class WestminsterMusicStoreManager implements StoreManager {
         }
     }
 }
+
+/*
+References:
+https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
+
+https://www.callicoder.com/java-arraylist/
+
+https://stackoverflow.com/questions/48720936/java-enhanced-for-loop-for-arraylist-with-custom-object
+
+To open GUI from console
+https://stackoverflow.com/questions/2550310/can-a-main-method-of-class-be-invoked-from-another-class-in-java
+
+File handling
+https://www.w3schools.com/java/java_files.asp
+
+Next line in file handling
+https://stackoverflow.com/questions/17716192/insert-line-break-when-writing-to-file
+
+File handling - table format
+https://stackoverflow.com/questions/26229140/writing-data-to-text-file-in-table-format
+
+Table display format for print list
+https://stackoverflow.com/questions/15215326/how-can-i-create-table-using-ascii-in-a-console
+
+Selling date/time
+https://www.javatpoint.com/java-get-current-date
+
+Search for object in ArrayList
+https://stackoverflow.com/questions/17526608/how-to-find-an-object-in-an-arraylist-by-property
+*/

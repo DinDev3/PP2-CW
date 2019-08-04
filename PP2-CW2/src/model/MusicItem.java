@@ -86,3 +86,8 @@ public abstract class MusicItem implements Comparable<MusicItem>{
         return this.title.compareTo(obj.getTitle());
     }
 }
+
+/*
+References:
+https://beginnersbook.com/2013/12/java-arraylist-of-object-sort-example-comparable-and-comparator/
+*/

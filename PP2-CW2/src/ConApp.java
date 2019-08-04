@@ -60,8 +60,10 @@ public class ConApp {
                     managementAction.viewGUI();
                     break;
 
-                case 7:
-                    //display exit message
+                case 7:         //display exit message
+                    System.out.println("\nThank you for using the Online Music Store Manager.");
+                    System.out.println("\tLooking forward to assist you in the future.");
+                    System.out.println("\tExiting Program...");
                     System.exit(0);
 
                 default:

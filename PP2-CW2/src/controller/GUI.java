@@ -125,3 +125,17 @@ public class GUI extends Application {
         return null;
     }
 }
+
+/*
+References:
+Gui javafx table
+http://tutorials.jenkov.com/javafx/tableview.html
+https://www.youtube.com/watch?v=mtdlX2NMy4M
+
+Clear TableView
+https://stackoverflow.com/questions/32176782/how-can-i-clear-the-all-contents-of-the-cell-data-in-every-row-in-my-tableview-i
+
+JavaFX buttons
+https://camposha.info/course/java-all-in-one/lesson/javafx-textfields-and-buttons-get-and-set-values-onclick/
+http://www.java2s.com/Code/Java/JavaFX/ChangeLabeltextinButtonclickevent.htm
+*/
