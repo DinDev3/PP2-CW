@@ -1,0 +1,228 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: DatabaseController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: DatabaseController (controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DatabaseController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (4/ 5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    98.6%
+  </span>
+  <span class="absValue">
+    (70/ 71)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;
+<i>4</i>&nbsp;import com.mongodb.*;
+<i>5</i>&nbsp;import com.mongodb.client.*;
+<i>6</i>&nbsp;import com.mongodb.client.model.Filters;
+<i>7</i>&nbsp;import model.CD;
+<i>8</i>&nbsp;import model.Date;
+<i>9</i>&nbsp;import model.MusicItem;
+<i>10</i>&nbsp;import model.Vinyl;
+<i>11</i>&nbsp;import org.bson.Document;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;
+<b class="nc"><i>14</i>&nbsp;public class DatabaseController {</b>
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    public static void addToDB(String itemID, String title, String genre, int year, int month,int day, String artist, double price, String type, double duration) {
+<i>17</i>&nbsp;        //Adding a CD to the Collection
+<i>18</i>&nbsp;
+<b class="fc"><i>19</i>&nbsp;        MongoClientURI uri = new MongoClientURI(</b>
+<i>20</i>&nbsp;                &quot;mongodb+srv://cw_user:123098@cluster0-gxfyy.gcp.mongodb.net/test?retryWrites=true&amp;w=majority&quot;);
+<b class="fc"><i>21</i>&nbsp;        com.mongodb.MongoClient mongoClient = new com.mongodb.MongoClient(uri);</b>
+<b class="fc"><i>22</i>&nbsp;        MongoDatabase database = mongoClient.getDatabase(&quot;OnlineMusicStore&quot;);</b>
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;        //Access collection
+<b class="fc"><i>25</i>&nbsp;        MongoCollection&lt;Document&gt; collection = database.getCollection(&quot;ItemsInStore&quot;);</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;        //create a document
+<b class="fc"><i>28</i>&nbsp;        Document newItem = new Document(&quot;item ID&quot;, itemID)</b>
+<b class="fc"><i>29</i>&nbsp;                .append(&quot;Title&quot;, title)</b>
+<b class="fc"><i>30</i>&nbsp;                .append(&quot;Genre&quot;, genre)</b>
+<b class="fc"><i>31</i>&nbsp;                .append(&quot;Release Date&quot;,new Document(&quot;year&quot;,year)            //document inside document</b>
+<b class="fc"><i>32</i>&nbsp;                        .append(&quot;month&quot;,month)</b>
+<b class="fc"><i>33</i>&nbsp;                        .append(&quot;day&quot;, day))</b>
+<b class="fc"><i>34</i>&nbsp;                .append(&quot;Artist&quot;, artist)</b>
+<b class="fc"><i>35</i>&nbsp;                .append(&quot;Price&quot;, price)</b>
+<b class="fc"><i>36</i>&nbsp;                .append(&quot;Type&quot;, type)</b>
+<b class="fc"><i>37</i>&nbsp;                .append(&quot;Duration&quot;, duration);</b>
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;        //insert the document
+<b class="fc"><i>40</i>&nbsp;        collection.insertOne(newItem);</b>
+<b class="fc"><i>41</i>&nbsp;    }</b>
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;    public static void addToDB(String itemID, String title, String genre,int year, int month,int day, String artist, double price, String type, double speed, double diameter) {
+<i>44</i>&nbsp;        //Adding a Vinyl to the Collection
+<i>45</i>&nbsp;
+<b class="fc"><i>46</i>&nbsp;        MongoClientURI uri = new MongoClientURI(</b>
+<i>47</i>&nbsp;                &quot;mongodb+srv://cw_user:123098@cluster0-gxfyy.gcp.mongodb.net/test?retryWrites=true&amp;w=majority&quot;);
+<b class="fc"><i>48</i>&nbsp;        com.mongodb.MongoClient mongoClient = new com.mongodb.MongoClient(uri);</b>
+<b class="fc"><i>49</i>&nbsp;        MongoDatabase database = mongoClient.getDatabase(&quot;OnlineMusicStore&quot;);</b>
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;        //Access collection
+<b class="fc"><i>52</i>&nbsp;        MongoCollection&lt;Document&gt; collection = database.getCollection(&quot;ItemsInStore&quot;);</b>
+<i>53</i>&nbsp;
+<i>54</i>&nbsp;        //create a document
+<b class="fc"><i>55</i>&nbsp;        Document newItem = new Document(&quot;item ID&quot;, itemID)</b>
+<b class="fc"><i>56</i>&nbsp;                .append(&quot;Title&quot;, title)</b>
+<b class="fc"><i>57</i>&nbsp;                .append(&quot;Genre&quot;, genre)</b>
+<b class="fc"><i>58</i>&nbsp;                .append(&quot;Release Date&quot;,new Document(&quot;year&quot;,year)            //document inside document</b>
+<b class="fc"><i>59</i>&nbsp;                        .append(&quot;month&quot;,month)</b>
+<b class="fc"><i>60</i>&nbsp;                        .append(&quot;day&quot;, day))</b>
+<b class="fc"><i>61</i>&nbsp;                .append(&quot;Artist&quot;, artist)</b>
+<b class="fc"><i>62</i>&nbsp;                .append(&quot;Price&quot;, price)</b>
+<b class="fc"><i>63</i>&nbsp;                .append(&quot;Type&quot;, type)</b>
+<b class="fc"><i>64</i>&nbsp;                .append(&quot;Speed(RPM)&quot;, speed)</b>
+<b class="fc"><i>65</i>&nbsp;                .append(&quot;Diameter(cm)&quot;, diameter);</b>
+<i>66</i>&nbsp;
+<i>67</i>&nbsp;        //insert the document
+<b class="fc"><i>68</i>&nbsp;        collection.insertOne(newItem);</b>
+<b class="fc"><i>69</i>&nbsp;    }</b>
+<i>70</i>&nbsp;
+<i>71</i>&nbsp;    public static void deleteFromDB(String searchID) {
+<i>72</i>&nbsp;        //Deleting an item from the Collection
+<i>73</i>&nbsp;
+<b class="fc"><i>74</i>&nbsp;        MongoClientURI uri = new MongoClientURI(</b>
+<i>75</i>&nbsp;                &quot;mongodb+srv://cw_user:123098@cluster0-gxfyy.gcp.mongodb.net/test?retryWrites=true&amp;w=majority&quot;);
+<b class="fc"><i>76</i>&nbsp;        com.mongodb.MongoClient mongoClient = new com.mongodb.MongoClient(uri);</b>
+<b class="fc"><i>77</i>&nbsp;        MongoDatabase database = mongoClient.getDatabase(&quot;OnlineMusicStore&quot;);</b>
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;        //Access collection
+<b class="fc"><i>80</i>&nbsp;        MongoCollection&lt;Document&gt; collection = database.getCollection(&quot;ItemsInStore&quot;);</b>
+<i>81</i>&nbsp;
+<b class="fc"><i>82</i>&nbsp;        collection.deleteOne(Filters.eq(&quot;item ID&quot;, searchID));</b>
+<b class="fc"><i>83</i>&nbsp;    }</b>
+<i>84</i>&nbsp;
+<i>85</i>&nbsp;    public static void importDB() {
+<i>86</i>&nbsp;        //importing stored data in db to application
+<i>87</i>&nbsp;
+<b class="fc"><i>88</i>&nbsp;        MongoClientURI uri = new MongoClientURI(</b>
+<i>89</i>&nbsp;                &quot;mongodb+srv://cw_user:123098@cluster0-gxfyy.gcp.mongodb.net/test?retryWrites=true&amp;w=majority&quot;);
+<b class="fc"><i>90</i>&nbsp;        com.mongodb.MongoClient mongoClient = new com.mongodb.MongoClient(uri);</b>
+<b class="fc"><i>91</i>&nbsp;        MongoDatabase database = mongoClient.getDatabase(&quot;OnlineMusicStore&quot;);</b>
+<i>92</i>&nbsp;
+<i>93</i>&nbsp;        //Access collection
+<b class="fc"><i>94</i>&nbsp;        MongoCollection&lt;Document&gt; oldCollection = database.getCollection(&quot;ItemsInStore&quot;);</b>
+<i>95</i>&nbsp;
+<b class="fc"><i>96</i>&nbsp;        for(Document selectedDoc : oldCollection.find()){</b>
+<b class="fc"><i>97</i>&nbsp;            String itemID = (String)selectedDoc.get(&quot;item ID&quot;);</b>
+<b class="fc"><i>98</i>&nbsp;            String title = (String) selectedDoc.get(&quot;Title&quot;);</b>
+<b class="fc"><i>99</i>&nbsp;            String genre = (String) selectedDoc.get(&quot;Genre&quot;);</b>
+<b class="fc"><i>100</i>&nbsp;            Document dateObject = (Document) selectedDoc.get(&quot;Release Date&quot;);          //Date will give null, need to add day, month, year separately to db when adding</b>
+<i>101</i>&nbsp;
+<b class="fc"><i>102</i>&nbsp;            String artist = (String) selectedDoc.get(&quot;Artist&quot;);</b>
+<b class="fc"><i>103</i>&nbsp;            double price = (double) selectedDoc.get(&quot;Price&quot;);</b>
+<b class="fc"><i>104</i>&nbsp;            String type = (String) selectedDoc.get(&quot;Type&quot;);</b>
+<i>105</i>&nbsp;
+<i>106</i>&nbsp;            //breaking down date document to create date using Date constructor
+<b class="fc"><i>107</i>&nbsp;            int year = dateObject.getInteger(&quot;year&quot;);</b>
+<b class="fc"><i>108</i>&nbsp;            int month = dateObject.getInteger(&quot;month&quot;);</b>
+<b class="fc"><i>109</i>&nbsp;            int date = dateObject.getInteger(&quot;day&quot;);</b>
+<i>110</i>&nbsp;
+<i>111</i>&nbsp;            //creating Date object using Date constructor in Date class (Otherwise won&#39;t show up in GUI)
+<b class="fc"><i>112</i>&nbsp;            Date releasedDate = new Date(year, month, date);</b>
+<i>113</i>&nbsp;
+<b class="fc"><i>114</i>&nbsp;            if(type.equals(&quot;CD&quot;)){</b>
+<b class="fc"><i>115</i>&nbsp;                double duration = (double) selectedDoc.get(&quot;Duration&quot;);</b>
+<b class="fc"><i>116</i>&nbsp;                MusicItem storedCD = new CD(itemID, title, genre, releasedDate, artist, price, type, duration);</b>
+<b class="fc"><i>117</i>&nbsp;                WestminsterMusicStoreManager.itemsInStore.add(storedCD);</b>
+<b class="fc"><i>118</i>&nbsp;                WestminsterMusicStoreManager.allItemIDs.put(itemID,type);</b>
+<i>119</i>&nbsp;//                System.out.println(storedCD);            //to check whether item was added
+<i>120</i>&nbsp;
+<b class="fc"><i>121</i>&nbsp;            }else if(type.equals(&quot;Vinyl&quot;)){</b>
+<b class="fc"><i>122</i>&nbsp;                double speed = (double) selectedDoc.get(&quot;Speed(RPM)&quot;);</b>
+<b class="fc"><i>123</i>&nbsp;                double diameter = (double) selectedDoc.get(&quot;Diameter(cm)&quot;);</b>
+<b class="fc"><i>124</i>&nbsp;                MusicItem storedVinyl = new Vinyl(itemID, title, genre, releasedDate, artist, price, type, speed, diameter);</b>
+<b class="fc"><i>125</i>&nbsp;                WestminsterMusicStoreManager.itemsInStore.add(storedVinyl);</b>
+<b class="fc"><i>126</i>&nbsp;                WestminsterMusicStoreManager.allItemIDs.put(itemID,type);</b>
+<i>127</i>&nbsp;//                System.out.println(storedVinyl);            //to check whether item was added
+<i>128</i>&nbsp;            }
+<b class="fc"><i>129</i>&nbsp;        }</b>
+<b class="fc"><i>130</i>&nbsp;        System.out.println(&quot;\n----All items retrieved from database.----&quot;);</b>
+<b class="fc"><i>131</i>&nbsp;        System.out.println(&quot;```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````&quot;);</b>
+<b class="fc"><i>132</i>&nbsp;    }</b>
+<i>133</i>&nbsp;}
+<i>134</i>&nbsp;
+<i>135</i>&nbsp;/*
+<i>136</i>&nbsp;References:
+<i>137</i>&nbsp;https://www.tutorialspoint.com/mongodb/mongodb_java
+<i>138</i>&nbsp;        https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/
+<i>139</i>&nbsp;        https://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/installation/
+<i>140</i>&nbsp;        https://mongodb.github.io/mongo-java-driver/
+<i>141</i>&nbsp;        https://github.com/mongodb/mongo-java-driver/tree/master
+<i>142</i>&nbsp;
+<i>143</i>&nbsp;Importing MongoDB documents to Java ArrayList
+<i>144</i>&nbsp;https://stackoverflow.com/questions/19435621/extract-field-value-from-mongodb-basicdbobject?rq=1
+<i>145</i>&nbsp;*/
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-08-05 03:27</div>
+</div>
+</body>
+</html>
